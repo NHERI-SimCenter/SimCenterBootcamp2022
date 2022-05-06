@@ -1,0 +1,28 @@
+  "parameters": [
+    {
+      "id": "programFile",
+      "value": {
+        "visible": true,
+        "required": true,
+        "type": "string",
+        "order": 0,
+        "enquote": false,
+        "default": "dakota.in",
+        "validator": null
+      },
+      "details": {
+        "label": "Program File to Compile",
+        "description": "Program File to Compile",
+        "argument": null,
+        "showArgument": false,
+        "repeatArgument": false
+      },
+      "semantics": {
+        "minCardinality": 1,
+        "maxCardinality": 1,
+        "ontology": [
+          "xs:string"
+        ]
+      }
+    }
+  ],

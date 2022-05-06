@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Git &mdash; Programming Bootcamp 2020  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Emacs" href="emacs.html" />
+    <link rel="prev" title="TACC-Frontera" href="TACC.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupInstructions.html">Setup Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_videos.html">Self-Study Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-repo">Creating a Repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-your-local-repo">Using Your Local Repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-your-remote-repo">Working With Your Remote Repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synching-your-fork-with-original">Synching your Fork with Original</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Questions, Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming Bootcamp 2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Git</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/git.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git">
+<span id="lblgit"></span><h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don’t want to read what follows. Here is the minimal, all commands are issued from the powershell or terminal application.</p>
+<blockquote>
+<div><p>DO ONCE</p>
+<ol class="arabic">
+<li><p>Fork the SimCenterProgrammingBootcamp2020 repo in your browser.</p></li>
+<li><p>Clone a Copy of YOUR Fork to local computer. In PowerShell (Winddows) or in terminal (MacOS), cd to a directory you want to place the repo and then type:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_NAME</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Change into the local <cite>SimCenterBootcamp2020</cite> folder</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">SimCenterBootcamp2020</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create a pointer to the original SimCenter version by typing:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NHERI</span><span class="o">-</span><span class="n">SimCenter</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>REPEAT DAILY:</p>
+<ol class="arabic">
+<li><p>Save the changes you want to KEEP to your local repo and your forked copy (execute inside the <cite>SimCenterBootcamp2020</cite> folder):</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">filename1</span> <span class="n">filename2</span> <span class="o">...</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;SOME INSTRUCTIVE COMMENT&quot;</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>(OPTIONAL) Throw away the rest!</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get the latest from SimCenter repo and merge changes into your own:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;daily update&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can watch the lecture recordings from Thursday, August 13, 2020 on <a class="reference external" href="https://youtu.be/9bJfG1C2Z3M">YouTube</a> .</p>
+</div>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/9bJfG1C2Z3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p><p><a class="reference external" href="http://git.com">Git</a> is the most widely used version control system today.  Version control software is software that enables programmers to manage changes to software over time. It is great for individuals as it keeps track of every modification to the code made in a special kind of database. If a mistake is made, the individual can turn back the clock and compare earlier versions of the code to help fix the mistake. Version control software is indespensible for groups of programmers working on a shared software project for it aids programmers when the programmers are making changes to the same files (seemlessly intagrating changes from different programmers when these changes are in different parts of the files and notifying developers of ‘conflicts’ (situations when the different programmers have made changes to same parts of the same file). Version control software is an essential part of the every-day of the modern software team’s professional practices. You can use <strong>git</strong> in a number of ways:</p>
+<blockquote>
+<div><p>Option A. Use with a local source code repo.</p>
+<p>Option B. Keep both a local repo and a remote repo. A better approach if you like backups (highly recomended) or you use multiple machines.</p>
+<p>Option C. Keep both a local and a remote, but work with others on a remote shared repo.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are a number of places that will host your remote repos:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>github</p></li>
+<li><p>gitlab</p></li>
+<li><p>bitbucket</p></li>
+<li><p>sourceforge</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="creating-a-repo">
+<h2>Creating a Repo<a class="headerlink" href="#creating-a-repo" title="Permalink to this headline">¶</a></h2>
+<p>For individual programmers working on a software project, the typical git eusage is to create a repo at one of the sites and point your local repo to that site. As you work with the repo you add and commit new changess to your local repo or checkout older versions of the code. At points you can send (push) your changes to github repo or pull code stored at the remote repo.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For purposes of documenting the commands, we will assume the remote hosting service is github.com, your user name is YOUR_USERNAME and the repo is named REPO.git</p>
+</div>
+<p>There are three options for creating a repo.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>For option A above in which you just want a local repo on your machine, in the folder in which you want to create a repo type the following in a terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First commit&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>For option B, if you have no existing code and want to start a new empty repo the best option is to go to the hosting site and create a repo there. Obtain the cloning address from the hosting site and then in a terminal window in directory you wish the repo folder to exist use the git clone command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</li>
+<li><p>For B again, but you have existing code in a folder and wish to create a repo go again to the hosting site and create a repo. Obtain the cloing url. Then in a terminal window go to the folder whose source code you are creating the repo for. Here type the following commands to create a local repo, add the current contents of the folder, point the repo to the hosted repo, and push the files to the remote repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First commit&quot;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>This is similar to the first option. The difference is that you point the local repo to the remote repo and then push the current files. So if you start with option A, and decide to switch to option B later you can!</p>
+<p>On some systems, before you commit you are required to enter your login and email address with the remote service. Some other systems, will just provide a prompt when you issue the command. The commands that you may need to invoke before you can commit are the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;email@example.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Mona Lisa&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Finally for option C, you are part of a collaborative project, or just want to start at the state of some other open source project you find on one of the hosting sites you first <strong>FORK</strong> a copy of the repo into your own area. You do this in the browser. Once forked, a repo will exist in your own area which you can clone. This will bring all repo files to your computer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>That operation has made a local copy of the repo. If this is a collaboaritive project you need to tell the local configuration about the original repo. For command demonsstration purposes, we will again use github.com, the remote owner of the original forks repo was ORIGINAL_OWNER and the repo was named REPO.git</p>
+<blockquote>
+<div><blockquote>
+<div><ol class="upperroman simple">
+<li><p>If you issue the command git -v you should see the url of <strong>your</strong> remote repo, i.e. typing the following in the terminal should show the results shown:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<span class="o">&gt;</span> <span class="n">origin</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">origin</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="upperroman simple" start="2">
+<li><p>Next step is to specify the remote upstream repo and give it a reference name. The most widely used name for this repo is <strong>upstream</strong>. In same terminal window type:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ol class="upperroman simple" start="3">
+<li><p>Now if you type git remote -v again, you should see it as part of your remotes.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<span class="o">&gt;</span> <span class="n">origin</span>    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">origin</span>    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USERNAME</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">upstream</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">upstream</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if you make a mistake with the upstream repo for any reason, you can remove it and add again</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">rm</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">REPO</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="using-your-local-repo">
+<h2>Using Your Local Repo<a class="headerlink" href="#using-your-local-repo" title="Permalink to this headline">¶</a></h2>
+<p>Once you have created the repo (whether for option A, B or C) there are some standard commands to use it. There are a number of commands <strong>add</strong>, <strong>commit</strong> and <strong>checkout</strong> are most commonly used. Others usefule commands to know are <strong>branch</strong>, <strong>rm</strong>, <strong>mv</strong>, and <strong>log</strong>.</p>
+<div class="align-center figure" id="id2">
+<img alt="../_images/git1.png" src="../_images/git1.png" />
+<p class="caption"><span class="caption-text">Working with Local Repo</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic">
+<li><p>To look at the difference between your current files and the commiitted files in the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span>
+</pre></div>
+</div>
+<p>You can be selective here, you can specify the files in the current folder</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>or a list of files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="n">fileName1</span> <span class="n">fileName2</span> <span class="o">..</span> <span class="n">fileNameN</span>
+</pre></div>
+</div>
+</li>
+<li><p>To update the repo with the current state of the files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>You can be selective here, you can specify the files in the current folder</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>or a list of files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">fileName1</span> <span class="n">fileName2</span> <span class="o">..</span> <span class="n">fileNameN</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The figure is not quite accurate, when you issue the <strong>add</strong> command, the files are staged for addition to the local repo.</p>
+</div>
+</li>
+<li><p>Once added, all files that have been <strong>staged</strong> for commit, can be committed with the commit command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;some message as to what commit is about&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>To look at the commits you have made to the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>To look at the last 10 commits you have made to the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">n</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you are unhappy with changes made to a file and wish to revert back to the current file in the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">fileName</span>
+</pre></div>
+</div>
+<p>If you are unhappy all changes made in current directory and wish to go back to one of previous commits, find that commit’s hash and issue the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">commitHash</span> <span class="o">.</span>
+</pre></div>
+</div>
+</li>
+<li><p>It is common to create tags to mark code milestones, e.g. versions. To create for example a version 1.0 tag issue the following:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v1</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Version 1.0&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>To view tags</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span>
+</pre></div>
+</div>
+</li>
+<li><p>Now a git push does not send tags to remote. To do so you must issue a command to do so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">tags</span>
+</pre></div>
+</div>
+</li>
+<li><p>To check out a tag , i.e. checkout tag v1.0 type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">v1</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also create tags and releases at the remote repo in your browser. When you create releases visitors can click on a releases tab, view the releases and download a zipped up file contating all the code for that release.</p>
+</div>
+</div>
+<div class="section" id="working-with-your-remote-repo">
+<h2>Working With Your Remote Repo<a class="headerlink" href="#working-with-your-remote-repo" title="Permalink to this headline">¶</a></h2>
+<p>Say you have an online repo and now you want to update the repo with all the changes you have made to your local copy.</p>
+<div class="align-center figure" id="id3">
+<img alt="../_images/git2.png" src="../_images/git2.png" />
+<p class="caption"><span class="caption-text">Working with a Remote Repo in the Cloud</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic">
+<li><p>To send the commits from your local repo to your hosted repo you issue the push command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you want to pull the code from your online repo and merge with your current, common for situations were you are using multiple computers, you will use the <strong>pull</strong> command. It actually does a git fetch and merge in a single operation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="synching-your-fork-with-original">
+<h2>Synching your Fork with Original<a class="headerlink" href="#synching-your-fork-with-original" title="Permalink to this headline">¶</a></h2>
+<p>When working in a collaborative project, your interaction with git is as shown in following figure. You fork the repo, clone the fork to your desktop, add, commit and checkout with your local repo. A good idea befor you push changes to your fork is to fetch and merge code in the original repo. <strong>This is good practice, because if you work too long away from the original chances are you will have more conflicts to sort out when you do eventually merge the code</strong>. So before you push to your own fork, fetch and merge the original repo, fix any conflicts and add and commit them. Then push to your fork. At this time you can also make a puill request to tyhe original if you think your contributions are at a significant pointy to do so.</p>
+<div class="align-center figure" id="id4">
+<img alt="../_images/git3.png" src="../_images/git3.png" />
+<p class="caption"><span class="caption-text">One Recommended Approach to Collaborative Git</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic">
+<li><p>To Synch your Fork with the original you need to fetch the branches and their respective commits from the upstream repository. Commits to original master branch will be stored in a local branch, upstream/master.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="o">&gt;</span> <span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="n">XX</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="n">XX</span><span class="o">/</span><span class="n">XX</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="n">YY</span> <span class="p">(</span><span class="n">delta</span> <span class="n">XX</span><span class="p">),</span> <span class="n">reused</span> <span class="n">XX</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">9</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Unpacking</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="n">YY</span><span class="o">/</span><span class="n">YY</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">From</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORIGINAL_OWNER</span><span class="o">/</span><span class="n">REPO</span>
+<span class="o">&gt;</span>  <span class="o">*</span> <span class="p">[</span><span class="n">new</span> <span class="n">branch</span><span class="p">]</span>      <span class="n">master</span>     <span class="o">-&gt;</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><p>Switch to your own master branch, if you don’t use branches you will be here so this is not necessary.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="o">&gt;</span> <span class="n">Switched</span> <span class="n">to</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Now merge the changes between the two into your local master branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+<span class="o">&gt;</span>    <span class="n">Updating</span> <span class="n">wkflkqjflkfwlkfgq</span>
+<span class="o">&gt;</span> <span class="n">Fast</span><span class="o">-</span><span class="n">forward</span>
+<span class="o">&gt;</span>  <span class="n">X</span> <span class="n">files</span> <span class="n">changed</span><span class="p">,</span> <span class="n">Y</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="n">Z</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+<span class="o">&gt;</span>  <span class="o">.....</span>
+<span class="o">&gt;</span>  <span class="o">.....</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Messages differ depending on your local commits</p>
+</div>
+</li>
+<li><p>Now merge any conlicts with <strong>add</strong> and <strong>commit</strong> commands. Hopefully there are When dealing with <strong>conflicts</strong> you have a number of options:</p>
+<ol class="arabic">
+<li><p>You can open and edit each file that has a conflict.</p></li>
+<li><p>You can tell git to use your version of the code to resolve the conflict.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">ours</span> <span class="n">PATH</span><span class="o">/</span><span class="n">FILE</span>
+</pre></div>
+</div>
+</li>
+<li><p>You can tell git to use THEIR (UPSTREAMS) version of the code to resolve the conflict.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">theirs</span> <span class="n">PATH</span><span class="o">/</span><span class="n">FILE</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The latter two options, while quick and easy, are typically not what you wabt. They can be dangerous as you are loosing either your changes or changes others have made. It is thus useful to look at the conflicts individually just to ensure that you are resolving the conflict correctly.</p>
+</div>
+</li>
+<li><p>Now that you have made the final <strong>push</strong>, you can now through, the web browser, make a pull request from your remote fork to the original upstream repo.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not really a warning, just something to get your attention. Git has many more commands and features, e.g. branching. We have just presented enough basic commands that will get you through most of what you want to do starting off. As you come across special situations, Dr. Google will prove invaluable!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="emacs.html" class="btn btn-neutral float-right" title="Emacs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="TACC.html" class="btn btn-neutral float-left" title="TACC-Frontera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Peter Mackenzie-Helnwein, Frank McKenna.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

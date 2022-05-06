@@ -1,0 +1,125 @@
+{
+    "maxSystemJobs": 500,
+    "executionType": "HPC",
+    "available": true,
+    "description": "Stampede2 comprises 4200 Intel Knights Landing (KNL) nodes (each with 68 cores and 96GB of DDR RAM and 16GB of high speed MCDRAM), and 1736 Intel Xeon Skylake nodes (each with 48 cores and 192GB of RAM).",
+    "storage": {
+        "proxy": null,
+        "protocol": "SFTP",
+        "mirror": false,
+        "host": "stampede2.tacc.utexas.edu",
+        "port": 22,
+        "auth": {
+            "type": "PASSWORD",
+            "username": "${USERNAME}",
+            "password": "${PASSWORD}"
+        },
+        "homeDir": "/",
+        "rootDir": "${SCRATCH_DIR}"
+    },
+    "type": "EXECUTION",
+    "login": {
+        "proxy": null,
+        "protocol": "SSH",
+        "port": 22,
+        "auth": {
+            "type": "PASSWORD",
+            "username": "${USERNAME}",
+            "password": "${PASSWORD}"
+        },
+        "host": "stampede2.tacc.utexas.edu"
+    },
+    "startupScript": "~/.bashrc",
+    "scheduler": "SLURM",
+    "default": false,
+    "public": false,
+    "maxSystemJobsPerUser": 250,
+    "id": "demo.exec.stampede2.${USERNAME}",
+    "workDir": "",
+    "site": "tacc.utexas.edu",
+    "environment": "",
+    "queues": [
+    {
+      "maxJobs": 3,
+      "maxMemoryPerNode": 192,
+      "default": false,
+      "maxRequestedTime": "48:00:00",
+      "name": "skx-large",
+      "description": null,
+      "maxNodes": 865,
+      "maxProcessorsPerNode": 41664,
+      "mappedName": null,
+      "maxUserJobs": -1,
+      "customDirectives": "${ALLOCATION}"
+    },
+    {
+      "maxJobs": 25,
+      "maxMemoryPerNode": 192,
+      "default": false,
+      "maxRequestedTime": "48:00:00",
+      "name": "skx-normal",
+      "description": null,
+      "maxNodes": 128,
+      "maxProcessorsPerNode": 6144,
+      "mappedName": null,
+      "maxUserJobs": -1,
+      "customDirectives": "${ALLOCATION}"
+    },
+    {
+      "maxJobs": 1,
+      "maxMemoryPerNode": 96,
+      "default": false,
+      "maxRequestedTime": "02:00:00",
+      "name": "development",
+      "description": null,
+      "maxNodes": 4,
+      "maxProcessorsPerNode": 272,
+      "mappedName": null,
+      "maxUserJobs": 1,
+      "customDirectives": "${ALLOCATION} "
+    },
+    {
+      "maxJobs": 50,
+      "maxMemoryPerNode": 96,
+      "default": true,
+      "maxRequestedTime": "48:00:00",
+      "name": "normal",
+      "description": null,
+      "maxNodes": 256,
+      "maxProcessorsPerNode": 17048,
+      "mappedName": null,
+      "maxUserJobs": 5,
+      "customDirectives": "${ALLOCATION}"
+    },
+    {
+      "maxJobs": 5,
+      "maxMemoryPerNode": 96,
+      "default": false,
+      "maxRequestedTime": "48:00:00",
+      "name": "large",
+      "description": null,
+      "maxNodes": 2046,
+      "maxProcessorsPerNode": 139264,
+      "mappedName": null,
+      "maxUserJobs": -1,
+      "customDirectives": "${ALLOCATION}"
+    },
+    {
+      "maxJobs": 1,
+      "maxMemoryPerNode": 192,
+      "default": false,
+      "maxRequestedTime": "02:00:00",
+      "name": "skx-dev",
+      "description": null,
+      "maxNodes": 4,
+      "maxProcessorsPerNode": 192,
+      "mappedName": null,
+      "maxUserJobs": -1,
+      "customDirectives": "${ALLOCATION}"
+    }
+    ],
+    "globalDefault": false,
+    "name": "${USERNAME} Stampede2 HPC Execution System for DesignSafe",
+    "status": "UP",
+    "scratchDir": "${SCRATCH_DIR}"
+}

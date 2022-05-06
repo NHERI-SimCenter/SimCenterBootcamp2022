@@ -1,0 +1,24 @@
+{
+    "name": "Run 1",
+    "appId": "mpiCompileSimCenter-0.0.1",
+    "inputs": {
+      "inputDirectory": "agave://designsafe.storage.default/tg457427/demo2"
+    },
+    "parameters" : {
+      "programFile":"piMPI.c"
+    },
+    "maxRunTime": "00:01:00",
+    "memoryPerNode": "1GB",
+    "nodeCount": 1,
+    "processorsPerNode": 8,
+    "maxRunTime": "00:01:00",
+    "archive": true,
+    "archiveOnAppError":true,
+    "archiveSystem":"designsafe.storage.default",
+    "notifications": [
+      {
+        "url" : "fmckenna@berkeley.edu",
+        "event": "*"
+      }
+    ]
+}

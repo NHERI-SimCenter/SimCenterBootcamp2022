@@ -1,0 +1,125 @@
+{
+    "maxSystemJobs": 500,
+    "executionType": "HPC",
+    "available": true,
+    "description": "Frontera has two computing subsystems, a primary computing system focused on double precision performance, and a second subsystem focused on single precision streaming-memory computing.",
+    "storage": {
+        "proxy": null,
+        "protocol": "SFTP",
+        "mirror": false,
+        "host": "frontera.tacc.utexas.edu",
+        "port": 22,
+        "auth": {
+            "type": "PASSWORD",
+            "username": "${USERNAME}",
+            "password": "${PASSWORD}"
+        },
+        "homeDir": "/",
+        "rootDir": "${SCRATCH_DIR}"
+    },
+    "type": "EXECUTION",
+    "login": {
+        "proxy": null,
+        "protocol": "SSH",
+        "port": 22,
+        "auth": {
+            "type": "PASSWORD",
+            "username": "${USERNAME}",
+            "password": "${PASSWORD}"
+        },
+        "host": "frontera.tacc.utexas.edu"
+    },
+    "startupScript": "~/.bashrc",
+    "scheduler": "SLURM",
+    "default": false,
+    "public": false,
+    "maxSystemJobsPerUser": 250,
+    "id": "demo.exec.frontera.${USERNAME}",
+    "workDir": "",
+    "site": "tacc.utexas.edu",
+    "environment": "",
+    "queues": [
+        {
+            "name": "normal",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "192GB",
+            "default": true,
+            "maxRequestedTime": "48:00:00",
+            "description": null,
+            "maxNodes": 512,
+            "maxProcessorsPerNode": 28672,
+            "mappedName": null,
+            "maxUserJobs": 50,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
+            "name": "development",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "192GB",
+            "default": false,
+            "maxRequestedTime": "02:00:00",
+            "description": null,
+            "maxNodes": 40,
+            "maxProcessorsPerNode": 2240,
+            "mappedName": null,
+            "maxUserJobs": 1,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
+            "name": "large",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "192GB",
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "description": null,
+            "maxNodes": 2048,
+            "maxProcessorsPerNode": 114688,
+            "mappedName": null,
+            "maxUserJobs": 5,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
+            "name": "flex",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "192GB",
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "description": null,
+            "maxNodes": 128,
+            "maxProcessorsPerNode": 7168,
+            "mappedName": null,
+            "maxUserJobs": 50,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
+            "name": "rtx",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "128GB",
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "description": null,
+            "maxNodes": 22,
+            "maxProcessorsPerNode": -1,
+            "mappedName": null,
+            "maxUserJobs": 5,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
+            "name": "rtx-dev",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "128GB",
+            "default": false,
+            "maxRequestedTime": "02:00:00",
+            "description": null,
+            "maxNodes": 2,
+            "maxProcessorsPerNode": -1,
+            "mappedName": null,
+            "maxUserJobs": 2,
+            "customDirectives": "${ALLOCATION}"
+        }
+    ],
+    "globalDefault": false,
+    "name": "${USERNAME} Frontera HPC DEMO Execution System for DesignSafe",
+    "status": "UP",
+    "scratchDir": "${SCRATCH_DIR}"
+}

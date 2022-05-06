@@ -1,0 +1,17 @@
+The **file3.c** is as shown below:
+
+.. literalinclude:: ./assignments/c2/file3.c
+  :language: c
+  :linenos:
+
+
+.. note::
+   
+   No cmake or Makefile has been provided. You can compile the file with icc or whatever compiler you are using. The program takes a single input, the file to read. To compile and test the program, issue the following at the terminal prompt.
+
+   
+   .. code::
+
+      icc file3.c -o file3
+      ./file2 small.txt
+      ./file2 big.txt

@@ -1,0 +1,26 @@
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+program file is piMPI.c
+/scratch1/00477/tg457427/scratch1/00477/tg457427/tg457427/job-507792d1-35b0-4dc0-abd2-421cfba7ddc3-007-run-1
+total 33
+4 drwx------ 4 tg457427 G-80610 4096 Jan  8 04:21 .
+4 drwx------ 3 tg457427 G-80610 4096 Jan  8 04:19 ..
+4 -rw------- 1 tg457427 G-80610  345 Jan  8 04:19 .agave.archive
+4 -rw------- 1 tg457427 G-80610   28 Jan  8 04:19 .agave.log
+4 drwx------ 2 tg457427 G-80610 4096 Jan  8 04:19 demo2
+1 -rw------- 1 tg457427 G-80610  653 Jan  8 04:22 run-1-507792d1-35b0-4dc0-abd2-421cfba7ddc3-007.err
+1 -rw------- 1 tg457427 G-80610  239 Jan  8 04:22 run-1-507792d1-35b0-4dc0-abd2-421cfba7ddc3-007.out
+4 -rwx------ 1 tg457427 G-80610 2132 Jan  8 04:19 run-1.ipcexe
+4 drwx------ 3 tg457427 G-80610 4096 Jan  8 04:19 test
+4 -rw------- 1 tg457427 G-80610  401 Jan  8 04:19 wrapper.sh
+currentDIR
+/scratch1/00477/tg457427/scratch1/00477/tg457427/tg457427/job-507792d1-35b0-4dc0-abd2-421cfba7ddc3-007-run-1/demo2
+directory listing
+total 12
+4 drwx------ 2 tg457427 G-80610 4096 Jan  8 04:19 .
+4 drwx------ 4 tg457427 G-80610 4096 Jan  8 04:21 ..
+4 -rw------- 1 tg457427 G-80610 1286 Jan  8 04:19 piMPI.c
+TACC:  Starting up job 2332652 
+TACC:  Starting parallel tasks... 
+PI =       3.14159265, duration: 0.080000 s
+TACC:  Shutdown complete. Exiting. 
