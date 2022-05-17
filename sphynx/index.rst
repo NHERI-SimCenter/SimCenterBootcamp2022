@@ -33,6 +33,8 @@ These two weeks are offered as individual or as one combined workshop as follows
    The workship will conclude on Friday with a team coding challange that emphasizes on
    collaborative coding and computing.
 
+
+
 2. C/C++/HPC Workshop 
 
    * **Mon July 18 - Friday, July 22, 2022**
