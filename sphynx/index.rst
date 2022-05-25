@@ -1,11 +1,11 @@
-.. Programming Bootcamp 2020 documentation master file, created by
-   sphinx-quickstart on Fri Jul 24 12:37:12 2020.
+.. Programming Bootcamp 2022 documentation master file, created by
+   sphinx-quickstart on Fri Jul 24 12:37:12 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 
-Welcome to the NHERI-SimCenter 2020 Programming Bootcamp
-=====================================================
+Welcome to the NHERI-SimCenter 2022 Programming Bootcamp
+========================================================
 
 For the past few years, this bootcamp was offered as a week-long intensive workshop
 at the University of California Richmond Field Station.
@@ -17,7 +17,7 @@ the actual meetings.
 .. note::
 
    Course material is available through 
-   the `NHERI-SimCenter/SimCenterBootcamp2020 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020>`_
+   the `NHERI-SimCenter/SimCenterBootcamp2022 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_
    repository on https://github.com 
 
    You will need your own GitHub account to participate in our exercises.
@@ -32,11 +32,11 @@ the actual meetings.
    source/setupInstructions
    source/lecture_videos
    source/assignments
-   source/TACC
    source/git
    source/emacs
-   #source/GUI
+   source/TACC
+   source/tapis
    source/help
    source/resources
-   #source/mathematics
+
 

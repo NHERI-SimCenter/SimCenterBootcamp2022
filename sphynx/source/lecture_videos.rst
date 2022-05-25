@@ -1,5 +1,5 @@
 Self-Study Videos
-****************
+*****************
 
 .. toctree::
    :maxdepth: 2
