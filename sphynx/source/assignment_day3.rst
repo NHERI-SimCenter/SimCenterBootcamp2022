@@ -39,7 +39,8 @@ Practice problems (after class)
 Self-study portion for day 4 (watch before tomorrow's class)
 -----------
 
-* watch the introduction to Machine Learning video. This takes :green:`~1 hour`.
+* Install PyCharm CE. Follow the setup video for configuration.
+* Watch the video on modules. This takes :green:`~0.5-1 hour`.
 
 .. raw:: html
 
