@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>C: Assignment to Test Setup &mdash; Programming Bootcamp 2020  documentation</title>
+  <title>C: Assignment to Test Setup &mdash; Programming Bootcamp 2022  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
 
@@ -31,10 +33,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -56,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2020
+            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
           
 
           
@@ -87,7 +89,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupInstructions.html">Setup Instructions</a></li>
@@ -103,12 +105,13 @@
 <li class="toctree-l2"><a class="reference internal" href="assignment_C2_solution.html">C: Day 2 In Class Exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assignment_C3.html">C++ Exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assignment_C4.html">C: Parallel Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_C5.html">C: Tapis-cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C5.html">C-Tapis Assignment</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis.html">Tapis CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Questions, Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
@@ -126,7 +129,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Programming Bootcamp 2020</a>
+          <a href="../index.html">Programming Bootcamp 2022</a>
         
       </nav>
 
@@ -199,7 +202,7 @@
 <p>The following is a list of items you need to perform. For those of you who followed our <strong>Python</strong> course, steps <strong>1</strong> and <strong>2</strong> are not needed.</p>
 <ol class="arabic">
 <li><p>In your browser you need to sign up for <a class="reference external" href="https://github.com">github</a>. If you have difficulties they have a <a class="reference external" href="https://docs.github.com/en/free-pro-team&#64;latest/github/getting-started-with-github/signing-up-for-a-new-github-account">page devoted to signing up</a></p></li>
-<li><p>After signing up and logging in, navigate in your browser to the SimCenterBottcamp2020 <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2020">git page</a>. At the website, click on the <strong>Fork</strong>, button at top right. This will create a fork of the repo under your own github username and take you to the main page for that repo.</p></li>
+<li><p>After signing up and logging in, navigate in your browser to the SimCenterBottcamp2022 <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022">git page</a>. At the website, click on the <strong>Fork</strong>, button at top right. This will create a fork of the repo under your own github username and take you to the main page for that repo.</p></li>
 <li><p>Now under the <strong>Code</strong> pull down menu on this new page, copy the https address into your clipboard.</p></li>
 <li><p>Install and then pair the TACC Token app on your phone. Instructions can be found at the <a class="reference external" href="https://portal.tacc.utexas.edu/tutorials/multifactor-authentication">TACC website</a></p></li>
 <li><p>Now we login to TACC. From Powershell terminal if on Windows10 or a terminal window if using MacOS, enter the following (replacing of course your DesignSafe account name with YOUR_NAME) and provide your designsafe login and the TACC token. For the TACC token open the TACC Token app you have installed on your phone.</p>
@@ -208,17 +211,17 @@
 </div>
 </li>
 <li><p>Now let us clone the repo that you just forked on github. To do so type the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span> <span class="n">GIT</span> <span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span> <span class="n">GIT</span> <span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2022</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
-<li><p>This last command has created a new folder in your current directory named <strong>SimCenterBootcamp2020</strong>. We now want you to <strong>cd</strong> (change directory) into that directory. This is done by you typing the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">SimCenterBootcamp2020</span>
+<li><p>This last command has created a new folder in your current directory named <strong>SimCenterBootcamp2022</strong>. We now want you to <strong>cd</strong> (change directory) into that directory. This is done by you typing the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">SimCenterBootcamp2022</span>
 </pre></div>
 </div>
 </li>
-<li><p>Now we want you to issue the following command, which will add a pointer, called upstream, to the master SimCenterBootcamp2020 repo that you forked:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NHERI</span><span class="o">-</span><span class="n">SimCenter</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+<li><p>Now we want you to issue the following command, which will add a pointer, called upstream, to the master SimCenterBootcamp2022 repo that you forked:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NHERI</span><span class="o">-</span><span class="n">SimCenter</span><span class="o">/</span><span class="n">SimCenterBootcamp2022</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
@@ -294,7 +297,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Peter Mackenzie-Helnwein, Frank McKenna.
+        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
 
     </p>
   </div>

@@ -10,29 +10,29 @@ Git
 
     DO ONCE
     
-    1. Fork the SimCenterProgrammingBootcamp2020 repo in your browser.
+    1. Fork the SimCenterProgrammingBootcamp2022 repo in your browser.
        
     2. Clone a Copy of YOUR Fork to local computer. In PowerShell (Winddows) or in terminal (MacOS), cd to a directory you want to place the repo and then type:
 
           .. code::
    
-                git clone https://github.com/YOUR_NAME/SimCenterBootcamp2020.git
+                git clone https://github.com/YOUR_NAME/SimCenterBootcamp2022.git
        
-    3. Change into the local `SimCenterBootcamp2020` folder
+    3. Change into the local `SimCenterBootcamp2022` folder
 
         .. code::
 
-                cd SimCenterBootcamp2020
+                cd SimCenterBootcamp2022
 
     4. Create a pointer to the original SimCenter version by typing:
 
          .. code::
    
-                git remote add upstream https://github.com/NHERI-SimCenter/SimCenterBootcamp2020.git
+                git remote add upstream https://github.com/NHERI-SimCenter/SimCenterBootcamp2022.git
 
     REPEAT DAILY:
 
-    1. Save the changes you want to KEEP to your local repo and your forked copy (execute inside the `SimCenterBootcamp2020` folder):
+    1. Save the changes you want to KEEP to your local repo and your forked copy (execute inside the `SimCenterBootcamp2022` folder):
 
          .. code::       
 

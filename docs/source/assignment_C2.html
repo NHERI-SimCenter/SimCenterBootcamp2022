@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>C Arrays and File I/O &mdash; Programming Bootcamp 2020  documentation</title>
+  <title>C Arrays and File I/O &mdash; Programming Bootcamp 2022  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
 
@@ -31,10 +33,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2020
+            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
           
 
           
@@ -85,15 +88,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupInstructions.html">Setup Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture_videos.html">Self-Study Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis.html">Tapis CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Questions, Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
@@ -111,7 +115,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Programming Bootcamp 2020</a>
+          <a href="../index.html">Programming Bootcamp 2022</a>
         
       </nav>
 
@@ -335,121 +339,67 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 <h2>Problem 5: Reading From a binary file and Memory Allocation<a class="headerlink" href="#problem-5-reading-from-a-binary-file-and-memory-allocation" title="Permalink to this headline">¶</a></h2>
 <p>Reading of data from files and placing them into containers such as Vectors is easy if you know the size of the data you are reading. If this is unknown the problem becomes more tricky. The solution presented on slide 22 worked for a small number of inputs, but failed with a segmentation fault for larger problems. You are to fix the problem. A copy of the offending file <strong>file3.c</strong> has been placed in the directory ex2-5 along with two files. The program can handle the first <strong>small.txt</strong>, it will fail with the second <strong>big.txt</strong>. Can you make the program work. The solution will test your understanding of file I/O,  memory management and pointers.</p>
 <p>The <strong>file3.c</strong> is as shown below. You need to put some code to replace comment at the line 41.</p>
-<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
-<span class="cm">/*******************************************************************</span>
-<span class="cm"> * program to read values from a file, </span>
-<span class="cm"> * with each line being csv list of int and two double</span>
-<span class="cm"> *</span>
-<span class="cm"> * program fails if num lines &gt; 100</span>
-<span class="cm"> *    Major flaw will cause data to be overwritten outside array </span>
-<span class="cm"> *    bounds if #lines &gt; 100 &amp; will ultimataly lead to a segmentation fault</span>
-<span class="cm"> *</span>
-<span class="cm"> * Exerise is to fix flaw WITHOUT just setting maxVectorSize incredibly large</span>
-<span class="cm"> *</span>
-<span class="cm"> * written: fmk</span>
-<span class="cm"> ******************************************************************* */</span>
-
-<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;ERROR correct usage appName inputFile</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="kt">FILE</span> <span class="o">*</span><span class="n">filePtr</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s">&quot;r&quot;</span><span class="p">);</span> 
-
-  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">float</span> <span class="n">float1</span><span class="p">,</span> <span class="n">float2</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">maxVectorSize</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-  <span class="kt">double</span> <span class="o">*</span><span class="n">vector1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
-  <span class="kt">double</span> <span class="o">*</span><span class="n">vector2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>  
-  <span class="kt">int</span> <span class="n">vectorSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  
-  <span class="k">while</span> <span class="p">(</span><span class="n">fscanf</span><span class="p">(</span><span class="n">filePtr</span><span class="p">,</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">vector1</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float1</span><span class="p">;</span>
-    <span class="n">vector2</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float2</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">vector2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vector1</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-    <span class="n">vectorSize</span><span class="o">++</span><span class="p">;</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">vectorSize</span> <span class="o">==</span> <span class="n">maxVectorSize</span><span class="p">)</span> <span class="p">{</span>
-      <span class="cm">/* some code needed here .. programming exercise */</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="n">fclose</span><span class="p">(</span><span class="n">filePtr</span><span class="p">);</span>  
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>
+<span class="linenos"> 2</span><span class="cm">/*******************************************************************</span>
+<span class="linenos"> 3</span><span class="cm"> * program to read values from a file, </span>
+<span class="linenos"> 4</span><span class="cm"> * with each line being csv list of int and two double</span>
+<span class="linenos"> 5</span><span class="cm"> *</span>
+<span class="linenos"> 6</span><span class="cm"> * program fails if num lines &gt; 100</span>
+<span class="linenos"> 7</span><span class="cm"> *    Major flaw will cause data to be overwritten outside array </span>
+<span class="linenos"> 8</span><span class="cm"> *    bounds if #lines &gt; 100 &amp; will ultimataly lead to a segmentation fault</span>
+<span class="linenos"> 9</span><span class="cm"> *</span>
+<span class="linenos">10</span><span class="cm"> * Exerise is to fix flaw WITHOUT just setting maxVectorSize incredibly large</span>
+<span class="linenos">11</span><span class="cm"> *</span>
+<span class="linenos">12</span><span class="cm"> * written: fmk</span>
+<span class="linenos">13</span><span class="cm"> ******************************************************************* */</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">16</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">21</span>    <span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;ERROR correct usage appName inputFile</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos">22</span>    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
+<span class="linenos">23</span>  <span class="p">}</span>
+<span class="linenos">24</span>  
+<span class="linenos">25</span>  <span class="kt">FILE</span> <span class="o">*</span><span class="n">filePtr</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s">&quot;r&quot;</span><span class="p">);</span> 
+<span class="linenos">26</span>
+<span class="linenos">27</span>  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="linenos">28</span>  <span class="kt">float</span> <span class="n">float1</span><span class="p">,</span> <span class="n">float2</span><span class="p">;</span>
+<span class="linenos">29</span>  <span class="kt">int</span> <span class="n">maxVectorSize</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="linenos">30</span>  <span class="kt">double</span> <span class="o">*</span><span class="n">vector1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
+<span class="linenos">31</span>  <span class="kt">double</span> <span class="o">*</span><span class="n">vector2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>  
+<span class="linenos">32</span>  <span class="kt">int</span> <span class="n">vectorSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="linenos">33</span>  
+<span class="linenos">34</span>  <span class="k">while</span> <span class="p">(</span><span class="n">fscanf</span><span class="p">(</span><span class="n">filePtr</span><span class="p">,</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">35</span>    <span class="n">vector1</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float1</span><span class="p">;</span>
+<span class="linenos">36</span>    <span class="n">vector2</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float2</span><span class="p">;</span>
+<span class="linenos">37</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">vector2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vector1</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="linenos">38</span>    <span class="n">vectorSize</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span>    <span class="k">if</span> <span class="p">(</span><span class="n">vectorSize</span> <span class="o">==</span> <span class="n">maxVectorSize</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">41</span>      <span class="cm">/* some code needed here .. programming exercise */</span>
+<span class="linenos">42</span>    <span class="p">}</span>
+<span class="linenos">43</span>  <span class="p">}</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>  <span class="n">fclose</span><span class="p">(</span><span class="n">filePtr</span><span class="p">);</span>  
+<span class="linenos">46</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>The <strong>small.txt</strong> file is as shown below.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.153779</span><span class="p">,</span> <span class="mf">0.560532</span>
-<span class="mi">1</span><span class="p">,</span> <span class="mf">0.865013</span><span class="p">,</span> <span class="mf">0.276724</span>
-<span class="mi">2</span><span class="p">,</span> <span class="mf">0.895919</span><span class="p">,</span> <span class="mf">0.704462</span>
-<span class="mi">3</span><span class="p">,</span> <span class="mf">0.886472</span><span class="p">,</span> <span class="mf">0.929641</span>
-<span class="mi">4</span><span class="p">,</span> <span class="mf">0.469290</span><span class="p">,</span> <span class="mf">0.350208</span>
-<span class="mi">5</span><span class="p">,</span> <span class="mf">0.941637</span><span class="p">,</span> <span class="mf">0.096535</span>
-<span class="mi">6</span><span class="p">,</span> <span class="mf">0.457211</span><span class="p">,</span> <span class="mf">0.346164</span>
-<span class="mi">7</span><span class="p">,</span> <span class="mf">0.970019</span><span class="p">,</span> <span class="mf">0.114938</span>
-<span class="mi">8</span><span class="p">,</span> <span class="mf">0.769819</span><span class="p">,</span> <span class="mf">0.341565</span>
-<span class="mi">9</span><span class="p">,</span> <span class="mf">0.684224</span><span class="p">,</span> <span class="mf">0.748597</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.153779</span><span class="p">,</span> <span class="mf">0.560532</span>
+<span class="linenos"> 2</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.865013</span><span class="p">,</span> <span class="mf">0.276724</span>
+<span class="linenos"> 3</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.895919</span><span class="p">,</span> <span class="mf">0.704462</span>
+<span class="linenos"> 4</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.886472</span><span class="p">,</span> <span class="mf">0.929641</span>
+<span class="linenos"> 5</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.469290</span><span class="p">,</span> <span class="mf">0.350208</span>
+<span class="linenos"> 6</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.941637</span><span class="p">,</span> <span class="mf">0.096535</span>
+<span class="linenos"> 7</span><span class="mi">6</span><span class="p">,</span> <span class="mf">0.457211</span><span class="p">,</span> <span class="mf">0.346164</span>
+<span class="linenos"> 8</span><span class="mi">7</span><span class="p">,</span> <span class="mf">0.970019</span><span class="p">,</span> <span class="mf">0.114938</span>
+<span class="linenos"> 9</span><span class="mi">8</span><span class="p">,</span> <span class="mf">0.769819</span><span class="p">,</span> <span class="mf">0.341565</span>
+<span class="linenos">10</span><span class="mi">9</span><span class="p">,</span> <span class="mf">0.684224</span><span class="p">,</span> <span class="mf">0.748597</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>No cmake or Makefile has been provided. You can compile the file with icc or whatever compiler you are using. The program takes a single input, the file to read. To compile and test the program, issue the following at the terminal prompt.</p>
@@ -472,7 +422,7 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Peter Mackenzie-Helnwein, Frank McKenna.
+        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
 
     </p>
   </div>

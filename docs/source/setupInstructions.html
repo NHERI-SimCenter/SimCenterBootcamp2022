@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Setup Instructions &mdash; Programming Bootcamp 2020  documentation</title>
+  <title>Setup Instructions &mdash; Programming Bootcamp 2022  documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
 
@@ -31,10 +33,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -56,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2020
+            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
           
 
           
@@ -87,7 +89,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Setup Instructions</a><ul>
@@ -118,9 +120,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lecture_videos.html">Self-Study Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis.html">Tapis CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Questions, Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
@@ -138,7 +141,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Programming Bootcamp 2020</a>
+          <a href="../index.html">Programming Bootcamp 2022</a>
         
       </nav>
 
@@ -204,14 +207,14 @@
 <h3>Fork the SimCenter Code Repository<a class="headerlink" href="#fork-the-simcenter-code-repository" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https.github.com">github</a> and sign in or sign up.</p></li>
-<li><p>Go to the <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2020">SimCenterBootcamp2020</a> repository.</p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022">SimCenterBootcamp2022</a> repository.</p></li>
 <li><p>In the very top right corner, where it has fork and a number beside it, click the fork button. This will create a fork of the Bootcamp repo in your own account.</p></li>
 </ol>
 </div>
 <div class="section" id="install-git">
 <h3>Install Git<a class="headerlink" href="#install-git" title="Permalink to this headline">¶</a></h3>
 <p>Install git from the <a class="reference external" href="https://git-scm.com/downloads">git download page</a>. Once installed, open up powershell and <strong>clone</strong> your copy of the bootcamp repo by typing the following in powershell terminal:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GIT</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GIT</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2022</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -260,7 +263,7 @@
 </div>
 <div class="section" id="test-the-install-of-python">
 <h4>Test the Install of Python<a class="headerlink" href="#test-the-install-of-python" title="Permalink to this headline">¶</a></h4>
-<p>In powerwhell cd to the SimCenterBootcamp2020 folder and type the following.</p>
+<p>In powerwhell cd to the SimCenterBootcamp2022 folder and type the following.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">code</span>
 <span class="n">cd</span> <span class="n">jupyter</span>
 <span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span>
@@ -278,14 +281,14 @@ Installation on MacOS Big Sur follows identical steps.</p>
 <h3>Fork the SimCenter Code Repository<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https.github.com">github</a> and sign in or sign up.</p></li>
-<li><p>Go to the <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2020">SimCenterBootcamp2020</a> repository.</p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022">SimCenterBootcamp2022</a> repository.</p></li>
 <li><p>In the very top right corner, where it has fork and a number beside it, click the fork button. This will create a fork of the Bootcamp repo in your own account.</p></li>
 </ol>
 </div>
 <div class="section" id="id4">
 <h3>Install Git<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>There are a number of ways to install the source code management system <a class="reference external" href="https://git-scm.com/download/mac">**git**</a> on your computer. The simplest is to open a terminal application and type git. If the developer package has not already installed on your system, this wil ask you to install it. So say yes. When done test it using your <strong>fork</strong> of the github repo. To do this go to <strong>YOUR</strong> fork of the github repo, using the green pull down menu, gcopy the clone address. Open a terminal and in the terminal type</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GIT</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2020</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">GIT</span><span class="o">-</span><span class="n">LOGIN</span><span class="o">/</span><span class="n">SimCenterBootcamp2022</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -295,7 +298,7 @@ Installation on MacOS Big Sur follows identical steps.</p>
 </div>
 <div class="section" id="install-python-on-a-mac">
 <h3>Install Python on a Mac<a class="headerlink" href="#install-python-on-a-mac" title="Permalink to this headline">¶</a></h3>
-<p>The Mac comes with Python pre-installed, which is currently the outdated version 2.7. As of January 1st, 2020 no new bug reports, fixes, or changes will be made to Python 2, and Python 2 is officially no longer supported. SimCenter tools require Python 3. We recommend installing Python 3.7 from <a class="reference external" href="https://www.python.org/downloads/mac-osx">Python.org Mac Download</a> using the
+<p>The Mac comes with Python pre-installed, which is currently the outdated version 2.7. As of January 1st, 2022 no new bug reports, fixes, or changes will be made to Python 2, and Python 2 is officially no longer supported. SimCenter tools require Python 3. We recommend installing Python 3.7 from <a class="reference external" href="https://www.python.org/downloads/mac-osx">Python.org Mac Download</a> using the
 <strong>macOS 64-bit installer</strong>. The installer will place a python3 executable in your /usr/local/bin directory, whose location should be on your system PATH. Version 3.8 does not appear to do so anymore, see the note below.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -346,7 +349,7 @@ Installation on MacOS Big Sur follows identical steps.</p>
 </div>
 <div class="section" id="id5">
 <h4>Test the Install of Python<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-<p>In a terminal cd to the SimCenterBootcamp2020 folder and type the following.</p>
+<p>In a terminal cd to the SimCenterBootcamp2022 folder and type the following.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">code</span>
 <span class="n">cd</span> <span class="n">jupyter</span>
 <span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span>
@@ -405,7 +408,7 @@ It can be fixed by downgrading to <code class="docutils literal notranslate"><sp
 </pre></div>
 </div>
 <p>followed by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.19</span><span class="o">.</span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.19.3</span>
 </pre></div>
 </div>
 </li>
@@ -438,7 +441,7 @@ It can be fixed by downgrading to <code class="docutils literal notranslate"><sp
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Peter Mackenzie-Helnwein, Frank McKenna.
+        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
 
     </p>
   </div>

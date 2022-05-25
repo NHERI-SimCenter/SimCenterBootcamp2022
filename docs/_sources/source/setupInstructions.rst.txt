@@ -25,7 +25,7 @@ Fork the SimCenter Code Repository
 ----------------------------------
 
 #. Go to `github <https.github.com>`_ and sign in or sign up.
-#. Go to the `SimCenterBootcamp2020 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020>`_ repository.
+#. Go to the `SimCenterBootcamp2022 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_ repository.
 #. In the very top right corner, where it has fork and a number beside it, click the fork button. This will create a fork of the Bootcamp repo in your own account. 
 
 Install Git
@@ -35,7 +35,7 @@ Install git from the `git download page <https://git-scm.com/downloads>`_. Once 
 
 .. code-block:: python
    
-   git clone https://github.com/YOUR-GIT-LOGIN/SimCenterBootcamp2020.git
+   git clone https://github.com/YOUR-GIT-LOGIN/SimCenterBootcamp2022.git
 
 .. warning::
 
@@ -86,7 +86,7 @@ Once Python is installed, you need to extend it by installing a number of packag
 Test the Install of Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In powerwhell cd to the SimCenterBootcamp2020 folder and type the following.
+In powerwhell cd to the SimCenterBootcamp2022 folder and type the following.
 
 .. code-block:: python
 
@@ -112,7 +112,7 @@ Fork the SimCenter Code Repository
 ----------------------------------
 
 #. Go to `github <https.github.com>`_ and sign in or sign up.
-#. Go to the `SimCenterBootcamp2020 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020>`_ repository.
+#. Go to the `SimCenterBootcamp2022 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_ repository.
 #. In the very top right corner, where it has fork and a number beside it, click the fork button. This will create a fork of the Bootcamp repo in your own account. 
 
 Install Git
@@ -122,7 +122,7 @@ There are a number of ways to install the source code management system `**git**
 
 .. code-block:: python
    
-   git clone https://github.com/YOUR-GIT-LOGIN/SimCenterBootcamp2020.git
+   git clone https://github.com/YOUR-GIT-LOGIN/SimCenterBootcamp2022.git
 
 .. warning::
 
@@ -131,7 +131,7 @@ There are a number of ways to install the source code management system `**git**
 Install Python on a Mac
 -----------------------
 
-The Mac comes with Python pre-installed, which is currently the outdated version 2.7. As of January 1st, 2020 no new bug reports, fixes, or changes will be made to Python 2, and Python 2 is officially no longer supported. SimCenter tools require Python 3. We recommend installing Python 3.7 from `Python.org Mac Download <https://www.python.org/downloads/mac-osx>`_ using the 
+The Mac comes with Python pre-installed, which is currently the outdated version 2.7. As of January 1st, 2022 no new bug reports, fixes, or changes will be made to Python 2, and Python 2 is officially no longer supported. SimCenter tools require Python 3. We recommend installing Python 3.7 from `Python.org Mac Download <https://www.python.org/downloads/mac-osx>`_ using the 
 **macOS 64-bit installer**. The installer will place a python3 executable in your /usr/local/bin directory, whose location should be on your system PATH. Version 3.8 does not appear to do so anymore, see the note below. 
 
 .. note:: 
@@ -189,7 +189,7 @@ Once Python is installed, you need to extend it by installing a number of packag
 Test the Install of Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In a terminal cd to the SimCenterBootcamp2020 folder and type the following.
+In a terminal cd to the SimCenterBootcamp2022 folder and type the following.
 
 .. code-block:: python
 

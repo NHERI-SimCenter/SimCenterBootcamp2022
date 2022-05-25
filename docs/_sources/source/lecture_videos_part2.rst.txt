@@ -118,7 +118,7 @@ Parallel Programming With OpenMP
 
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/APzanKquS-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-Intoduction to Agave
+Intoduction to Tapis
 --------------------
 
 .. raw:: html
@@ -126,7 +126,7 @@ Intoduction to Agave
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/vNFbzG4t1bI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
-Agave Systems
+Tapis Systems
 -------------
 
 .. raw:: html
@@ -134,7 +134,7 @@ Agave Systems
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/TddwsA5MY_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
-Agave Files
+Tapis Files
 -----------
 
 .. raw:: html
@@ -142,14 +142,14 @@ Agave Files
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/eh7Etvuvo7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
    
 
-Agave Apps
+Tapis Apps
 ----------
 
 .. raw:: html
 	 
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/f2-Qg6sMsQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-Agave Jobs
+Tapis Jobs
 ----------
 
 .. raw:: html

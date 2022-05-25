@@ -12,7 +12,7 @@ The figure below shows an method to compute **pi** by numerical integration. We 
            Computation of pi numerically
 
 	   
-The solution `pi.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/tree/master/code/c/ExerciseDay1/assignments/pi.c>`_ can be found on github. The contents of that file is presented here:
+The solution `pi.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/assignments/pi.c>`_ can be found on github. The contents of that file is presented here:
 
 .. literalinclude:: ./assignments/c4/pi.c
   :language: c

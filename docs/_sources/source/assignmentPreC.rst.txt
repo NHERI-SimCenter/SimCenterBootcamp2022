@@ -18,7 +18,7 @@ The following is a list of items you need to perform. For those of you who follo
 
 #. In your browser you need to sign up for `github <https://github.com>`_. If you have difficulties they have a `page devoted to signing up <https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/signing-up-for-a-new-github-account>`_
 
-#. After signing up and logging in, navigate in your browser to the SimCenterBottcamp2020 `git page <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020>`_. At the website, click on the **Fork**, button at top right. This will create a fork of the repo under your own github username and take you to the main page for that repo.
+#. After signing up and logging in, navigate in your browser to the SimCenterBottcamp2022 `git page <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_. At the website, click on the **Fork**, button at top right. This will create a fork of the repo under your own github username and take you to the main page for that repo.
 
 #. Now under the **Code** pull down menu on this new page, copy the https address into your clipboard. 
 
@@ -34,19 +34,19 @@ The following is a list of items you need to perform. For those of you who follo
 
    .. code::
       
-      git clone https://github.com/YOUR GIT LOGIN/SimCenterBootcamp2020.git
+      git clone https://github.com/YOUR GIT LOGIN/SimCenterBootcamp2022.git
 
-#. This last command has created a new folder in your current directory named **SimCenterBootcamp2020**. We now want you to **cd** (change directory) into that directory. This is done by you typing the following:
+#. This last command has created a new folder in your current directory named **SimCenterBootcamp2022**. We now want you to **cd** (change directory) into that directory. This is done by you typing the following:
 
    .. code::
 
-      cd SimCenterBootcamp2020
+      cd SimCenterBootcamp2022
 
-#. Now we want you to issue the following command, which will add a pointer, called upstream, to the master SimCenterBootcamp2020 repo that you forked:
+#. Now we want you to issue the following command, which will add a pointer, called upstream, to the master SimCenterBootcamp2022 repo that you forked:
 
    .. code::
      
-     git remote add upstream https://github.com/NHERI-SimCenter/SimCenterBootcamp2020.git
+     git remote add upstream https://github.com/NHERI-SimCenter/SimCenterBootcamp2022.git
 
 #. Now let us go back to your home folder. Here we will create a new folder named **hello** and get you to create your first **C** program in that folder.
 
