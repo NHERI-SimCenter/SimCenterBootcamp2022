@@ -1,8 +1,8 @@
 
-C: Tapis-cli
-============
+C-Tapis Assignment
+==================
 
-Today we have a number of exercises. The purpose of these exercises is to set it up so that you are able to run your parallel application on Frontera or Stampede2 by issuing commands in the terminal of your desktop using your DesignSafe account and resources it makes available to you. Time permitting we will share the applications with fellow classmates. The advantage of being able to do this from a terminal is convenience and speed, e.g. you no longer will be required to login and find a token, cd to appropriate directories, edit submit scripts, and so on. Ultimately, as you progress in your careers you will begin to understand, the ability to share your work is one of the really great advantages provided.
+The purpose of these exercises is to set it up so that you are able to run a parallel application on Frontera or Stampede2 by issuing commands in the terminal of your desktop using your DesignSafe account and resources. Time permitting we will share the applications with fellow classmates. The advantage of being able to do this from a terminal is convenience and speed, e.g. you no longer will be required to login and find a token, cd to appropriate directories, edit submit scripts, and so on. Ultimately, as you progress in your careers you will begin to understand, the ability to share your work is one of the really great advantages provided.
 
 There are **5** steps to the exercise today. The steps follow the videos presented for today's class (these are enclosed in hints herein). The exercises are outlined below the **hint**.
 
@@ -147,7 +147,7 @@ Add a directory tmp to your home folder at DesignSafe
 
    tapis files mkdir agave://designsafe.storage.default/YOUR_NAME tmp
 
-Copy the small file **SimCenterBootcamp2020/code/agave/ExerciseDays4/ex1/piMPI.c** to your current directory. From there send it to your new folder at DesignSafe.
+Copy the small file **SimCenterBootcamp2022/code/agave/ExerciseDays4/ex1/piMPI.c** to your current directory. From there send it to your new folder at DesignSafe.
 
 .. code::
 

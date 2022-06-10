@@ -6,7 +6,7 @@
 
 
 Welcome to the NHERI-SimCenter 2022 Programming Bootcamp
-=====================================================
+========================================================
 
 Following the success of our online version of this workshop,
 this year's **offering will be solely online**.  Expect to collaborate with 
@@ -49,13 +49,10 @@ These two weeks are offered as individual or as one combined workshop as follows
 .. note::
 
    Course material is available through 
-   the `NHERI-SimCenter/SimCenterBootcamp2022
-   <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_
+   the `NHERI-SimCenter/SimCenterBootcamp2022 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022>`_
    repository on https://github.com 
 
    You will need your own GitHub account to participate in our exercises.
-
-
 
 .. toctree::
    :maxdepth: 3
@@ -65,11 +62,11 @@ These two weeks are offered as individual or as one combined workshop as follows
    source/setupInstructions
    source/lecture_videos
    source/assignments
-   source/TACC
    source/git
    source/emacs
-   #source/GUI
+   source/TACC
+   source/tapis
    source/help
    source/resources
-   #source/mathematics
+
 

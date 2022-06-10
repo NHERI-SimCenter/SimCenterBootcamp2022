@@ -1,12 +1,10 @@
-*********
+********
 Syllabus
-*********
+********
 
 .. raw:: HTML
 
 	<p><font color=red> last updated: May 17, 2022 </font></p>
-
-
 
 Welcome to the SimCenter Programming Bootcamp 2022.
 Following the success of our online version of this workshop,
@@ -22,11 +20,6 @@ this year's **offering will be solely online**.
   and help you learn from a community of like-minded graduate students and post-docs.
 * The SimCenter team is putting in all effort to recreate some of the community building benefits
   through discussion sessions and social time.
-
-The bootcamp is organized as a series of live video conferencing (ZOOM), prerecorded video
-lectures, hands-on exercises with online review options, and daily homework assignments.  The
-ideal flow of lessons and activities is provided in the "By Day" listing below.
-
 
 
 **The bootcamp is organized** as two weeks of daily self-study assignments, 
@@ -48,12 +41,13 @@ These two weeks are offered as individual or as one combined workshop as follows
 
 
 Python - June 13-17, 2022
---------------------------
+-------------------------
+
 
 * Day 1
 
-  * `Welcome Message and SimCenter Intro <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/BootCampIntro.pdf>`_
-  * `What is a computer? Programming philosophy <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/WhatIsComputer.pdf>`_
+  * `Welcome Message and SimCenter Intro <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/BootCampIntro.pdf>`_
+  * `What is a computer? Programming philosophy <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/WhatIsComputer.pdf>`_
   * Python Basics
   * Data types
   * Loops
@@ -86,6 +80,7 @@ Python - June 13-17, 2022
   * Assign Homework #3
 
 
+
 * Day 4
 
   * Homework #3 review
@@ -104,9 +99,9 @@ Python - June 13-17, 2022
 
 
 Introduction to C/C++/HPC - July 18-22, 2022
----------------------------------------------
+--------------------------------------------
 
-* Day 6: `Basic C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/C-Day1.pdf>`_
+* Day 6: `Basic C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day1.pdf>`_
   
   * Computers and Computer Programs
   * The C Computer Programming Language
@@ -116,7 +111,7 @@ Introduction to C/C++/HPC - July 18-22, 2022
   * Assign Homework #5
 
 
-* Day 7: `More Advanced C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/C-Day2.pdf>`_
+* Day 7: `More Advanced C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day2.pdf>`_
   
   * C: Pointers Review
   * C: Memory Allocation
@@ -125,7 +120,7 @@ Introduction to C/C++/HPC - July 18-22, 2022
   * Assign Homework #6
 
     
-* Day 8 - `C: Datatypes & C++ <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/C-Day3.pdf>`_
+* Day 8 - `C: Datatypes & C++ <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day3.pdf>`_
 
   * Object Oriented Programming
   * C++
@@ -133,7 +128,7 @@ Introduction to C/C++/HPC - July 18-22, 2022
   * Assign Homework #7
 
 
-* Day 9 - `Parallel Programming <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/C-Day4.pdf>`_
+* Day 9 - `Parallel Programming <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day4.pdf>`_
 
   * Parallel Computers  
   * MessagePassing & MPI
@@ -141,19 +136,19 @@ Introduction to C/C++/HPC - July 18-22, 2022
   * Assign Homework #8
     
 
-* Day 10 - `DesignSafe & Agave <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/Agave2.pdf>`_
+* Day 10 - `DesignSafe & Tapis <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Agave2.pdf>`_
 
   * Review: Exercise
   * Intro to DesignSafe & Tapis
   * Interfacing with DesignSafe through Command Line
   * Exercise
-  * Building an Agave App
+  * Building an Tapis App
   * Exercise
   * Closing Remarks
 
 
 ..
-	  * `Building Graphic User Interfaces (GUI) using Qt5 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/blob/master/presentations/NHERI-SimCenter-GUI-Qt.pdf>`_
+	  * `Building Graphic User Interfaces (GUI) using Qt5 <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/NHERI-SimCenter-GUI-Qt.pdf>`_
   
 
 

@@ -63,7 +63,7 @@ To start you off, we have provided a file **solveQuadratic.c** in **/code/c/Exer
 
       gcc solveQuadratic.c -lm
       
-The solution `solveQuadratic.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/tree/master/code/c/ExerciseDay1/solutions/solveQuadratic.c>`_ can be found on github. The contents of that file is presented here:
+The solution `solveQuadratic.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/solutions/solveQuadratic.c>`_ can be found on github. The contents of that file is presented here:
 
 .. literalinclude:: ./solutions/c1/solveQuadratic.c
   :language: c
@@ -92,7 +92,7 @@ To transform stress to a rotated coordinate system one can use the formula shown
       ./appName 1.0 100.0 0.01 1 > results.out
 
 
-      The solution `transformStress.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/tree/master/code/c/ExerciseDay1/solutions/transformStress.c>`_ can be found on github. The contents of that file is presented here:
+      The solution `transformStress.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/solutions/transformStress.c>`_ can be found on github. The contents of that file is presented here:
 
 .. literalinclude:: ./solutions/c1/transformStress.c
   :language: c
@@ -117,7 +117,7 @@ The figure below shows an method to compute **pi** by numerical integration. We 
    You will be using your solution on Day 4 as part of the parallel exercises.
    
 	   
-      The solution `pi.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2020/tree/master/code/c/ExerciseDay1/solutions/pi.c>`_ can be found on github. The contents of that file is presented here:
+      The solution `pi.c  <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/solutions/pi.c>`_ can be found on github. The contents of that file is presented here:
 
 .. literalinclude:: ./solutions/c1/pi.c
   :language: c

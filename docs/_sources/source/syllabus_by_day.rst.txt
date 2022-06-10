@@ -92,13 +92,13 @@ Week 2
   * Exercise
 
 
-* Day 9 - DesignSafe & Agave
+* Day 9 - DesignSafe & Tapis
 
   * Review: Exercise
   * Intro to DesignSafe & Tapis
   * Interfacing with DesignSafe through Command Line
   * Exercise
-  * Building an Agave App
+  * Building a Tapis App
   * Exercise
 
 
