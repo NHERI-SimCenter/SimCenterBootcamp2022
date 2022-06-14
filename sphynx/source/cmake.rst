@@ -23,7 +23,23 @@ The commands used when building an application utilizing cmake are pretty standa
 		> cmake ..
 		> cmake --build . --config Release
 		> cmake --install .
-		
+
+
+.. warning ::
+
+    If running on a windows machine that you have installed the Intel oneAPI compiler suite on, you would issue the following from the terminal, or **cmd** application. The first line is a batch script provided with the intel installation that sets up the appropraite env variables needed by **cmake** and the applications it will invoke.
+
+    .. code-block ::
+   
+                "C:\Program Files (x86)\Intel\oneAPI\setVars" intel64 mod
+		mkdir build
+		cd build
+		cmake .. -G "Visual Studio 16 2019"
+		cmake --build . --config Release
+		cmake --install .
+
+
+   
 When run like this **cmake** will look for a **CMakeLists.txt** file in the source code directory. Below is a very basic **CmakeLists.txt** file that could be utilized for creating the **HelloWorld** application.
 
 .. code-block::		
@@ -36,7 +52,7 @@ When run like this **cmake** will look for a **CMakeLists.txt** file in the sour
    
    add_executable(HelloWorld hello.c)
 
-   The file starts with **cmake_minimum_required**,  which specifies the min version of cmake required to build the application, i.e. if yours is older it will not build. Next comes information on the project name, version and languages used in the source code files. Finally the line:
+The file starts with **cmake_minimum_required**,  which specifies the min version of cmake required to build the application, i.e. if yours is older it will not build. Next comes information on the project name, version and languages used in the source code files. Finally the line:
 
 .. code-block::
    

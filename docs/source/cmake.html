@@ -184,6 +184,18 @@
 <span class="go">&gt; cmake --install .</span>
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If running on a windows machine that you have installed the Intel oneAPI compiler suite on, you would issue the following from the terminal, or <strong>cmd</strong> application. The first line is a batch script provided with the intel installation that sets up the appropraite env variables needed by <strong>cmake</strong> and the applications it will invoke.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setVars&quot;</span> <span class="n">intel64</span> <span class="n">mod</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 16 2019&quot;</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
 <p>When run like this <strong>cmake</strong> will look for a <strong>CMakeLists.txt</strong> file in the source code directory. Below is a very basic <strong>CmakeLists.txt</strong> file that could be utilized for creating the <strong>HelloWorld</strong> application.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake_minimum_required</span><span class="p">(</span><span class="n">VERSION</span> <span class="mf">3.13</span><span class="p">)</span>
 
@@ -192,10 +204,9 @@
         <span class="n">LANGUAGES</span> <span class="n">C</span><span class="p">)</span>
 
 <span class="n">add_executable</span><span class="p">(</span><span class="n">HelloWorld</span> <span class="n">hello</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
-
-<span class="n">The</span> <span class="n">file</span> <span class="n">starts</span> <span class="k">with</span> <span class="o">**</span><span class="n">cmake_minimum_required</span><span class="o">**</span><span class="p">,</span>  <span class="n">which</span> <span class="n">specifies</span> <span class="n">the</span> <span class="nb">min</span> <span class="n">version</span> <span class="n">of</span> <span class="n">cmake</span> <span class="n">required</span> <span class="n">to</span> <span class="n">build</span> <span class="n">the</span> <span class="n">application</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="k">if</span> <span class="n">yours</span> <span class="ow">is</span> <span class="n">older</span> <span class="n">it</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">build</span><span class="o">.</span> <span class="n">Next</span> <span class="n">comes</span> <span class="n">information</span> <span class="n">on</span> <span class="n">the</span> <span class="n">project</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">languages</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">source</span> <span class="n">code</span> <span class="n">files</span><span class="o">.</span> <span class="n">Finally</span> <span class="n">the</span> <span class="n">line</span><span class="p">:</span>
 </pre></div>
 </div>
+<p>The file starts with <strong>cmake_minimum_required</strong>,  which specifies the min version of cmake required to build the application, i.e. if yours is older it will not build. Next comes information on the project name, version and languages used in the source code files. Finally the line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">add_executable</span><span class="p">(</span><span class="n">HelloWorld</span> <span class="n">hello</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
