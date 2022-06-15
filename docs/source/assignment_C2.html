@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>C Arrays and File I/O &mdash; Programming Bootcamp 2022  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
@@ -103,79 +53,38 @@
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Programming Bootcamp 2022</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>C Arrays and File I/O</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/source/assignment_C2.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="c-arrays-and-file-i-o">
-<h1>C Arrays and File I/O<a class="headerlink" href="#c-arrays-and-file-i-o" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="c-arrays-and-file-i-o">
+<h1>C Arrays and File I/O<a class="headerlink" href="#c-arrays-and-file-i-o" title="Permalink to this headline"></a></h1>
 <p>Today we have several problems for you to tackle.
 Parts should look and feel familiar from Day 1, though we will add more features as we go.
 Those problems are modeled after exercises in Python and, thus, allow you to learn how data structures
 compare when transitioning from python to C (and later C++).</p>
-<div class="section" id="problem-1-reviewing-the-stress-transformation-problem">
-<h2>Problem 1: Reviewing the stress transformation problem<a class="headerlink" href="#problem-1-reviewing-the-stress-transformation-problem" title="Permalink to this headline">¶</a></h2>
+<section id="problem-1-reviewing-the-stress-transformation-problem">
+<h2>Problem 1: Reviewing the stress transformation problem<a class="headerlink" href="#problem-1-reviewing-the-stress-transformation-problem" title="Permalink to this headline"></a></h2>
 <p>Navigate to <strong>/code/c/ExerciseDay2/ex2-1/</strong> to find another solution for the stress transformation problem.  The main difference to Frank’s solution is that this one places functions in separate files, as
 well as adds a header file that contains the definition of the function without its implementation.</p>
 <p>Compiling this version requires multiple steps:</p>
@@ -215,9 +124,9 @@ type</p>
 <p>to recompile all portions necessary and link all parts to one executable.  That process remains exactly the
 same regardless of the number of files in your project.  Give it a try and see how convenient this is
 especially for projects provided by somebody else.</p>
-</div>
-<div class="section" id="problem-2-using-structures">
-<h2>Problem 2: Using structures<a class="headerlink" href="#problem-2-using-structures" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-2-using-structures">
+<h2>Problem 2: Using structures<a class="headerlink" href="#problem-2-using-structures" title="Permalink to this headline"></a></h2>
 <p>The implementation of <code class="code docutils literal notranslate"><span class="pre">StressTransform()</span></code> was intentionally done a bit clumsy, just the way a beginner might
 write it. Your task in this exercise is to create a structure</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="p">{</span>
@@ -248,9 +157,9 @@ entries in such a structure requires the syntax</p>
 </div>
 <p>used for scalar-valued arguments.</p>
 </div>
-</div>
-<div class="section" id="problem-3-writing-data-for-use-by-other-programs-csv">
-<h2>Problem 3: Writing data for use by other programs: CSV<a class="headerlink" href="#problem-3-writing-data-for-use-by-other-programs-csv" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-3-writing-data-for-use-by-other-programs-csv">
+<h2>Problem 3: Writing data for use by other programs: CSV<a class="headerlink" href="#problem-3-writing-data-for-use-by-other-programs-csv" title="Permalink to this headline"></a></h2>
 <p>While C is very powerful for numeric computations, it can be impractical to generate graphs or fancy
 images using the computed values.  A more efficient way is to use C to do the analysis, write results to
 an easily readable file, and use specialized tools for the post-processing.  One common and simple format
@@ -288,9 +197,9 @@ folder where you placed <strong>list.csv</strong> run</p>
 </div>
 <p>Isn’t that nice?</p>
 </div>
-</div>
-<div class="section" id="problem-4-writing-to-a-binary-file">
-<h2>Problem 4: Writing to a binary file<a class="headerlink" href="#problem-4-writing-to-a-binary-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-4-writing-to-a-binary-file">
+<h2>Problem 4: Writing to a binary file<a class="headerlink" href="#problem-4-writing-to-a-binary-file" title="Permalink to this headline"></a></h2>
 <p>Modify the code generated in the previous exercise to write a binary file names <em>mohrcircle.dta</em> instead
 of the formatted ASCII data.  The data shall be exported in clocks composed of <code class="code docutils literal notranslate"><span class="pre">double</span> <span class="pre">theta</span></code>
 followed by a block of <code class="code docutils literal notranslate"><span class="pre">STRESS</span></code> (or the three components of stress as <code class="code docutils literal notranslate"><span class="pre">double</span></code>).</p>
@@ -335,9 +244,9 @@ and recover the structure of a binary file (though it still requires some practi
 <p>where the <code class="code docutils literal notranslate"><span class="pre">|</span> <span class="pre">less</span></code> pipes the output in a pager utility that allows you to search the output,
 jump pages forward and backward, or move to any specific line.  Press <code class="code docutils literal notranslate"><span class="pre">q</span></code> to exit this utility.</p>
 </div>
-</div>
-<div class="section" id="problem-5-reading-from-a-binary-file-and-memory-allocation">
-<h2>Problem 5: Reading From a binary file and Memory Allocation<a class="headerlink" href="#problem-5-reading-from-a-binary-file-and-memory-allocation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-5-reading-from-a-binary-file-and-memory-allocation">
+<h2>Problem 5: Reading From a binary file and Memory Allocation<a class="headerlink" href="#problem-5-reading-from-a-binary-file-and-memory-allocation" title="Permalink to this headline"></a></h2>
 <p>Reading of data from files and placing them into containers such as Vectors is easy if you know the size of the data you are reading. If this is unknown the problem becomes more tricky. The solution presented on slide 22 worked for a small number of inputs, but failed with a segmentation fault for larger problems. You are to fix the problem. A copy of the offending file <strong>file3.c</strong> has been placed in the directory ex2-5 along with two files. The program can handle the first <strong>small.txt</strong>, it will fail with the second <strong>big.txt</strong>. Can you make the program work. The solution will test your understanding of file I/O,  memory management and pointers.</p>
 <p>The <strong>file3.c</strong> is as shown below. You need to put some code to replace comment at the line 41.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>
@@ -352,40 +261,40 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 <span class="linenos">10</span><span class="cm"> * Exerise is to fix flaw WITHOUT just setting maxVectorSize incredibly large</span>
 <span class="linenos">11</span><span class="cm"> *</span>
 <span class="linenos">12</span><span class="cm"> * written: fmk</span>
-<span class="linenos">13</span><span class="cm"> ******************************************************************* */</span>
+<span class="linenos">13</span><span class="cm"> ******************************************************************* */</span><span class="w"></span>
 <span class="linenos">14</span>
-<span class="linenos">15</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos">16</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos">15</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">16</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">18</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">19</span>
-<span class="linenos">20</span>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">21</span>    <span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;ERROR correct usage appName inputFile</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="linenos">22</span>    <span class="k">return</span> <span class="mi">-1</span><span class="p">;</span>
-<span class="linenos">23</span>  <span class="p">}</span>
-<span class="linenos">24</span>  
-<span class="linenos">25</span>  <span class="kt">FILE</span> <span class="o">*</span><span class="n">filePtr</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s">&quot;r&quot;</span><span class="p">);</span> 
+<span class="linenos">20</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ERROR correct usage appName inputFile</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">  </span>
+<span class="linenos">25</span><span class="w">  </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">filePtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s">&quot;r&quot;</span><span class="p">);</span><span class="w"> </span>
 <span class="linenos">26</span>
-<span class="linenos">27</span>  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">28</span>  <span class="kt">float</span> <span class="n">float1</span><span class="p">,</span> <span class="n">float2</span><span class="p">;</span>
-<span class="linenos">29</span>  <span class="kt">int</span> <span class="n">maxVectorSize</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<span class="linenos">30</span>  <span class="kt">double</span> <span class="o">*</span><span class="n">vector1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
-<span class="linenos">31</span>  <span class="kt">double</span> <span class="o">*</span><span class="n">vector2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>  
-<span class="linenos">32</span>  <span class="kt">int</span> <span class="n">vectorSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">33</span>  
-<span class="linenos">34</span>  <span class="k">while</span> <span class="p">(</span><span class="n">fscanf</span><span class="p">(</span><span class="n">filePtr</span><span class="p">,</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">float2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">35</span>    <span class="n">vector1</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float1</span><span class="p">;</span>
-<span class="linenos">36</span>    <span class="n">vector2</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span> <span class="o">=</span> <span class="n">float2</span><span class="p">;</span>
-<span class="linenos">37</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">vector2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vector1</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="linenos">38</span>    <span class="n">vectorSize</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">27</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">float1</span><span class="p">,</span><span class="w"> </span><span class="n">float2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">maxVectorSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">vector1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">vector2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">maxVectorSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span><span class="w">  </span>
+<span class="linenos">32</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">vectorSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">  </span>
+<span class="linenos">34</span><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">fscanf</span><span class="p">(</span><span class="n">filePtr</span><span class="p">,</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">float1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">float2</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">EOF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">    </span><span class="n">vector1</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">float1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">    </span><span class="n">vector2</span><span class="p">[</span><span class="n">vectorSize</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">float2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">vector2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">vector1</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">    </span><span class="n">vectorSize</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 <span class="linenos">39</span>
-<span class="linenos">40</span>    <span class="k">if</span> <span class="p">(</span><span class="n">vectorSize</span> <span class="o">==</span> <span class="n">maxVectorSize</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">41</span>      <span class="cm">/* some code needed here .. programming exercise */</span>
-<span class="linenos">42</span>    <span class="p">}</span>
-<span class="linenos">43</span>  <span class="p">}</span>
+<span class="linenos">40</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vectorSize</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">maxVectorSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">      </span><span class="cm">/* some code needed here .. programming exercise */</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">44</span>
-<span class="linenos">45</span>  <span class="n">fclose</span><span class="p">(</span><span class="n">filePtr</span><span class="p">);</span>  
-<span class="linenos">46</span><span class="p">}</span>
+<span class="linenos">45</span><span class="w">  </span><span class="n">fclose</span><span class="p">(</span><span class="n">filePtr</span><span class="p">);</span><span class="w">  </span>
+<span class="linenos">46</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The <strong>small.txt</strong> file is as shown below.</p>
@@ -410,51 +319,35 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
-
-    </p>
+    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

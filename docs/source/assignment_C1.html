@@ -1,76 +1,37 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>C Variables and Functions &mdash; Programming Bootcamp 2022  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="C: Day 2 In Class Exercises" href="assignment_C2_solution.html" />
     <link rel="prev" title="C: Assignment to Test Setup" href="assignmentPreC.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -78,18 +39,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
@@ -125,78 +75,36 @@
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Programming Bootcamp 2022</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="assignments.html">Assignments</a> &raquo;</li>
-        
       <li>C Variables and Functions</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/source/assignment_C1.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="c-variables-and-functions">
-<h1>C Variables and Functions<a class="headerlink" href="#c-variables-and-functions" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="c-variables-and-functions">
+<h1>C Variables and Functions<a class="headerlink" href="#c-variables-and-functions" title="Permalink to this headline"></a></h1>
 <p>Today we have three problems for you to tackle. Two are familiar and you performed them in Python as part of day 1 exercises and assignments. The third <strong>pi</strong> is new.</p>
-<div class="section" id="problem-1-solve-the-quadratic">
-<h2>Problem 1: Solve the Quadratic<a class="headerlink" href="#problem-1-solve-the-quadratic" title="Permalink to this headline">¶</a></h2>
+<section id="problem-1-solve-the-quadratic">
+<h2>Problem 1: Solve the Quadratic<a class="headerlink" href="#problem-1-solve-the-quadratic" title="Permalink to this headline"></a></h2>
 <p>We wish to solve the quadratic equations, i.e. given <strong>a</strong>, <strong>x</strong>, and <strong>c</strong>, solve the following equation for <strong>x</strong>.</p>
 <div class="math notranslate nohighlight">
 \[ax^2+bx+c=0\]</div>
@@ -221,62 +129,64 @@
 <span class="linenos"> 6</span><span class="c1">// write a program to take 3 inputs and output the soln</span>
 <span class="linenos"> 7</span><span class="c1">// deal with possible errors in input, i.e. b^2-4ac negative</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="linenos">10</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos">11</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 9</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos">10</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">11</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 <span class="linenos">12</span>
-<span class="linenos">13</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">13</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">14</span>
-<span class="linenos">15</span>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">16</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: appName a b c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="linenos">17</span>    <span class="n">exit</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span>
-<span class="linenos">18</span>  <span class="p">}</span>
+<span class="linenos">15</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: appName a b c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">19</span>
-<span class="linenos">20</span>  <span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="linenos">21</span>  <span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-<span class="linenos">22</span>  <span class="kt">float</span> <span class="n">c</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="linenos">20</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
 <span class="linenos">23</span>
-<span class="linenos">24</span>  <span class="kt">double</span> <span class="n">b2minus4ac</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="mi">-4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
-<span class="linenos">25</span>  <span class="kt">double</span> <span class="n">bDiv2a</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
-<span class="linenos">26</span>    
-<span class="linenos">27</span>  <span class="k">if</span> <span class="p">(</span><span class="n">b2minus4ac</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">28</span>    
+<span class="linenos">24</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">b2minus4ac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="mi">-4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">bDiv2a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span>
+<span class="linenos">27</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b2minus4ac</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span>
 <span class="linenos">29</span>
-<span class="linenos">30</span>    <span class="kt">double</span> <span class="n">other</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">b2minus4ac</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
-<span class="linenos">31</span>    <span class="kt">double</span> <span class="n">x1</span> <span class="o">=</span> <span class="n">bDiv2a</span> <span class="o">-</span> <span class="n">other</span><span class="p">;</span>
-<span class="linenos">32</span>    <span class="kt">double</span> <span class="n">x2</span> <span class="o">=</span> <span class="n">bDiv2a</span> <span class="o">+</span> <span class="n">other</span><span class="p">;</span>    
-<span class="linenos">33</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Double Solution x1:  %lf  x2: %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>    
+<span class="linenos">30</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">b2minus4ac</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bDiv2a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">other</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bDiv2a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="p">;</span><span class="w">    </span>
+<span class="linenos">33</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Double Solution x1:  %lf  x2: %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span><span class="w">    </span>
 <span class="linenos">34</span>
-<span class="linenos">35</span>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">b2minus4ac</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">35</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b2minus4ac</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">36</span>
-<span class="linenos">37</span>    <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
-<span class="linenos">38</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Single Solution is %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
-<span class="linenos">39</span>    
-<span class="linenos">40</span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos">41</span>    
-<span class="linenos">42</span>    <span class="kt">double</span> <span class="n">other</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">b2minus4ac</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
-<span class="linenos">43</span>    <span class="kt">double</span> <span class="n">x1</span> <span class="o">=</span> <span class="n">bDiv2a</span> <span class="o">-</span> <span class="n">other</span><span class="p">;</span>
-<span class="linenos">44</span>    <span class="kt">double</span> <span class="n">x2</span> <span class="o">=</span> <span class="n">bDiv2a</span> <span class="o">+</span> <span class="n">other</span><span class="p">;</span>
-<span class="linenos">45</span>    
-<span class="linenos">46</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Complex Solution x1:  %lf + %lfi, x2: %lf + %lfi</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">bDiv2a</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">bDiv2a</span><span class="p">,</span> <span class="o">-</span><span class="n">other</span><span class="p">);</span>    
-<span class="linenos">47</span>    
-<span class="linenos">48</span>  <span class="p">}</span>
+<span class="linenos">37</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Single Solution is %lf</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">    </span>
+<span class="linenos">40</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span>
+<span class="linenos">42</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">b2minus4ac</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bDiv2a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">other</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bDiv2a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">    </span>
+<span class="linenos">46</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Complex Solution x1:  %lf + %lfi, x2: %lf + %lfi</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bDiv2a</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">bDiv2a</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">other</span><span class="p">);</span><span class="w">    </span>
+<span class="linenos">47</span><span class="w">    </span>
+<span class="linenos">48</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">49</span>
-<span class="linenos">50</span>  
-<span class="linenos">51</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">52</span><span class="p">}</span>
+<span class="linenos">50</span><span class="w">  </span>
+<span class="linenos">51</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">52</span><span class="p">}</span><span class="w"></span>
 <span class="linenos">53</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="problem-2-stress-transformations">
-<h2>Problem 2: Stress Transformations<a class="headerlink" href="#problem-2-stress-transformations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-2-stress-transformations">
+<h2>Problem 2: Stress Transformations<a class="headerlink" href="#problem-2-stress-transformations" title="Permalink to this headline"></a></h2>
 <p>To transform stress to a rotated coordinate system one can use the formula shown in the figure. We would ask you to write code that will take as input <strong>4</strong> values  sigmaXX, sigmaYY, tauXY, and <strong>theta</strong> compute the stress in the transformed coordinate system. We would ask you to perform that transformation computation in a function other than <strong>main</strong> and to complicate things, but demonstrate you understand passing of arrays, pass the input and output stresses to this new function in fixed length arrays.</p>
 <blockquote>
-<div><div class="align-center figure" id="id1">
+<div><figure class="align-center" id="id1">
 <img alt="../_images/stress.png" src="../_images/stress.png" />
-<p class="caption"><span class="caption-text">Equation for stress transformation</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Equation for stress transformation</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -300,80 +210,82 @@
 <span class="linenos">11</span><span class="c1">//</span>
 <span class="linenos">12</span><span class="c1">// Extend to possibly include all outputs for a Mohr circle, were the theta now provided is a deltaTheta</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="linenos">15</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos">16</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="linenos">14</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos">15</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos">16</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="kt">void</span> <span class="nf">transformStress</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">stressIN</span><span class="p">,</span> <span class="kt">float</span> <span class="n">theta</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">stressTransformed</span><span class="p">);</span>
+<span class="linenos">18</span><span class="kt">void</span><span class="w"> </span><span class="nf">transformStress</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">stressIN</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">stressTransformed</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">20</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">21</span>
-<span class="linenos">22</span>  <span class="c1">// NOTE: if 5 args are provided, the program will output data for a Mohr Circle</span>
-<span class="linenos">23</span>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">argc</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">24</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: appName sigX sigY tauXY theta &lt;anything&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="linenos">25</span>    <span class="n">exit</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span>
-<span class="linenos">26</span>  <span class="p">}</span>
+<span class="linenos">22</span><span class="w">  </span><span class="c1">// NOTE: if 5 args are provided, the program will output data for a Mohr Circle</span>
+<span class="linenos">23</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: appName sigX sigY tauXY theta &lt;anything&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">27</span>
-<span class="linenos">28</span>  <span class="kt">float</span> <span class="n">vectorIN</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
-<span class="linenos">29</span>  <span class="n">vectorIN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="linenos">30</span>  <span class="n">vectorIN</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-<span class="linenos">31</span>  <span class="n">vectorIN</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
-<span class="linenos">32</span>  <span class="kt">float</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>  
+<span class="linenos">28</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">  </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">  </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">  </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span><span class="w">  </span>
 <span class="linenos">33</span>
 <span class="linenos">34</span>
-<span class="linenos">35</span>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">35</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">36</span>
-<span class="linenos">37</span>    <span class="c1">// 4 args: Compute single transformed stress for theta provided</span>
-<span class="linenos">38</span>    
-<span class="linenos">39</span>    <span class="n">transformStress</span><span class="p">(</span><span class="n">vectorIN</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">vectorTransformed</span><span class="p">);</span>
-<span class="linenos">40</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-<span class="linenos">41</span>    
-<span class="linenos">42</span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos">37</span><span class="w">    </span><span class="c1">// 4 args: Compute single transformed stress for theta provided</span>
+<span class="linenos">38</span><span class="w">    </span>
+<span class="linenos">39</span><span class="w">    </span><span class="n">transformStress</span><span class="p">(</span><span class="n">vectorIN</span><span class="p">,</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">40</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span>
+<span class="linenos">42</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">43</span>
-<span class="linenos">44</span>    <span class="c1">// 5 args provided: compute Mohr circle using deltaTheta</span>
-<span class="linenos">45</span>    
-<span class="linenos">46</span>    <span class="c1">// print current</span>
-<span class="linenos">47</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">vectorIN</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vectorIN</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vectorIN</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>    
+<span class="linenos">44</span><span class="w">    </span><span class="c1">// 5 args provided: compute Mohr circle using deltaTheta</span>
+<span class="linenos">45</span><span class="w">    </span>
+<span class="linenos">46</span><span class="w">    </span><span class="c1">// print current</span>
+<span class="linenos">47</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vectorIN</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w">    </span>
 <span class="linenos">48</span>
-<span class="linenos">49</span>    <span class="c1">// compute for all angles until we reach 360 (don&#39;t compute for 360)</span>
-<span class="linenos">50</span>    <span class="kt">float</span> <span class="n">currentTheta</span> <span class="o">=</span> <span class="n">theta</span><span class="p">;</span>
-<span class="linenos">51</span>    <span class="k">while</span> <span class="p">(</span><span class="n">currentTheta</span> <span class="o">&lt;</span> <span class="mf">360.</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">52</span>      <span class="n">transformStress</span><span class="p">(</span><span class="n">vectorIN</span><span class="p">,</span> <span class="n">currentTheta</span><span class="p">,</span> <span class="n">vectorTransformed</span><span class="p">);</span>
-<span class="linenos">53</span>      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">currentTheta</span><span class="p">,</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-<span class="linenos">54</span>	     <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>      
-<span class="linenos">55</span>      <span class="n">currentTheta</span> <span class="o">+=</span> <span class="n">theta</span><span class="p">;</span>
-<span class="linenos">56</span>    <span class="p">}</span>
-<span class="linenos">57</span>  <span class="p">}</span>
-<span class="linenos">58</span>  
-<span class="linenos">59</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">60</span><span class="p">}</span>
+<span class="linenos">49</span><span class="w">    </span><span class="c1">// compute for all angles until we reach 360 (don&#39;t compute for 360)</span>
+<span class="linenos">50</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">currentTheta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">currentTheta</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">360.</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">      </span><span class="n">transformStress</span><span class="p">(</span><span class="n">vectorIN</span><span class="p">,</span><span class="w"> </span><span class="n">currentTheta</span><span class="p">,</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f, %f, %f, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">currentTheta</span><span class="p">,</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">	     </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">vectorTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w">      </span>
+<span class="linenos">55</span><span class="w">      </span><span class="n">currentTheta</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">theta</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">57</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">58</span><span class="w">  </span>
+<span class="linenos">59</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">60</span><span class="p">}</span><span class="w"></span>
 <span class="linenos">61</span>
-<span class="linenos">62</span><span class="kt">void</span> <span class="nf">transformStress</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">stressIN</span><span class="p">,</span> <span class="kt">float</span> <span class="n">theta</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">stressTransformed</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">62</span><span class="kt">void</span><span class="w"> </span><span class="nf">transformStress</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">stressIN</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">stressTransformed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">63</span>
-<span class="linenos">64</span>  <span class="kt">float</span> <span class="n">sigX</span>  <span class="o">=</span> <span class="n">stressIN</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="linenos">65</span>  <span class="kt">float</span> <span class="n">sigY</span>  <span class="o">=</span> <span class="n">stressIN</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="linenos">66</span>  <span class="kt">float</span> <span class="n">tauXY</span> <span class="o">=</span> <span class="n">stressIN</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>    
+<span class="linenos">64</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">sigX</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">stressIN</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">65</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">sigY</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">stressIN</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">66</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">tauXY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stressIN</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">    </span>
 <span class="linenos">67</span>
-<span class="linenos">68</span>  <span class="c1">// convert theta to radians &amp; compute sin and cos of the angle</span>
-<span class="linenos">69</span>  
-<span class="linenos">70</span>  <span class="kt">float</span> <span class="n">thetaRadians</span> <span class="o">=</span> <span class="n">theta</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">M_PI</span><span class="p">;</span> <span class="c1">// M_PI is PI as a double from the math.h file</span>
-<span class="linenos">71</span>  <span class="kt">float</span> <span class="n">cosX</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">thetaRadians</span><span class="p">);</span>
-<span class="linenos">72</span>  <span class="kt">float</span> <span class="n">sinX</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">thetaRadians</span><span class="p">);</span>
+<span class="linenos">68</span><span class="w">  </span><span class="c1">// convert theta to radians &amp; compute sin and cos of the angle</span>
+<span class="linenos">69</span><span class="w">  </span>
+<span class="linenos">70</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">thetaRadians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">M_PI</span><span class="p">;</span><span class="w"> </span><span class="c1">// M_PI is PI as a double from the math.h file</span>
+<span class="linenos">71</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">cosX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">thetaRadians</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">72</span><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">sinX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">thetaRadians</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">73</span>
-<span class="linenos">74</span>  <span class="n">stressTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigX</span><span class="o">*</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span> <span class="o">+</span> <span class="n">sigY</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">tauXY</span> <span class="o">*</span> <span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span><span class="p">;</span>
-<span class="linenos">75</span>  <span class="n">stressTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigX</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span> <span class="o">+</span> <span class="n">sigY</span><span class="o">*</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">tauXY</span> <span class="o">*</span> <span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span><span class="p">;</span>
-<span class="linenos">76</span>  <span class="n">stressTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sigY</span><span class="o">-</span><span class="n">sigX</span><span class="p">)</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span> <span class="o">+</span> <span class="n">tauXY</span> <span class="o">*</span> <span class="p">(</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span> <span class="o">-</span> <span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span><span class="p">);</span>
-<span class="linenos">77</span><span class="p">}</span>
+<span class="linenos">74</span><span class="w">  </span><span class="n">stressTransformed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sigX</span><span class="o">*</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sigY</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">tauXY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">75</span><span class="w">  </span><span class="n">stressTransformed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sigX</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sigY</span><span class="o">*</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">tauXY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">76</span><span class="w">  </span><span class="n">stressTransformed</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sigY</span><span class="o">-</span><span class="n">sigX</span><span class="p">)</span><span class="o">*</span><span class="n">sinX</span><span class="o">*</span><span class="n">cosX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tauXY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">cosX</span><span class="o">*</span><span class="n">cosX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sinX</span><span class="o">*</span><span class="n">sinX</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">77</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="section" id="problem-3-compute-pi-numerically">
-<h3>Problem 3: Compute PI numerically<a class="headerlink" href="#problem-3-compute-pi-numerically" title="Permalink to this headline">¶</a></h3>
+<section id="problem-3-compute-pi-numerically">
+<h3>Problem 3: Compute PI numerically<a class="headerlink" href="#problem-3-compute-pi-numerically" title="Permalink to this headline"></a></h3>
 <p>The figure below shows an method to compute <strong>pi</strong> by numerical integration. We would like you to implement that computation in a <strong>C</strong> program.</p>
 <blockquote>
-<div><div class="align-center figure" id="id2">
+<div><figure class="align-center" id="id2">
 <img alt="../_images/pi.png" src="../_images/pi.png" />
-<p class="caption"><span class="caption-text">Computation of pi numerically</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Computation of pi numerically</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -382,81 +294,64 @@
 <div><p>The solution <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/solutions/pi.c">pi.c</a> can be found on github. The contents of that file is presented here:</p>
 </div></blockquote>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">static</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">numSteps</span> <span class="o">=</span> <span class="mi">1000000000</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="k">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numSteps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000000</span><span class="p">;</span><span class="w"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 7</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span>  <span class="c1">// perform calculation</span>
-<span class="linenos">10</span>  <span class="kt">double</span> <span class="n">pi</span>   <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">11</span>  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">numSteps</span><span class="p">;</span>
-<span class="linenos">12</span>  <span class="kt">double</span> <span class="n">x</span>  <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="mf">0.50</span><span class="p">;</span>
-<span class="linenos">13</span>  
-<span class="linenos">14</span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numSteps</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">15</span>    <span class="n">pi</span> <span class="o">+=</span> <span class="mf">4.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">);</span>
-<span class="linenos">16</span>    <span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span><span class="p">;</span>
-<span class="linenos">17</span>  <span class="p">}</span>
-<span class="linenos">18</span>  
-<span class="linenos">19</span>  <span class="n">pi</span> <span class="o">*=</span> <span class="n">dx</span><span class="p">;</span>
-<span class="linenos">20</span>  
-<span class="linenos">21</span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PI = %16.14f Difference from math.h definition %16.14f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="o">-</span><span class="n">M_PI</span><span class="p">);</span>
-<span class="linenos">22</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">23</span><span class="p">}</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="c1">// perform calculation</span>
+<span class="linenos">10</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="o">/</span><span class="n">numSteps</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="o">*</span><span class="mf">0.50</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">  </span>
+<span class="linenos">14</span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">numSteps</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">pi</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">4.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">  </span>
+<span class="linenos">19</span><span class="w">  </span><span class="n">pi</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">  </span>
+<span class="linenos">21</span><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;PI = %16.14f Difference from math.h definition %16.14f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="w"> </span><span class="n">pi</span><span class="o">-</span><span class="n">M_PI</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="assignment_C2_solution.html" class="btn btn-neutral float-right" title="C: Day 2 In Class Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="assignmentPreC.html" class="btn btn-neutral float-left" title="C: Assignment to Test Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assignment_C2_solution.html" class="btn btn-neutral float-right" title="C: Day 2 In Class Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
-
-    </p>
+    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

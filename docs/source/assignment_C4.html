@@ -1,75 +1,36 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>C: Parallel Programming &mdash; Programming Bootcamp 2022  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="C-Tapis Assignment" href="assignment_C5.html" />
     <link rel="prev" title="C++ Exercises" href="assignment_C3.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,18 +38,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
@@ -121,107 +71,67 @@
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Programming Bootcamp 2022</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="assignments.html">Assignments</a> &raquo;</li>
-        
       <li>C: Parallel Programming</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/source/assignment_C4.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="c-parallel-programming">
-<h1>C: Parallel Programming<a class="headerlink" href="#c-parallel-programming" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="c-parallel-programming">
+<h1>C: Parallel Programming<a class="headerlink" href="#c-parallel-programming" title="Permalink to this headline"></a></h1>
 <p>Today we have two problems for you to tackle. They both parallelize the <strong>pi.c</strong> code you developed for day 1. Both programs will need to be compiled at one of the TACC supercomputers.</p>
 <p>The figure below shows an method to compute <strong>pi</strong> by numerical integration. We would like you to implement that computation in a <strong>C</strong> program.</p>
 <blockquote>
-<div><div class="align-center figure" id="id1">
+<div><figure class="align-center" id="id1">
 <img alt="../_images/pi.png" src="../_images/pi.png" />
-<p class="caption"><span class="caption-text">Computation of pi numerically</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Computation of pi numerically</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 <p>The solution <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/tree/master/code/c/ExerciseDay1/assignments/pi.c">pi.c</a> can be found on github. The contents of that file is presented here:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">static</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">numSteps</span> <span class="o">=</span> <span class="mi">1000000000</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="k">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numSteps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000000</span><span class="p">;</span><span class="w"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos"> 7</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span>  <span class="c1">// perform calculation</span>
-<span class="linenos">10</span>  <span class="kt">double</span> <span class="n">pi</span>   <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">11</span>  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">numSteps</span><span class="p">;</span>
-<span class="linenos">12</span>  <span class="kt">double</span> <span class="n">x</span>  <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="mf">0.50</span><span class="p">;</span>
-<span class="linenos">13</span>  
-<span class="linenos">14</span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numSteps</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">15</span>    <span class="n">pi</span> <span class="o">+=</span> <span class="mf">4.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">);</span>
-<span class="linenos">16</span>    <span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span><span class="p">;</span>
-<span class="linenos">17</span>  <span class="p">}</span>
-<span class="linenos">18</span>  
-<span class="linenos">19</span>  <span class="n">pi</span> <span class="o">*=</span> <span class="n">dx</span><span class="p">;</span>
-<span class="linenos">20</span>  
-<span class="linenos">21</span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PI = %16.14f Difference from math.h definition %16.14f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span> <span class="n">pi</span><span class="o">-</span><span class="n">M_PI</span><span class="p">);</span>
-<span class="linenos">22</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">23</span><span class="p">}</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="c1">// perform calculation</span>
+<span class="linenos">10</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="o">/</span><span class="n">numSteps</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="o">*</span><span class="mf">0.50</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">  </span>
+<span class="linenos">14</span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">numSteps</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">pi</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">4.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">  </span>
+<span class="linenos">19</span><span class="w">  </span><span class="n">pi</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">  </span>
+<span class="linenos">21</span><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;PI = %16.14f Difference from math.h definition %16.14f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="w"> </span><span class="n">pi</span><span class="o">-</span><span class="n">M_PI</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -247,49 +157,49 @@
 <p class="admonition-title">Warning</p>
 <p>Our solution of <strong>pi.c</strong> as written as a loop dependency which may need to revise for the second problem.</p>
 </div>
-<div class="section" id="problem-1-parallelize-using-mpi">
-<h2>Problem 1: Parallelize using <strong>MPI</strong><a class="headerlink" href="#problem-1-parallelize-using-mpi" title="Permalink to this headline">¶</a></h2>
+<section id="problem-1-parallelize-using-mpi">
+<h2>Problem 1: Parallelize using <strong>MPI</strong><a class="headerlink" href="#problem-1-parallelize-using-mpi" title="Permalink to this headline"></a></h2>
 <p>You are to modify the <strong>pi.c</strong> application and run it to use mpi. I have included a few files in code/parallel/ExercisesDay4/ex1 to help you. They include <strong>pi.c</strong> above, gather1.c and a submit.sh script. <strong>gather1.c</strong> was presented in the video, and us shown below:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 4</span><span class="cp">#define LUMP 5</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos"> 7</span>  
-<span class="linenos"> 8</span>  <span class="kt">int</span> <span class="n">numP</span><span class="p">,</span> <span class="n">procID</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">  </span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">numP</span><span class="p">,</span><span class="w"> </span><span class="n">procID</span><span class="p">;</span><span class="w"></span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>  <span class="c1">// the usual mpi initialization</span>
-<span class="linenos">11</span>  <span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
-<span class="linenos">12</span>  <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">numP</span><span class="p">);</span>
-<span class="linenos">13</span>  <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">procID</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">  </span><span class="c1">// the usual mpi initialization</span>
+<span class="linenos">11</span><span class="w">  </span><span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">  </span><span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">  </span><span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">procID</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">14</span>
-<span class="linenos">15</span>  <span class="kt">int</span> <span class="o">*</span><span class="n">globalData</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
-<span class="linenos">16</span>  <span class="kt">int</span> <span class="n">localData</span><span class="p">[</span><span class="n">LUMP</span><span class="p">];</span>
+<span class="linenos">15</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">globalData</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">localData</span><span class="p">[</span><span class="n">LUMP</span><span class="p">];</span><span class="w"></span>
 <span class="linenos">17</span>
-<span class="linenos">18</span>  <span class="c1">// process 0 is only 1 that needs global data</span>
-<span class="linenos">19</span>  <span class="k">if</span> <span class="p">(</span><span class="n">procID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">20</span>    <span class="n">globalData</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">LUMP</span> <span class="o">*</span> <span class="n">numP</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">);</span>
-<span class="linenos">21</span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">LUMP</span><span class="o">*</span><span class="n">numP</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="linenos">22</span>      <span class="n">globalData</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos">23</span>  <span class="p">}</span>
+<span class="linenos">18</span><span class="w">  </span><span class="c1">// process 0 is only 1 that needs global data</span>
+<span class="linenos">19</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">procID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">    </span><span class="n">globalData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">LUMP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">numP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">LUMP</span><span class="o">*</span><span class="n">numP</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">      </span><span class="n">globalData</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">24</span>
-<span class="linenos">25</span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">LUMP</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="linenos">26</span>    <span class="n">localData</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">procID</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
-<span class="linenos">27</span>  
-<span class="linenos">28</span>  <span class="n">MPI_Gather</span><span class="p">(</span><span class="n">localData</span><span class="p">,</span> <span class="n">LUMP</span><span class="p">,</span> <span class="n">MPI_INT</span><span class="p">,</span> <span class="n">globalData</span><span class="p">,</span> <span class="n">LUMP</span><span class="p">,</span> <span class="n">MPI_INT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">MPI_COMM_WORLD</span><span class="p">);</span>
+<span class="linenos">25</span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">LUMP</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="n">localData</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">procID</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">  </span>
+<span class="linenos">28</span><span class="w">  </span><span class="n">MPI_Gather</span><span class="p">(</span><span class="n">localData</span><span class="p">,</span><span class="w"> </span><span class="n">LUMP</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_INT</span><span class="p">,</span><span class="w"> </span><span class="n">globalData</span><span class="p">,</span><span class="w"> </span><span class="n">LUMP</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_INT</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_COMM_WORLD</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">29</span>
-<span class="linenos">30</span>  <span class="k">if</span> <span class="p">(</span><span class="n">procID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos">31</span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numP</span><span class="o">*</span><span class="n">LUMP</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="linenos">32</span>      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">globalData</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="linenos">33</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="linenos">34</span>  <span class="p">}</span>
+<span class="linenos">30</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">procID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">numP</span><span class="o">*</span><span class="n">LUMP</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">globalData</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">35</span>
-<span class="linenos">36</span>  <span class="k">if</span> <span class="p">(</span><span class="n">procID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="linenos">37</span>    <span class="n">free</span><span class="p">(</span><span class="n">globalData</span><span class="p">);</span>
+<span class="linenos">36</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">procID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">globalData</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">38</span>
-<span class="linenos">39</span>  <span class="n">MPI_Finalize</span><span class="p">();</span>
-<span class="linenos">40</span><span class="p">}</span>
+<span class="linenos">39</span><span class="w">  </span><span class="n">MPI_Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">40</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The submit script is as shown below.</p>
@@ -396,9 +306,9 @@
 <span class="linenos">79</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="problem-2-parallelize-using-openmp">
-<h2>Problem 2: Parallelize using OpenMP<a class="headerlink" href="#problem-2-parallelize-using-openmp" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="problem-2-parallelize-using-openmp">
+<h2>Problem 2: Parallelize using OpenMP<a class="headerlink" href="#problem-2-parallelize-using-openmp" title="Permalink to this headline"></a></h2>
 <p>You are to modify the <strong>pi.c</strong> application and run it to use mpi. I have included a few files in code/parallel/ExercisesDay4/ex1 to help you. They include <strong>pi.c</strong> above and submitPI.sh script. <strong>submitPI.sh</strong> is as shown:</p>
 <p>One possible solution, which includes multiple approaches, is as shown in the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span>
@@ -548,55 +458,38 @@
 <span class="linenos">145</span><span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="assignment_C5.html" class="btn btn-neutral float-right" title="C-Tapis Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="assignment_C3.html" class="btn btn-neutral float-left" title="C++ Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assignment_C5.html" class="btn btn-neutral float-right" title="C-Tapis Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
-
-    </p>
+    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
