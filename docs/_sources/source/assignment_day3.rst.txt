@@ -39,10 +39,11 @@ Practice problems (after class)
 Self-study portion for day 4 (watch before tomorrow's class)
 -----------
 
-* Install PyCharm CE. Follow the setup video for configuration.
-* Watch the video on modules. This takes :green:`~0.5-1 hour`.
+1. Install PyCharm CE. Follow the setup video for configuration.
+
+#. Watch the `Chapter 6: video on modules <https://youtu.be/FPjApvGtvgI>`__. This takes :green:`~0.5-1 hour`.
+
 
 .. raw:: html
 
-   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/JuWQmyGzEG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FPjApvGtvgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
