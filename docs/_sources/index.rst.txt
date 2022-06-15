@@ -64,6 +64,7 @@ These two weeks are offered as individual or as one combined workshop as follows
    source/assignments
    source/git
    source/emacs
+   source/cmake   
    source/TACC
    source/tapis
    source/help
