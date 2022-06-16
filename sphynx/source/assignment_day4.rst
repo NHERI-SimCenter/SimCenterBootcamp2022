@@ -6,7 +6,7 @@ Self-study portion for day 4 (ahead of class)
 -----------
 
 * Install PyCharm CE. Follow the setup video for configuration.
-* Make sure you are part of our slack channel (`Here the invitation link<https://join.slack.com/share/enQtMzY3MDA0NDM2NDgzNy0xNDk4YmU5MTUyZjhhZGRlZDAyNDkyN2UyOTc1ZmJiODQ5NWRkMzFmMGE0ZWRjOWQ2YmE4YjAyMjkyYmE4NmQy>`__.
+* Make sure you are part of our slack channel (`Here the invitation link <https://join.slack.com/share/enQtMzY3MDA0NDM2NDgzNy0xNDk4YmU5MTUyZjhhZGRlZDAyNDkyN2UyOTc1ZmJiODQ5NWRkMzFmMGE0ZWRjOWQ2YmE4YjAyMjkyYmE4NmQy>`__.
 * Watch the video on modules. This takes :green:`~0.5-1 hour`.
 
 .. raw:: html
