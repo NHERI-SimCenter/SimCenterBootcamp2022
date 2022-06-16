@@ -76,6 +76,10 @@ Each instance represents one node in the system
      - description
    * - `pos`
      - `np.array([x,y])`
+     - index position of this `Node()` in a `System().nodes` list.  This needs to be set by
+       `System().addNode(thisNode)`, so coordinate this with the `System()` team.
+   * - `index`
+     - `int`
      - holds `x` and `y` coordinates of the points
    * - `disp`
      - `np.array([u,v])`
@@ -88,6 +92,12 @@ Each instance represents one node in the system
      - `np.array([Px,Py])`
      - holds `x` and `y` components of the
        nodal load vector.
+
+
+**Equations**
+
+1. Deformed position node 0: :math:`{\bf x}_0 = {\bf X}_0 + (factor)*{\bf U}_0`
+#. Deformed position node 1: :math:`{\bf x}_1 = {\bf X}_1 + (factor)*{\bf U}_1`
 
 
 Element
@@ -148,8 +158,8 @@ recompute every time!
 #. Strain: :math:`\varepsilon = {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)`
 #. Force: :math:`f = \sigma(\varepsilon) A` using `material.setStrain(eps)` and `material.getStress()`.
 #. Nodal force vector: :math:`{\bf P}^e = f \, {\bf n}`
-#. Nodal stiffness matrix: :math:`{\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}` using `material.getStiffness()` to find :math:`E_t`.
 #. :math:`{\bf P}_0 = -{\bf P}^e ~~~~~~ {\bf P}_1 = {\bf P}^e`
+#. Nodal stiffness matrix: :math:`{\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}` using `material.getStiffness()` to find :math:`E_t`.
 #. :math:`{\bf k}_{00} = {\bf k}_{11} = {\bf k}^e ~~~~~~~~ {\bf k}_{01} = {\bf k}_{10} = -{\bf k}^e`
 
 
@@ -183,10 +193,6 @@ Material
      - strain :math:`\varepsilon`
      - n/a
      - update state for a user provided axial strain value
-   * - ``
-     - 
-     - 
-     - 
 
 .. list-table:: Element class variables
    :widths: 25 25 50
@@ -208,6 +214,27 @@ Material
    * - `Et`
      - float
      - holds current materil tangent modulus
+
+
+**Equations**
+
+1. Elastic trial state:
+
+   1.1  :math:`\sigma = E * (\varepsilon - \varepsilon_P)`
+   
+   1.2  :math:`E_t = E`
+
+2. Yield check: :math:`f = ||\sigma|| - f_y`
+
+
+3. IF :math:`f \ge 0`:
+
+   3.1. :math:`\Delta\varepsilon_P = \text{sign}(\sigma) * \frac{f}{E}`
+   
+   3.2. :math:`\sigma = \sigma -  E * \Delta\varepsilon_P`
+   
+   3.3. :math:`E_t = E_t - E`
+
 
 
 System
@@ -272,6 +299,31 @@ Creates an instance of a truss model
    * - `loads`
      - `np.array([...])`
      - system sized load vector
+
+
+**Equations**
+
+1. each element has `node0 = elem.nodes[0]` and `node1 = elem.nodes[1]`
+#. node indices `i = node0.index` and `j = node1.index`
+#. a local d.o.f. :math:`u\to k=0` or :math:`v\to k=1` of node :math:`i` belongs at global index :math:`K = 4*i + k`
+#. a local d.o.f. :math:`u\to m=0` or :math:`v\to m=1` of node :math:`j` belongs at global index :math:`M = 4*j + m`
+
+*Assembly*:
+
+* :math:`{\bf F}`: element force from `elem.getForce()`
+* :math:`{\bf K_t}`: element stiffness from `elem.getStiffness()`
+* :math:`{\bf R}_{sys}`: system force
+* :math:`{\bf K_t}_{sys}`: system stiffness
+
+5. Loop over `nodes`: :math:`{\bf R}_{sys}[K] = nodes[i].getLoad()[k]`   (this should return 0 if no load at this node and d.o.f.)
+#. Loop over `elements`: :math:`{\bf R}_{sys}[K] = {\bf R}_{sys}[K] -  {\bf F}[i][k]`
+#. Loop over `elements`: :math:`{\bf K_t}_{sys}[K,M] = {\bf K_t}_{sys}[K,M] +  {\bf K_t}[i,j][k,m]`
+#. Loop over `nodes`: if a d.o.f. at *K* is fixed, set :math:`{\bf R}_{sys}[K] = 0` and :math:`{\bf K_t}_{sys}[K,K] = 1.0e20`.
+#. Solve system of equations:  :math:`{\bf U} = {\bf K_t}_{sys}^{-1}\,{\bf R}_{sys}`
+#. Loop over `nodes`: :math:`nodes[i].setDisp(u,v)` using :math:`u = {\bf U}[2*i]` and :math:`v = {\bf U}[2*i+1]`
+#. Recompute: :math:`{\bf R}_{sys}` as in steps 5 and 6 (**do not repeat steps 7-11**).  If
+   everything was done correctly, fixed d.o.f.s will contain the support reactions and free
+   d.o.f.s should hold numeric zeros.
 
 
 Plotter

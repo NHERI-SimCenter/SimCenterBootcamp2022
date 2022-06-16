@@ -118,8 +118,8 @@ We will use Friday’s session to combine your components into a single applicat
 <section id="node">
 <h2>Node<a class="headerlink" href="#node" title="Permalink to this headline"></a></h2>
 <p>Each instance represents one node in the system</p>
-<table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">Node class methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Node class methods</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -187,8 +187,8 @@ a default factor of 1.0 if none given.</p></td>
 </tr>
 </tbody>
 </table>
-<table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">Node class variables</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Node class variables</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -203,30 +203,40 @@ a default factor of 1.0 if none given.</p></td>
 <tbody>
 <tr class="row-even"><td><p><cite>pos</cite></p></td>
 <td><p><cite>np.array([x,y])</cite></p></td>
+<td><p>index position of this <cite>Node()</cite> in a <cite>System().nodes</cite> list.  This needs to be set by
+<cite>System().addNode(thisNode)</cite>, so coordinate this with the <cite>System()</cite> team.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>index</cite></p></td>
+<td><p><cite>int</cite></p></td>
 <td><p>holds <cite>x</cite> and <cite>y</cite> coordinates of the points</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>disp</cite></p></td>
+<tr class="row-even"><td><p><cite>disp</cite></p></td>
 <td><p><cite>np.array([u,v])</cite></p></td>
 <td><p>holds <cite>x</cite> and <cite>y</cite> components of nodal displacement</p></td>
 </tr>
-<tr class="row-even"><td><p><cite>fixity</cite></p></td>
+<tr class="row-odd"><td><p><cite>fixity</cite></p></td>
 <td><p>list of two <cite>True|False</cite></p></td>
 <td><p><cite>fixity[i]</cite> is <cite>True</cite> if <cite>i</cite>-th degree of freedom is fixed, <cite>False</cite> otherwise.  Note:
 <cite>i=0|1</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>force</cite></p></td>
+<tr class="row-even"><td><p><cite>force</cite></p></td>
 <td><p><cite>np.array([Px,Py])</cite></p></td>
 <td><p>holds <cite>x</cite> and <cite>y</cite> components of the
 nodal load vector.</p></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Equations</strong></p>
+<ol class="arabic simple">
+<li><p>Deformed position node 0: <span class="math notranslate nohighlight">\({\bf x}_0 = {\bf X}_0 + (factor)*{\bf U}_0\)</span></p></li>
+<li><p>Deformed position node 1: <span class="math notranslate nohighlight">\({\bf x}_1 = {\bf X}_1 + (factor)*{\bf U}_1\)</span></p></li>
+</ol>
 </section>
 <section id="element">
 <h2>Element<a class="headerlink" href="#element" title="Permalink to this headline"></a></h2>
 <p>Each instance represents one truss member</p>
-<table class="colwidths-given docutils align-default" id="id5">
-<caption><span class="caption-text">Element class methods</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Element class methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -261,8 +271,8 @@ two components of the force.</p></td>
 </table>
 <p><strong>Note</strong>: a <cite>Node()</cite> object may have changed its state between calls, so you need to
 recompute every time!</p>
-<table class="colwidths-given docutils align-default" id="id6">
-<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -301,16 +311,16 @@ recompute every time!</p>
 <li><p>Strain: <span class="math notranslate nohighlight">\(\varepsilon = {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)\)</span></p></li>
 <li><p>Force: <span class="math notranslate nohighlight">\(f = \sigma(\varepsilon) A\)</span> using <cite>material.setStrain(eps)</cite> and <cite>material.getStress()</cite>.</p></li>
 <li><p>Nodal force vector: <span class="math notranslate nohighlight">\({\bf P}^e = f \, {\bf n}\)</span></p></li>
-<li><p>Nodal stiffness matrix: <span class="math notranslate nohighlight">\({\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}\)</span> using <cite>material.getStiffness()</cite> to find <span class="math notranslate nohighlight">\(E_t\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\({\bf P}_0 = -{\bf P}^e ~~~~~~ {\bf P}_1 = {\bf P}^e\)</span></p></li>
+<li><p>Nodal stiffness matrix: <span class="math notranslate nohighlight">\({\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}\)</span> using <cite>material.getStiffness()</cite> to find <span class="math notranslate nohighlight">\(E_t\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\({\bf k}_{00} = {\bf k}_{11} = {\bf k}^e ~~~~~~~~ {\bf k}_{01} = {\bf k}_{10} = -{\bf k}^e\)</span></p></li>
 </ol>
 </section>
 <section id="material">
 <h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>
 <p><strong>This class is provided as a demonstration example.</strong></p>
-<table class="colwidths-given docutils align-default" id="id7">
-<caption><span class="caption-text">Material class methods</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-text">Material class methods</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -345,15 +355,10 @@ recompute every time!</p>
 <td><p>n/a</p></td>
 <td><p>update state for a user provided axial strain value</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id1"><span class="problematic" id="id2">``</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<table class="colwidths-given docutils align-default" id="id8">
-<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id6">
+<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -385,12 +390,25 @@ Holds user provided parameters (MOE, Poisson’s ratio, yield stress)</p></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Equations</strong></p>
+<ol class="arabic">
+<li><p>Elastic trial state:</p>
+<p>1.1  <span class="math notranslate nohighlight">\(\sigma = E * (\varepsilon - \varepsilon_P)\)</span></p>
+<p>1.2  <span class="math notranslate nohighlight">\(E_t = E\)</span></p>
+</li>
+<li><p>Yield check: <span class="math notranslate nohighlight">\(f = ||\sigma|| - f_y\)</span></p></li>
+<li><p>IF <span class="math notranslate nohighlight">\(f \ge 0\)</span>:</p>
+<p>3.1. <span class="math notranslate nohighlight">\(\Delta\varepsilon_P = \text{sign}(\sigma) * \frac{f}{E}\)</span></p>
+<p>3.2. <span class="math notranslate nohighlight">\(\sigma = \sigma -  E * \Delta\varepsilon_P\)</span></p>
+<p>3.3. <span class="math notranslate nohighlight">\(E_t = E_t - E\)</span></p>
+</li>
+</ol>
 </section>
 <section id="system">
 <h2>System<a class="headerlink" href="#system" title="Permalink to this headline"></a></h2>
 <p>Creates an instance of a truss model</p>
-<table class="colwidths-given docutils align-default" id="id9">
-<caption><span class="caption-text">System class methods</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id7">
+<caption><span class="caption-text">System class methods</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -439,8 +457,8 @@ loop through nodes and update nodal displacement, compute unbalanced force <span
 </tr>
 </tbody>
 </table>
-<table class="colwidths-given docutils align-default" id="id10">
-<caption><span class="caption-text">System class variables</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id8">
+<caption><span class="caption-text">System class variables</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -475,12 +493,37 @@ loop through nodes and update nodal displacement, compute unbalanced force <span
 </tr>
 </tbody>
 </table>
+<p><strong>Equations</strong></p>
+<ol class="arabic simple">
+<li><p>each element has <cite>node0 = elem.nodes[0]</cite> and <cite>node1 = elem.nodes[1]</cite></p></li>
+<li><p>node indices <cite>i = node0.index</cite> and <cite>j = node1.index</cite></p></li>
+<li><p>a local d.o.f. <span class="math notranslate nohighlight">\(u\to k=0\)</span> or <span class="math notranslate nohighlight">\(v\to k=1\)</span> of node <span class="math notranslate nohighlight">\(i\)</span> belongs at global index <span class="math notranslate nohighlight">\(K = 4*i + k\)</span></p></li>
+<li><p>a local d.o.f. <span class="math notranslate nohighlight">\(u\to m=0\)</span> or <span class="math notranslate nohighlight">\(v\to m=1\)</span> of node <span class="math notranslate nohighlight">\(j\)</span> belongs at global index <span class="math notranslate nohighlight">\(M = 4*j + m\)</span></p></li>
+</ol>
+<p><em>Assembly</em>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\({\bf F}\)</span>: element force from <cite>elem.getForce()</cite></p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf K_t}\)</span>: element stiffness from <cite>elem.getStiffness()</cite></p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf R}_{sys}\)</span>: system force</p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf K_t}_{sys}\)</span>: system stiffness</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Loop over <cite>nodes</cite>: <span class="math notranslate nohighlight">\({\bf R}_{sys}[K] = nodes[i].getLoad()[k]\)</span>   (this should return 0 if no load at this node and d.o.f.)</p></li>
+<li><p>Loop over <cite>elements</cite>: <span class="math notranslate nohighlight">\({\bf R}_{sys}[K] = {\bf R}_{sys}[K] -  {\bf F}[i][k]\)</span></p></li>
+<li><p>Loop over <cite>elements</cite>: <span class="math notranslate nohighlight">\({\bf K_t}_{sys}[K,M] = {\bf K_t}_{sys}[K,M] +  {\bf K_t}[i,j][k,m]\)</span></p></li>
+<li><p>Loop over <cite>nodes</cite>: if a d.o.f. at <em>K</em> is fixed, set <span class="math notranslate nohighlight">\({\bf R}_{sys}[K] = 0\)</span> and <span class="math notranslate nohighlight">\({\bf K_t}_{sys}[K,K] = 1.0e20\)</span>.</p></li>
+<li><p>Solve system of equations:  <span class="math notranslate nohighlight">\({\bf U} = {\bf K_t}_{sys}^{-1}\,{\bf R}_{sys}\)</span></p></li>
+<li><p>Loop over <cite>nodes</cite>: <span class="math notranslate nohighlight">\(nodes[i].setDisp(u,v)\)</span> using <span class="math notranslate nohighlight">\(u = {\bf U}[2*i]\)</span> and <span class="math notranslate nohighlight">\(v = {\bf U}[2*i+1]\)</span></p></li>
+<li><p>Recompute: <span class="math notranslate nohighlight">\({\bf R}_{sys}\)</span> as in steps 5 and 6 (<strong>do not repeat steps 7-11</strong>).  If
+everything was done correctly, fixed d.o.f.s will contain the support reactions and free
+d.o.f.s should hold numeric zeros.</p></li>
+</ol>
 </section>
 <section id="plotter">
 <h2>Plotter<a class="headerlink" href="#plotter" title="Permalink to this headline"></a></h2>
 <p>Creates undeformed and deformed plots of the system.</p>
-<table class="colwidths-given docutils align-default" id="id11">
-<caption><span class="caption-text">Plotter class methods</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id9">
+<caption><span class="caption-text">Plotter class methods</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -532,8 +575,8 @@ of that name</p></td>
 </tr>
 </tbody>
 </table>
-<table class="colwidths-given docutils align-default" id="id12">
-<caption><span class="caption-text">Plotter class variables</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id10">
+<caption><span class="caption-text">Plotter class variables</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
