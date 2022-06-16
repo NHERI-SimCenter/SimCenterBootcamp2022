@@ -38,7 +38,7 @@ If you haven't solved them yet:
 For those who want a bigger challenge **and** who are willing to work as a team:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Programming Challenge:
 
     programming_challenge
