@@ -9,7 +9,7 @@ class Node():
     def __init__(self):
         pass
 
-    def str(self):
+    def __str__(self):
         s = "Node()"
         return s
 

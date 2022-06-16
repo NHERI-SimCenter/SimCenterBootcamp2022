@@ -8,7 +8,7 @@ class Element():
     def __init__(self):
         pass
 
-    def str(self):
+    def __str__(self):
         s = "Element()"
         return s
 

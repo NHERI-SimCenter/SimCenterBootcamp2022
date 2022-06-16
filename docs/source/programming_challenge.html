@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Problem &mdash; Programming Bootcamp 2022  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python: Assignments Day 5" href="assignment_day5.html" />
+    <link rel="prev" title="Python: Assignments Day 4" href="assignment_day4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setupInstructions.html">Setup Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_videos.html">Self-Study Videos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="assignments.html">Assignments</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="assignment_day1.html">Python: Assignments Day 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_day2.html">Python: Assignments Day 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_day3.html">Python: Assignments Day 3</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="assignment_day4.html">Python: Assignments Day 4</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="assignment_day4.html#self-study-portion-for-day-4-ahead-of-class">Self-study portion for day 4 (ahead of class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignment_day4.html#live-exercises-in-class">Live exercises (in class)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="assignment_day4.html#practice-problems">Practice problems</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Challenge Problem</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="assignment_day4.html#self-study-portion-for-day-5-watch-before-tomorrow-s-class">Self-study portion for day 5 (watch before tomorrow’s class)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_day5.html">Python: Assignments Day 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignmentPreC.html">C: Assignment to Test Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C1.html">C Variables and Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C2_solution.html">C: Day 2 In Class Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C3.html">C++ Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C4.html">C: Parallel Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment_C5.html">C-Tapis Assignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmake.html">Cmake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TACC.html">TACC-Frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis.html">Tapis CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Questions, Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Programming Bootcamp 2022</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="assignments.html">Assignments</a> &raquo;</li>
+          <li><a href="assignment_day4.html">Python: Assignments Day 4</a> &raquo;</li>
+      <li>Challenge Problem</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/programming_challenge.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="challenge-problem">
+<h1>Challenge Problem<a class="headerlink" href="#challenge-problem" title="Permalink to this headline"></a></h1>
+<p>The goal is to create an object-oriented truss analysis program that</p>
+<ol class="arabic simple">
+<li><p>is based on the finite element method</p></li>
+<li><p>handles arbitrary trusses in 2D</p></li>
+<li><p>allows for arbitrary loading</p></li>
+<li><p>can plot its undeformed and deformed shape</p></li>
+</ol>
+<p>In order to succeed, we shall devide the task and conquer one class per team.
+We will use Friday’s session to combine your components into a single application.</p>
+<p>The program will need and use the following objects:</p>
+<section id="node">
+<h2>Node<a class="headerlink" href="#node" title="Permalink to this headline"></a></h2>
+<p>Each instance represents one node in the system</p>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Node class</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>input</p></th>
+<th class="head"><p>returns</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<td></td>
+<td><p>n/a</p></td>
+<td><p>constructor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="element">
+<h2>Element<a class="headerlink" href="#element" title="Permalink to this headline"></a></h2>
+<p>Each instance represents one truss member</p>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Element class</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>input</p></th>
+<th class="head"><p>returns</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<td></td>
+<td><p>n/a</p></td>
+<td><p>constructor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>
+<p><strong>This class is provided as a demonstration example.</strong></p>
+<table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-text">Material class</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>input</p></th>
+<th class="head"><p>returns</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<td><p>parameters as <cite>{‘E’:10.0}</cite></p></td>
+<td><p>n/a</p></td>
+<td><p>constructor. Sets parameters for this material and initializes all internal variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>getStress()</cite></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>request axial stress</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>getStiffness</cite></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(E_t\)</span></p></td>
+<td><p>request axial stiffness</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>setStrain(eps)</cite></p></td>
+<td><p>strain <span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+<td><p>n/a</p></td>
+<td><p>update state for a user provided axial strain value</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id1"><span class="problematic" id="id2">``</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="system">
+<h2>System<a class="headerlink" href="#system" title="Permalink to this headline"></a></h2>
+<p>Creates an instance of a truss model</p>
+<table class="colwidths-given docutils align-default" id="id6">
+<caption><span class="caption-text">System class</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>input</p></th>
+<th class="head"><p>returns</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<td></td>
+<td><p>n/a</p></td>
+<td><p>constructor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="plotter">
+<h2>Plotter<a class="headerlink" href="#plotter" title="Permalink to this headline"></a></h2>
+<table class="colwidths-given docutils align-default" id="id7">
+<caption><span class="caption-text">Plotter class</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>input</p></th>
+<th class="head"><p>returns</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<td></td>
+<td><p>n/a</p></td>
+<td><p>constructor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>` `</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="assignment_day4.html" class="btn btn-neutral float-left" title="Python: Assignments Day 4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assignment_day5.html" class="btn btn-neutral float-right" title="Python: Assignments Day 5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

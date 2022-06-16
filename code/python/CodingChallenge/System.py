@@ -12,7 +12,7 @@ class System():
     def __init__(self):
         pass
 
-    def str(self):
+    def __str__(self):
         s = "System()"
         return s
 

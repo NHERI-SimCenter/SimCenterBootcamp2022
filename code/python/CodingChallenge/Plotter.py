@@ -10,7 +10,7 @@ class Plotter():
     def __init__(self):
         pass
 
-    def str(self):
+    def __str__(self):
         s = "Plotter()"
         return s
 
