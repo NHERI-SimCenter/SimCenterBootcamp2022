@@ -155,7 +155,7 @@ recompute every time!
 1. :math:`{\bf L} = {\bf X}_1 - {\bf X}_0`
 #. :math:`\ell = ||{\bf L}||`
 #. :math:`{\bf n} = \frac{1}{\ell} \, {\bf L}`
-#. Strain: :math:`\varepsilon = {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)`
+#. Strain: :math:`\varepsilon = \frac{1}{\ell} \, {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)`
 #. Force: :math:`f = \sigma(\varepsilon) A` using `material.setStrain(eps)` and `material.getStress()`.
 #. Nodal force vector: :math:`{\bf P}^e = f \, {\bf n}`
 #. :math:`{\bf P}_0 = -{\bf P}^e ~~~~~~ {\bf P}_1 = {\bf P}^e`
