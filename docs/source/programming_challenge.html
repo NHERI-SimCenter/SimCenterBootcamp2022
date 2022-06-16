@@ -119,7 +119,7 @@ We will use Friday’s session to combine your components into a single applicat
 <h2>Node<a class="headerlink" href="#node" title="Permalink to this headline"></a></h2>
 <p>Each instance represents one node in the system</p>
 <table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">Node class</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">Node class methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -134,30 +134,90 @@ We will use Friday’s session to combine your components into a single applicat
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
-<td></td>
+<tr class="row-even"><td><p><cite>__init__(x,y)</cite></p></td>
+<td><p>coordinates of the point as two floats</p></td>
 <td><p>n/a</p></td>
-<td><p>constructor.</p></td>
+<td><p>constructor. Sets position and initializes displacement and force to zeros.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>fixDOF(idx)</cite></p></td>
+<td><p><cite>idx</cite> of the degree of freedom (dof)</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>set internal flag for this dof accordingly.</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
-<td></td>
-<td></td>
-<td></td>
+<tr class="row-even"><td><p><cite>isFixed(idx)</cite></p></td>
+<td><p><cite>idx</cite> of the degree of freedom (dof)</p></td>
+<td><p>True|False</p></td>
+<td><p>test function returning True if dof at <cite>idx</cite> is fixed, False otherwise.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>setDisp(u,v)</cite></p></td>
+<td><p>components of displacement</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>overwrited the displacements for this node.</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>getDisp()</cite></p></td>
 <td></td>
+<td><p><cite>np.array([u,v])</cite></p></td>
+<td><p>returns displacement vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>getPos()</cite></p></td>
 <td></td>
+<td><p><cite>np.array([x,y])</cite></p></td>
+<td><p>returns initial position</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>getDeformedPos(factor)</cite></p></td>
 <td></td>
+<td><p><cite>np.array([x+factor*u,y+factor*v])</cite></p></td>
+<td><p>returns current position with displacement magnified by factor.  Would be good to have
+a default factor of 1.0 if none given.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>addLoad(Px,Py)</cite></p></td>
+<td><p>components of load</p></td>
+<td></td>
+<td><p>add this load to nodal load</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>setLoad(Px,Px)</cite></p></td>
+<td><p>components of load</p></td>
+<td></td>
+<td><p>replace current load by provided load</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>getLoad()</cite></p></td>
+<td></td>
+<td><p><cite>np.array([Px,Py])</cite></p></td>
+<td><p>returns current load</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Node class variables</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>pos</cite></p></td>
+<td><p><cite>np.array([x,y])</cite></p></td>
+<td><p>holds <cite>x</cite> and <cite>y</cite> coordinates of the points</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>disp</cite></p></td>
+<td><p><cite>np.array([u,v])</cite></p></td>
+<td><p>holds <cite>x</cite> and <cite>y</cite> components of nodal displacement</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>fixity</cite></p></td>
+<td><p>list of two <cite>True|False</cite></p></td>
+<td><p><cite>fixity[i]</cite> is <cite>True</cite> if <cite>i</cite>-th degree of freedom is fixed, <cite>False</cite> otherwise.  Note:
+<cite>i=0|1</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>force</cite></p></td>
+<td><p><cite>np.array([Px,Py])</cite></p></td>
+<td><p>holds <cite>x</cite> and <cite>y</cite> components of the
+nodal load vector.</p></td>
 </tr>
 </tbody>
 </table>
@@ -165,8 +225,8 @@ We will use Friday’s session to combine your components into a single applicat
 <section id="element">
 <h2>Element<a class="headerlink" href="#element" title="Permalink to this headline"></a></h2>
 <p>Each instance represents one truss member</p>
-<table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">Element class</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-text">Element class methods</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -181,30 +241,55 @@ We will use Friday’s session to combine your components into a single applicat
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
-<td></td>
+<tr class="row-even"><td><p><cite>__init__(nd0, nd1, material)</cite></p></td>
+<td><p>two <cite>Node()</cite> objects, one <cite>Material()</cite> object.</p></td>
 <td><p>n/a</p></td>
 <td><p>constructor.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>getForce()</cite></p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>list of (1d) np.array objects</p></td>
+<td><p>A list of nodal forces.  Each nodal force shall be represented as a 1d np.array with
+two components of the force.</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>getStiffness()</cite></p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>2-by-2 list of 2-by-2 np.array</p></td>
+<td><p>A list of lists (matrix) containing nodal tangent matrices as <cite>np.array([[.,.],[.,.]])</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
-<td></td>
-<td></td>
-<td></td>
+</tbody>
+</table>
+<p><strong>Note</strong>: a <cite>Node()</cite> object may have changed its state between calls, so you need to
+recompute every time!</p>
+<table class="colwidths-given docutils align-default" id="id6">
+<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
-<td></td>
-<td></td>
-<td></td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>nodes</cite></p></td>
+<td><p>List of <cite>Node()</cite> instances</p></td>
+<td><p>representing the two nodes at either end of a truss.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>material</cite></p></td>
+<td><p><cite>Material()</cite></p></td>
+<td><p>pointer to an instance of <cite>Material()</cite>. Needed to compute stress and tangent modulus.</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>force</cite></p></td>
+<td><p>2-list of (1d) np.array objects.</p></td>
+<td><p>holding nodal forces <cite>P0</cite> and <cite>P1</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>Kt</cite></p></td>
+<td><p>2-by-2 array of 2-by-2 np.array objects.</p></td>
+<td><p>tangent stiffness matrix. Representing all nodal stiffness matrices.</p></td>
 </tr>
 </tbody>
 </table>
@@ -212,8 +297,8 @@ We will use Friday’s session to combine your components into a single applicat
 <section id="material">
 <h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>
 <p><strong>This class is provided as a demonstration example.</strong></p>
-<table class="colwidths-given docutils align-default" id="id5">
-<caption><span class="caption-text">Material class</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id7">
+<caption><span class="caption-text">Material class methods</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -255,12 +340,45 @@ We will use Friday’s session to combine your components into a single applicat
 </tr>
 </tbody>
 </table>
+<table class="colwidths-given docutils align-default" id="id8">
+<caption><span class="caption-text">Element class variables</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>params</cite></p></td>
+<td><p>dict</p></td>
+<td><p>default parameters: <cite>{‘E’:100., ‘nu’:0.0,  ‘fy:1.0e30}</cite>
+Holds user provided parameters (MOE, Poisson’s ratio, yield stress)</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>plastic_strain</cite></p></td>
+<td><p>float</p></td>
+<td><p>internal state variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>sig</cite></p></td>
+<td><p>float</p></td>
+<td><p>holds current stress</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>Et</cite></p></td>
+<td><p>float</p></td>
+<td><p>holds current materil tangent modulus</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="system">
 <h2>System<a class="headerlink" href="#system" title="Permalink to this headline"></a></h2>
 <p>Creates an instance of a truss model</p>
-<table class="colwidths-given docutils align-default" id="id6">
-<caption><span class="caption-text">System class</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<table class="colwidths-given docutils align-default" id="id9">
+<caption><span class="caption-text">System class methods</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -280,33 +398,77 @@ We will use Friday’s session to combine your components into a single applicat
 <td><p>n/a</p></td>
 <td><p>constructor.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>addNode(newNode)</cite></p></td>
+<td><p><cite>Node(…)</cite> object</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>add one <cite>Node()</cite> object to your list of elements (the model)</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>addElement(newElem)</cite></p></td>
+<td><p><cite>Element(…)</cite> object</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>add one <cite>Element()</cite> object to your list of elements (the model)</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>solve()</cite></p></td>
 <td></td>
 <td></td>
-<td></td>
+<td><p>assemble <span class="math notranslate nohighlight">\([K_t]\)</span> and <span class="math notranslate nohighlight">\(\{P\}\)</span>, solve for <span class="math notranslate nohighlight">\(\{u\} = [K_t]^{-1}\{P\}\)</span>,
+loop through nodes and update nodal displacement, compute unbalanced force <span class="math notranslate nohighlight">\(\{R\}
+= \{P\} - \{F\}\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>plot(factor=1.0)</cite></p></td>
 <td></td>
 <td></td>
+<td><p>collect node info and send it to the plotter. Request the plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>report()</cite></p></td>
 <td></td>
+<td></td>
+<td><p>print a summary report: list of nodal position, load, displacement, unbalanced force.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default" id="id10">
+<caption><span class="caption-text">System class variables</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>nodes</cite></p></td>
+<td><p>List of <cite>Node()</cite> objects</p></td>
+<td><p>holds all the nodes in the model</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>elements</cite></p></td>
+<td><p>List of <cite>Element()</cite> objects</p></td>
+<td><p>holds all the elements in the model</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>plotter</cite></p></td>
+<td><p><cite>Plotter()</cite></p></td>
+<td><p>pointer to <cite>Plotter()</cite> object to handle plotting</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>disp</cite></p></td>
+<td><p><cite>np.array([…])</cite></p></td>
+<td><p>system sized displacement vector</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>loads</cite></p></td>
+<td><p><cite>np.array([…])</cite></p></td>
+<td><p>system sized load vector</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="plotter">
 <h2>Plotter<a class="headerlink" href="#plotter" title="Permalink to this headline"></a></h2>
-<table class="colwidths-given docutils align-default" id="id7">
-<caption><span class="caption-text">Plotter class</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<p>Creates undeformed and deformed plots of the system.</p>
+<table class="colwidths-given docutils align-default" id="id11">
+<caption><span class="caption-text">Plotter class methods</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -321,30 +483,76 @@ We will use Friday’s session to combine your components into a single applicat
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
+<tr class="row-even"><td><p><cite>__init__()</cite></p></td>
 <td></td>
 <td><p>n/a</p></td>
-<td><p>constructor.</p></td>
+<td><p>constructor. Initialize the plotter object to sensible default settings, as needed.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>setMesh(verts,lines)</cite></p></td>
+<td><p>list of points, list of line indices</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>replace <cite>self.vertices</cite> and <cite>self.lines</cite> information.</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>setDisplacements(disp)</cite></p></td>
+<td><p>list of displacement vectors</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>replace <cite>self.disp</cite> information.</p></td>
 </tr>
-<tr class="row-odd"><td><p>` `</p></td>
+<tr class="row-odd"><td><p><cite>setValues(vals)</cite></p></td>
+<td><p>list of line (force) values.</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><p>replace <cite>self.values</cite> information.</p></td>
 </tr>
-<tr class="row-even"><td><p>` `</p></td>
+<tr class="row-even"><td><p><cite>displacementPlot(file=None)</cite></p></td>
+<td><p>a string</p></td>
 <td></td>
+<td><p>creates a plot showing undeformed in black and deformed model in red lines.
+If <cite>file</cite> is given, save a copy of the plot to a file
+of that name</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>valuePlot(deformed=False, file=None)</cite></p></td>
+<td><p>a string</p></td>
 <td></td>
-<td></td>
+<td><p>creates a plot showing the undeformed|deformed system (based on the user input) with
+lines colored based on <cite>values</cite>. Add a colormap/colorbar as legend.
+If <cite>file</cite> is given, save a copy of the plot to a file
+of that name</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default" id="id12">
+<caption><span class="caption-text">Plotter class variables</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>vertices</cite></p></td>
+<td><p>List of <cite>np.array([X,Y])</cite></p></td>
+<td><p>list of coordinate pairs representing points (nodes in the model)</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>lines</cite></p></td>
+<td><p>List of List</p></td>
+<td><p>list of 2-element lists of indices.  The two lists shall contain the indices of the
+start and end point of a line in the <cite>vertices list</cite>, respectively.</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>disp</cite></p></td>
+<td><p>list of <cite>np.array([u,v])</cite></p></td>
+<td><p>list of point displacements for deformed plot.  This list must be of identical shape
+as the <cite>vertices</cite> list such that respective entries represent point position and
+displacement, respectively.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>values</cite></p></td>
+<td><p><cite>np.array([…])</cite></p></td>
+<td><p>list containing the force values for each line (element).  This list must be of
+identical shape as the <cite>lines</cite> list.</p></td>
 </tr>
 </tbody>
 </table>
