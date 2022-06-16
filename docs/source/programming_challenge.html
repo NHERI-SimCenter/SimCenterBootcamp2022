@@ -293,6 +293,18 @@ recompute every time!</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Equations</strong></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\({\bf L} = {\bf X}_1 - {\bf X}_0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ell = ||{\bf L}||\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf n} = \frac{1}{\ell} \, {\bf L}\)</span></p></li>
+<li><p>Strain: <span class="math notranslate nohighlight">\(\varepsilon = {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)\)</span></p></li>
+<li><p>Force: <span class="math notranslate nohighlight">\(f = \sigma(\varepsilon) A\)</span> using <cite>material.setStrain(eps)</cite> and <cite>material.getStress()</cite>.</p></li>
+<li><p>Nodal force vector: <span class="math notranslate nohighlight">\({\bf P}^e = f \, {\bf n}\)</span></p></li>
+<li><p>Nodal stiffness matrix: <span class="math notranslate nohighlight">\({\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}\)</span> using <cite>material.getStiffness()</cite> to find <span class="math notranslate nohighlight">\(E_t\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf P}_0 = -{\bf P}^e ~~~~~~ {\bf P}_1 = {\bf P}^e\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf k}_{00} = {\bf k}_{11} = {\bf k}^e ~~~~~~~~ {\bf k}_{01} = {\bf k}_{10} = -{\bf k}^e\)</span></p></li>
+</ol>
 </section>
 <section id="material">
 <h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>

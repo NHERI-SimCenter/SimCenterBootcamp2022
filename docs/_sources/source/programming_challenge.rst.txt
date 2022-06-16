@@ -140,6 +140,19 @@ recompute every time!
      - 2-by-2 array of 2-by-2 np.array objects.
      - tangent stiffness matrix. Representing all nodal stiffness matrices.
 
+**Equations**
+
+1. :math:`{\bf L} = {\bf X}_1 - {\bf X}_0`
+#. :math:`\ell = ||{\bf L}||`
+#. :math:`{\bf n} = \frac{1}{\ell} \, {\bf L}`
+#. Strain: :math:`\varepsilon = {\bf n}\cdot( {\bf U}_1 - {\bf U}_0)`
+#. Force: :math:`f = \sigma(\varepsilon) A` using `material.setStrain(eps)` and `material.getStress()`.
+#. Nodal force vector: :math:`{\bf P}^e = f \, {\bf n}`
+#. Nodal stiffness matrix: :math:`{\bf k}^e = \frac{E_t(\varepsilon)\,A}{\ell}\, {\bf n}\otimes{\bf n}` using `material.getStiffness()` to find :math:`E_t`.
+#. :math:`{\bf P}_0 = -{\bf P}^e ~~~~~~ {\bf P}_1 = {\bf P}^e`
+#. :math:`{\bf k}_{00} = {\bf k}_{11} = {\bf k}^e ~~~~~~~~ {\bf k}_{01} = {\bf k}_{10} = -{\bf k}^e`
+
+
 
 Material
 ^^^^^^^^^^^^^^^^^^^^
