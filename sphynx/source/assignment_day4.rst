@@ -11,14 +11,15 @@ Self-study portion for day 4 (ahead of class)
 
 .. raw:: html
 
-   <p><iframe width="560" height="315" src="https://www.youtube.com/embed/JuWQmyGzEG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FPjApvGtvgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Live exercises (in class)
 --------
 
 * Organizing a python project on your file system.
 * Exploring code using the PyCharm debugger.
-* Sharing code via github (the lite version of git)
+.. * Sharing code via github (the lite version of git)
 
 
 Practice problems (after class)
@@ -30,6 +31,6 @@ Self-study portion for day 5 (watch before tomorrow's class)
 -----------
 
 * Make sure your PyCharm setup is working.
-* Make sure your github setup is working. You will need that for tomorrow's collaboration session.
+.. * Make sure your github setup is working. You will need that for tomorrow's collaboration session.
 
 
