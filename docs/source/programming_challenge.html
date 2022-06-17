@@ -136,7 +136,7 @@ We will use Friday’s session to combine your components into a single applicat
 <tbody>
 <tr class="row-even"><td><p><cite>__init__(x,y)</cite></p></td>
 <td><p>coordinates of the point as two floats</p></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>constructor. Sets position and initializes displacement and force to zeros.</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>fixDOF(idx)</cite></p></td>
@@ -253,7 +253,7 @@ nodal load vector.</p></td>
 <tbody>
 <tr class="row-even"><td><p><cite>__init__(nd0, nd1, material)</cite></p></td>
 <td><p>two <cite>Node()</cite> objects, one <cite>Material()</cite> object.</p></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>constructor.</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>getForce()</cite></p></td>
@@ -337,22 +337,27 @@ recompute every time!</p>
 <tbody>
 <tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
 <td><p>parameters as <cite>{‘E’:10.0}</cite></p></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>constructor. Sets parameters for this material and initializes all internal variables</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>getStress()</cite></p></td>
+<tr class="row-odd"><td><p><cite>getArea()</cite></p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p>return cross section area from <cite>parameters[‘A’]</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>getStress()</cite></p></td>
 <td></td>
 <td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
 <td><p>request axial stress</p></td>
 </tr>
-<tr class="row-even"><td><p><cite>getStiffness</cite></p></td>
+<tr class="row-odd"><td><p><cite>getStiffness</cite></p></td>
 <td></td>
 <td><p><span class="math notranslate nohighlight">\(E_t\)</span></p></td>
 <td><p>request axial stiffness</p></td>
 </tr>
-<tr class="row-odd"><td><p><cite>setStrain(eps)</cite></p></td>
+<tr class="row-even"><td><p><cite>setStrain(eps)</cite></p></td>
 <td><p>strain <span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>update state for a user provided axial strain value</p></td>
 </tr>
 </tbody>
@@ -425,7 +430,7 @@ Holds user provided parameters (MOE, Poisson’s ratio, yield stress)</p></td>
 <tbody>
 <tr class="row-even"><td><p><cite>__init__(…)</cite></p></td>
 <td></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>constructor.</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>addNode(newNode)</cite></p></td>
@@ -540,7 +545,7 @@ d.o.f.s should hold numeric zeros.</p></li>
 <tbody>
 <tr class="row-even"><td><p><cite>__init__()</cite></p></td>
 <td></td>
-<td><p>n/a</p></td>
+<td></td>
 <td><p>constructor. Initialize the plotter object to sensible default settings, as needed.</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>setMesh(verts,lines)</cite></p></td>

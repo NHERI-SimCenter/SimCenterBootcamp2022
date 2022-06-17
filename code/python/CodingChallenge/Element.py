@@ -1,4 +1,5 @@
 import numpy as np
+from Node import *
 
 class Element():
     """
@@ -36,10 +37,22 @@ class Element():
         U1 = self.nodes[1].getDisp()
 
         Lvec = X1 - X0
-        len = np.norm(Lvec)
-        Nvec = Lvec / len
+        ell = np.norm(Lvec)
+        Nvec = Lvec / ell
 
         eps = Nvec @ (U1 - U0) / ell
+        self.material.setStrain(eps)
+        stress = self.material.getStress()
+        area   = self.material.getArea()
+        f = stress * area
+
+        Pe = f * Nvec
+        self.force = [-Pe, Pe]
+
+        Et = self.material.getStiffness()
+        ke = (Et * A / ell) * np.outer(Nvec, Nvec)
+        self.force = [[ke,-ke],[-ke,ke]]
+
 
 if __name__ == "__main__":
     # testing the Element class

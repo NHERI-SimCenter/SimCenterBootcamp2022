@@ -8,12 +8,14 @@ class Material():
 
     """
 
-    def __init__(self, params={'E':1.0, 'nu':0.0, 'fy':1.0e30}):
+    def __init__(self, params={'E':1.0, 'A':1.0, 'nu':0.0, 'fy':1.0e30}):
         self.parameters = params
 
         # make sure all necessary parameters exist
         if 'E' not in self.parameters:
             self.parameters['E']  = 1.0
+        if 'A' not in self.parameters:
+            self.parameters['A']  = 1.0
         if 'nu' not in self.parameters:
             self.parameters['nu'] = 0.0
         if 'fy' not in self.parameters:
@@ -29,6 +31,9 @@ class Material():
 
     def __repr__(self):
         return str(self)
+
+    def getArea(self):
+        return self.parameters['A']
 
     def getStress(self):
         """

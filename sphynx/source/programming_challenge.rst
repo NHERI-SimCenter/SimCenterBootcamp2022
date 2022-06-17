@@ -26,7 +26,7 @@ Each instance represents one node in the system
      - description
    * - `__init__(x,y)`
      - coordinates of the point as two floats
-     - n/a
+     - 
      - constructor. Sets position and initializes displacement and force to zeros.
    * - `fixDOF(idx)`
      - `idx` of the degree of freedom (dof)
@@ -114,7 +114,7 @@ Each instance represents one truss member
      - description
    * - `__init__(nd0, nd1, material)`
      - two `Node()` objects, one `Material()` object.
-     - n/a
+     - 
      - constructor.
    * - `getForce()`
      - 
@@ -179,8 +179,12 @@ Material
      - description
    * - `__init__(...)`
      - parameters as `{'E':10.0}`
-     - n/a
+     - 
      - constructor. Sets parameters for this material and initializes all internal variables
+   * - `getArea()`
+     - 
+     - :math:`A`
+     - return cross section area from `parameters['A']`
    * - `getStress()`
      - 
      - :math:`\sigma`
@@ -191,7 +195,7 @@ Material
      - request axial stiffness
    * - `setStrain(eps)`
      - strain :math:`\varepsilon`
-     - n/a
+     - 
      - update state for a user provided axial strain value
 
 .. list-table:: Element class variables
@@ -251,7 +255,7 @@ Creates an instance of a truss model
      - description
    * - `__init__(...)`
      - 
-     - n/a
+     - 
      - constructor.
    * - `addNode(newNode)`
      - `Node(...)` object
@@ -341,7 +345,7 @@ Creates undeformed and deformed plots of the system.
      - description
    * - `__init__()`
      - 
-     - n/a
+     - 
      - constructor. Initialize the plotter object to sensible default settings, as needed.
    * - `setMesh(verts,lines)`
      - list of points, list of line indices
