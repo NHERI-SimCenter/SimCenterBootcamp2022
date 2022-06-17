@@ -76,7 +76,9 @@ class Material():
             self.plastic_strain += depsP
             self.Et = 0.0
 
-        print(4*'{:12.8e}  '.format(eps, f, self.plastic_strain, self.sig ))
+            print("material entering plastic state")
+
+        #print(4*'{:12.8e}  '.format(eps, f, self.plastic_strain, self.sig ))
 
 if __name__ == "__main__":
     # testing the Node class

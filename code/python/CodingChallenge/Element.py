@@ -1,5 +1,6 @@
 import numpy as np
 from Node import *
+from Material import *
 
 class Element():
     """
@@ -9,7 +10,8 @@ class Element():
     def __init__(self, node0, node1, material):
         self.nodes    = [node0, node1]
         self.material = material
-        self.force    = [ np.zeros(2), np.zeros(2) ]
+        self.force    = 0.0
+        self.Forces   = [ np.zeros(2), np.zeros(2) ]
         self.Kt       = [ [np.zeros((2,2)), np.zeros((2,2))], [np.zeros((2,2)), np.zeros((2,2))] ]
 
     def __str__(self):
@@ -22,9 +24,13 @@ class Element():
                                           repr(self.nodes[1]),
                                           repr(self.material))
 
-    def getForce(self):
+    def getAxialForce(self):
         self.updateState()
         return self.force
+
+    def getForce(self):
+        self.updateState()
+        return self.Forces
 
     def getStiffness(self):
         self.updateState()
@@ -37,24 +43,48 @@ class Element():
         U1 = self.nodes[1].getDisp()
 
         Lvec = X1 - X0
-        ell = np.norm(Lvec)
+        ell = np.linalg.norm(Lvec)
         Nvec = Lvec / ell
 
         eps = Nvec @ (U1 - U0) / ell
         self.material.setStrain(eps)
         stress = self.material.getStress()
         area   = self.material.getArea()
-        f = stress * area
+        self.force = stress * area
 
-        Pe = f * Nvec
-        self.force = [-Pe, Pe]
+        Pe = self.force * Nvec
+        self.Forces = [-Pe, Pe]
 
         Et = self.material.getStiffness()
-        ke = (Et * A / ell) * np.outer(Nvec, Nvec)
-        self.force = [[ke,-ke],[-ke,ke]]
+        ke = (Et * area / ell) * np.outer(Nvec, Nvec)
+        self.Kt = [[ke,-ke],[-ke,ke]]
 
 
 if __name__ == "__main__":
     # testing the Element class
-    elem = Element()
+    nd0 = Node(0.0, 0.0)
+    nd0.index = 0
+    nd1 = Node(3.0, 2.0)
+    nd1.index = 1
+    params = {'E':100, 'A':1.5, 'fy':1.0e20}
+    elem = Element(nd0, nd1, Material(params))
+
+    print(nd0)
+    print(nd1)
+
+    print("force =", elem.getAxialForce())
+    print("nodal forces: ", *elem.getForce())
+    print("element stiffness: ", elem.getStiffness())
+
+    # change the nodal displacements
+    nd0.setDisp(.1, .05)
+    nd1.setDisp(.05, .2)
+
+    print(nd0)
+    print(nd1)
+
+    print("force =", elem.getAxialForce())
+    print("nodal forces: ", *elem.getForce())
+    print("element stiffness: ", elem.getStiffness())
+
 

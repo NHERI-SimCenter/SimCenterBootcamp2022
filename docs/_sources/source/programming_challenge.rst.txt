@@ -76,11 +76,11 @@ Each instance represents one node in the system
      - description
    * - `pos`
      - `np.array([x,y])`
-     - index position of this `Node()` in a `System().nodes` list.  This needs to be set by
-       `System().addNode(thisNode)`, so coordinate this with the `System()` team.
+     - holds `x` and `y` coordinates of the points
    * - `index`
      - `int`
-     - holds `x` and `y` coordinates of the points
+     - index position of this `Node()` in a `System().nodes` list.  This needs to be set by
+       `System().addNode(thisNode)`, so coordinate this with the `System()` team.
    * - `disp`
      - `np.array([u,v])`
      - holds `x` and `y` components of nodal displacement

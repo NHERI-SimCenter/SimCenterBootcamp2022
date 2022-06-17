@@ -7,11 +7,12 @@ class Node():
     """
 
     def __init__(self, x ,y, u=0, v=0):
-        self.pos    = np.array([x,y])
-        self.index  = -1
-        self.disp   = np.array([u,v])
-        self.fixity = [False, False]
-        self.force  = np.zeros(2)
+        self.pos      = np.array([x,y])
+        self.index    = -1
+        self.disp     = np.array([u,v])
+        self.fixity   = [False, False]
+        self.force    = np.zeros(2)
+        self._hasLoad = False
 
     def __str__(self):
         s = \
@@ -48,13 +49,18 @@ class Node():
         return self.pos + factor * self.disp
 
     def addLoad(self, Px, Py):
-        self.force += np.array([Px, Py])
+        self.force   += np.array([Px, Py])
+        self._hasLoad = True
 
     def setLoad(self, Px, Py):
-        self.force = np.array([Px, Py])
+        self.force    = np.array([Px, Py])
+        self._hasLoad = True
 
     def getLoad(self):
         return self.force
+
+    def hasLoad(self):
+        return self._hasLoad
 
 
 if __name__ == "__main__":
