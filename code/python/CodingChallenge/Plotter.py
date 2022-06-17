@@ -87,7 +87,7 @@ class Plotter():
         lc = LineCollection(np.array(segments), cmap='rainbow')
         # Set the values used for colormapping
         lc.set_array(self.values)
-        lc.set_linewidth(2)
+        lc.set_linewidth(3)
         line = axs.add_collection(lc)
         fig.colorbar(line, ax=axs)
 
