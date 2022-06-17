@@ -15,9 +15,14 @@ class Element():
         self.Kt       = [ [np.zeros((2,2)), np.zeros((2,2))], [np.zeros((2,2)), np.zeros((2,2))] ]
 
     def __str__(self):
-        return "Element({},{},{})".format(repr(self.nodes[0]),
-                                          repr(self.nodes[1]),
-                                          repr(self.material))
+        s = \
+"""Element: node {} to node {}:
+   material properties: {}  strain:{}   stress:{}  
+   internal force: {}
+   Pe: [ {} {} ]""".format( self.nodes[0].index, self.nodes[1].index,
+                           repr(self.material), self.material.getStrain(), self.material.getStress(),
+                           self.force, *self.Forces[1] )
+        return s
 
     def __repr__(self):
         return "Element({},{},{})".format(repr(self.nodes[0]),

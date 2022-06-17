@@ -70,7 +70,7 @@ class System():
         for (i, node) in enumerate(self.nodes):
             for idx in [0,1]:
                 if node.isFixed(idx):
-                    K = 2*nd0.index + idx
+                    K = 2*node.index + idx
                     Rsys[K] = 0.0
                     # using the "more correct version" of applying BCs to Ksys
                     Ksys[:,K] = np.zeros(ndof)
@@ -80,7 +80,7 @@ class System():
         # stability check for system matrix
         (vals, vecs) = np.linalg.eig(Ksys)
         for (lam, v) in zip(vals, vecs.T):
-            if np.abs(lam) < 0.1:
+            if np.abs(lam) < 1.0e-2:
                 print(f"lambda = {lam:16.12e}")
                 print(v)
         # solve for displacements
@@ -108,18 +108,32 @@ class System():
         self.disp = U
 
     def plot(self, factor=1.0):
+
+        vertices = [ node.getPos() for node in self.nodes ]
+        lines    = [ [ elem.nodes[k].index for k in [0,1] ] for elem in self.elements ]
+        self.plotter.setMesh(vertices, lines)
+
+        ndof = len(self.Rsys)
+        R = self.Rsys.copy().reshape((ndof//2, 2))
+        self.plotter.setReactions(R)
+
+        disp = [ factor * node.getDisp() for node in self.nodes ]
+        self.plotter.setDisplacements(disp)
         self.plotter.displacementPlot()
+
+        values = [ elem.getAxialForce() for elem in self.elements ]
+        self.plotter.setValues(values)
         self.plotter.valuePlot()
 
     def report(self):
-        s  = "Truss Analysis Report\n"
+        s  = "\nTruss Analysis Report\n"
         s += "=====================\n"
-        s += "Nodes:\n"
+        s += "\nNodes:\n"
         s += "---------------------\n"
         for node in self.nodes:
             for ln in str(node).split('\n'):
                 s += "  " + ln + "\n"
-        s += "Elements:\n"
+        s += "\nElements:\n"
         s += "---------------------\n"
         for elem in self.elements:
             for ln in str(elem).split('\n'):

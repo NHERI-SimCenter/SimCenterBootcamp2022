@@ -80,6 +80,9 @@ class Material():
 
         #print(4*'{:12.8e}  '.format(eps, f, self.plastic_strain, self.sig ))
 
+    def getStrain(self):
+        return self.sig / self.parameters['E'] + self.plastic_strain
+
 if __name__ == "__main__":
     # testing the Node class
     mat = Material(params={'E':100.0, 'nu':0.0, 'fy':1.0})

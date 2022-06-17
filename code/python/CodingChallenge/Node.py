@@ -18,13 +18,13 @@ class Node():
         s = \
 """Node {}:
    x:{}   y:{}
-   u:{}   v:{}
    fix:{} fix:{}
-   Px:{}  Py:{}""".format( self.index,
+   Px:{}  Py:{}
+   u:{}   v:{}""".format( self.index,
                            self.pos[0],   self.pos[1],
-                           self.disp[0],  self.disp[1],
                            *self.fixity,
-                           self.force[0], self.force[1])
+                           self.force[0], self.force[1],
+                           self.disp[0],  self.disp[1])
         return s
 
     def __repr__(self):
