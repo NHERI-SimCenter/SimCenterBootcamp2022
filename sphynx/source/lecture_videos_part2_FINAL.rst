@@ -1,9 +1,13 @@
 
 Programming in C
-============
+================
 
 Computers, Programs and Applications
 ------------------------------------
+
+The first video provides information about just exactly what a computer is; basically some programmable device cabable of accepting inputs, storing data in form of files (which are just a sequence of bits, i.e. 0's and 1's), running applications (files with a special designation), and displaying ouputs. Before you play this first video you might find the following helpful: `What makes a computer, a computer? <https://www.youtube.com/watch?v=mCq8-xTH7jA>`_, `hardware & software: <https://www.youtube.com/watch?v=xnyFYiK2rSY>`_, `data & binary 
+<https://www.youtube.com/watch?v=USCBCmwMCDA>`_.
+
 
 .. raw:: html
 
