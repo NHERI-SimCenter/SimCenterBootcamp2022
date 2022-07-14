@@ -1,5 +1,6 @@
-C++ Exercises
-=============
+C: Assignments Day 3
+====================
+
 
 Today we have two problems for you to tackle.
 

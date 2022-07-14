@@ -1,5 +1,6 @@
-C Arrays and File I/O
-=====================
+C: Assignments Day 2
+====================
+
 
 Today we have several problems for you to tackle. 
 Parts should look and feel familiar from Day 1, though we will add more features as we go.

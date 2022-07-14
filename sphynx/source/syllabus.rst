@@ -101,7 +101,7 @@ Python - June 13-17, 2022
 Introduction to C/C++/HPC - July 18-22, 2022
 --------------------------------------------
 
-* Day 6: `Basic C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day1.pdf>`_
+* Day 1: `Basic C <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day1.pdf>`_
   
   * Computers and Computer Programs
   * The C Computer Programming Language

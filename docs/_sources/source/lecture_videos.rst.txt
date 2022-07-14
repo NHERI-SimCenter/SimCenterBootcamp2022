@@ -7,7 +7,5 @@ Self-Study Videos
 
    lecture_videos_part0
    lecture_videos_part1
-   /* lecture_videos_part1b */
    lecture_videos_part2
-   /* lecture_videos_part3 */
 

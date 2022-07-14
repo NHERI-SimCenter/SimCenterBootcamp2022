@@ -2,11 +2,13 @@
 Programming in C
 ================
 
-Day 1 - Introduction to C
--------------------------
+Day 1: Introduction to C
+------------------------
 
-Computers, Programs and Applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+There are a number of short videos to be watched prior to attending Day 1. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day1.pdf>`_
+
+1. Computers, Programs and Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first video provides information about just exactly what a computer is; basically some programmable device cabable of accepting inputs (keyboard, mouse, mic, etc.), storing data in form of files (which are just a sequence of bits, i.e. 0's and 1's), running applications (files with a special designation), and providing output (display, sound, etc.). Before you play this first video you might find the following helpful: `What makes a computer a computer? <https://www.youtube.com/watch?v=mCq8-xTH7jA>`_, `Hardware & Software: <https://www.youtube.com/watch?v=xnyFYiK2rSY>`_, `Data & Binary Representation 
 <https://www.youtube.com/watch?v=USCBCmwMCDA>`_, `Circuits and Logic <https://www.youtube.com/watch?v=ZoqMiFKspAA>`_
@@ -60,6 +62,8 @@ As you develop programs, there are basic algorithms that you will use over and o
 Day 2: C Continued
 ------------------
 
+There are a number of short videos to be watched prior to attending Day 2. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day2.pdf>`_
+
 C Pointers
 ^^^^^^^^^^
 
@@ -102,8 +106,10 @@ The C Language provides some built in data types, i.e. integer, float, double, a
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/_ewhjB45tTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
-Day 3 - Intrpduction to C++
----------------------------
+Day 3: Intrpduction to C++
+--------------------------
+
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day3.pdf>`_
 
 C++ Abstraction and OOP
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,11 +139,13 @@ Now we look at the specific language features that enable OOP programming in C++
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/a7e3sa0K5T8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 
-Day 4 - Parallel Programming
-----------------------------
+Day 4: Parallel Programming
+---------------------------
 
 Parallel Computers and Parallel Programming
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Parallel.pdf>`_
 
 **Frontera** is one of the fastest High Performance Computers in the world. It's high performance comes from the fact that it has many **CPU**nodes, each with many **cores**. To take advantage of such a powerful system, actually to take advantage of even your own local desktop system, you will need to create **parallel** programs.
 
@@ -164,11 +172,13 @@ This video is a very bried introduction to programming with the **OpenMP**, a li
 
    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/APzanKquS-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-Day 5 - Tapis
--------------
+Day 5: Tapis
+------------
 
 Intoduction to Tapis
 ^^^^^^^^^^^^^^^^^^^^
+
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Agave2.pdf>`_
 
 .. raw:: html
 	 
