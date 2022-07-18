@@ -53,11 +53,19 @@ Problem 2: Stress Transformations
 
 To transform stress to a rotated coordinate system one can use the formula shown in the figure. We would ask you to write code that will take as input **4** values  sigmaXX, sigmaYY, tauXY, and **theta** compute the stress in the transformed coordinate system. We would ask you to perform that transformation computation in a function other than **main** and to complicate things, but demonstrate you understand passing of arrays, pass the input and output stresses to this new function in fixed length arrays.
 
-   .. figure:: figures/stress.png
-           :align: center
-           :figclass: align-center
+**Theory**: Stress transformation
 
-           Equation for stress transformation
+.. math::
+    \sigma_x' = \sigma_x \cos^2\theta + \sigma_y \sin^2\theta + 2 \tau_{xy} \sin\theta \cos\theta \\
+    \sigma_y' = \sigma_x \sin^2\theta + \sigma_y \cos^2\theta - 2 \tau_{xy} \sin\theta \cos\theta \\
+    \tau_{xy}' = ( \sigma_y - \sigma_x ) \sin\theta \cos\theta + \tau_{xy} ( \cos^2\theta - \sin^2\theta ) 
+
+**Given state**:
+
+.. math::
+    \sigma_x = 12~\text{ksi}~, \qquad
+    \sigma_y = -5.5~\text{ksi}~, \qquad
+    \tau_{xy} = 3.5~\text{ksi}
 
 .. note::
 
