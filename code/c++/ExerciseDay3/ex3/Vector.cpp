@@ -5,13 +5,13 @@
 Vector::Vector(int sz)
 {
   size = 0;
-  data = 0;
+  data = 0; // PROVIDE CODE
 }
 
 Vector::~Vector()
 {
   if (data != 0)
-    ; // do something 
+    ; // PROVIDE CODE
 }
 
 // some methods
@@ -31,7 +31,7 @@ Vector::zero(void)
 double 
 Vector::norm(void) const
 {
-  return 0; // more code here
+  // PROVIDE CODE
 }
 
 double 
@@ -43,9 +43,10 @@ Vector::dot(const Vector &other) const
     std::cerr << "Vector::dot ERROR vectors not of same size, returning 0\n";
     return result;
   }
+  
+  // PROVIDE CODE
 
-  for (int i=0; i<size; i++)
-    result += data[i] * other.data[i];
+  
   return result;
 }
 
@@ -68,9 +69,7 @@ Vector::operator+(const Vector &other) const
     return result;
   }
 
-  
-  for (int i=0; i<size; i++)
-    result.data[i] = data[i] + other.data[i];
+  // PROVIDE CODE
 
   return result;
 }
@@ -78,28 +77,25 @@ Vector::operator+(const Vector &other) const
 void 
 Vector::operator=(const Vector &other)
 {
-  for (int i=0; i<size; i++)
-    data[i] = other.data[i];  
+  // PROVIDE CODE
 }
 
 void 
 Vector::operator+=(double val)
 {
-  for (int i=0; i<size; i++)
-    data[i] += val;  
+  // PROVIDE CODE
 }
 
 void 
 Vector::operator+=(const Vector &other)
 {
-  for (int i=0; i<size; i++)
-    data[i] += other.data[i];  
+  // PROVIDE CODE
 }
 
 double 
 Vector::operator()(int x) const
 {
-  return data[x];
+  // PROVIDE CODE
 }
 
 double &
@@ -110,6 +106,6 @@ Vector::operator()(int x)
     std::cerr << "Vector::operator() " << x << " outside range 0 through " << size-1 << "\n";
     return errorResult;
   }
-  return data[x];
+  // PROVIDE CODE
 }
 
