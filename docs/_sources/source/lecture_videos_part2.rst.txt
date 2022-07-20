@@ -109,7 +109,7 @@ The C Language provides some built in data types, i.e. integer, float, double, a
 Day 3: Intrpduction to C++
 --------------------------
 
-There are a number of short videos to be watched prior to attending Day 1. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day3.pdf>`_
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day3.pdf>`_
 
 C++ Abstraction and OOP
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -145,6 +145,8 @@ Day 4: Parallel Programming
 Parallel Computers and Parallel Programming
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Parallel.pdf>`_
+
 **Frontera** is one of the fastest High Performance Computers in the world. It's high performance comes from the fact that it has many **CPU**nodes, each with many **cores**. To take advantage of such a powerful system, actually to take advantage of even your own local desktop system, you will need to create **parallel** programs.
 
 .. raw:: html
@@ -175,6 +177,8 @@ Day 5: Tapis
 
 Intoduction to Tapis
 ^^^^^^^^^^^^^^^^^^^^
+
+There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is `available here <https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Agave2.pdf>`_
 
 .. raw:: html
 	 

@@ -104,6 +104,6 @@ The implementation file Vector.cpp:
 
 .. hint::
 
-   Wherever you see a comment **//PROVDE CODE** is a place you need to edit, e.g. line 8 requires some assignment using a  **new double[some value]**.
+   Wherever you see a comment **//PROVIDE CODE** is a place you need to edit, e.g. line 8 requires some assignment using a  **new double[some value]**.
 
    
