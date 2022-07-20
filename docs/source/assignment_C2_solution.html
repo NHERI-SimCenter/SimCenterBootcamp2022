@@ -1,37 +1,74 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>C: Day 2 In Class Exercises &mdash; Programming Bootcamp 2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C++ Exercises" href="assignment_C3.html" />
-    <link rel="prev" title="C Variables and Functions" href="assignment_C1.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
+          
+
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,35 +76,24 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupInstructions.html">Setup Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture_videos.html">Self-Study Videos</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="assignments.html">Assignments</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="assignment_day1.html">Python: Assignments Day 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_day2.html">Python: Assignments Day 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_day3.html">Python: Assignments Day 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_day4.html">Python: Assignments Day 4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_day5.html">Python: Assignments Day 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignmentPreC.html">C: Assignment to Test Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_C1.html">C Variables and Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">C: Day 2 In Class Exercises</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#problem-1-reviewing-the-stress-transformation-problem">Problem 1: Reviewing the stress transformation problem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#problem-2-using-structures">Problem 2: Using structures</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#problem-3-writing-data-for-use-by-other-programs-csv">Problem 3: Writing data for use by other programs: CSV</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#problem-4-writing-to-a-binary-file">Problem 4: Writing to a binary file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#problem-5-reading-from-a-binary-file">Problem 5: Reading From a binary file</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_C3.html">C++ Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_C4.html">C: Parallel Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignment_C5.html">C-Tapis Assignment</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emacs.html">Emacs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmake.html">Cmake</a></li>
@@ -77,39 +103,79 @@
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Programming Bootcamp 2022</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="assignments.html">Assignments</a> &raquo;</li>
+        
       <li>C: Day 2 In Class Exercises</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/source/assignment_C2_solution.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="c-day-2-in-class-exercises">
-<h1>C: Day 2 In Class Exercises<a class="headerlink" href="#c-day-2-in-class-exercises" title="Permalink to this headline"></a></h1>
+            
+  <div class="section" id="c-day-2-in-class-exercises">
+<h1>C: Day 2 In Class Exercises<a class="headerlink" href="#c-day-2-in-class-exercises" title="Permalink to this headline">¶</a></h1>
 <p>Today we have several problems for you to tackle.
 Parts should look and feel familiar from Day 1, though we will add more features as we go.
 Those problems are modeled after exercises in Python and, thus, allow you to learn how data structures
 compare when transitioning from python to C (and later C++).</p>
-<section id="problem-1-reviewing-the-stress-transformation-problem">
-<h2>Problem 1: Reviewing the stress transformation problem<a class="headerlink" href="#problem-1-reviewing-the-stress-transformation-problem" title="Permalink to this headline"></a></h2>
+<div class="section" id="problem-1-reviewing-the-stress-transformation-problem">
+<h2>Problem 1: Reviewing the stress transformation problem<a class="headerlink" href="#problem-1-reviewing-the-stress-transformation-problem" title="Permalink to this headline">¶</a></h2>
 <p>Navigate to <strong>/code/c/ExerciseDay2/ex2-1/</strong> to find another solution for the stress transformation
 problem.  The main difference to Frank’s solution is that this one places functions in separate files, as
 well as adds a header file that contains the definition of the function without its implementation.</p>
@@ -159,9 +225,9 @@ type</p>
 <p>to recompile all portions necessary and link all parts to one executable.  That process remains exactly the
 same regardless of the number of files in your project.  Give it a try and see how convenient this is
 especially for projects provided by somebody else.</p>
-</section>
-<section id="problem-2-using-structures">
-<h2>Problem 2: Using structures<a class="headerlink" href="#problem-2-using-structures" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="problem-2-using-structures">
+<h2>Problem 2: Using structures<a class="headerlink" href="#problem-2-using-structures" title="Permalink to this headline">¶</a></h2>
 <p>The implementation of <code class="code docutils literal notranslate"><span class="pre">StressTransform()</span></code> was intentionally done a bit clumsy, just the way a beginner might
 write it. Your task in this exercise is to create a structure</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="p">{</span>
@@ -196,24 +262,24 @@ entries in such a structure requires the syntax</p>
 <ul class="simple">
 <li><p>stresstransform.c</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 3</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 5</span><span class="cp">#include</span> <span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="kt">void</span><span class="w"> </span><span class="nf">StressTransform</span><span class="p">(</span><span class="n">STRESS</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">STRESS</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="kt">void</span> <span class="nf">StressTransform</span><span class="p">(</span><span class="n">STRESS</span> <span class="n">s</span><span class="p">,</span> <span class="n">STRESS</span> <span class="o">*</span><span class="n">sp</span><span class="p">,</span> <span class="kt">double</span> <span class="n">theta</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="o">*</span><span class="n">atan</span><span class="p">(</span><span class="mf">1.</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>	<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">atan</span><span class="p">(</span><span class="mf">1.</span><span class="p">);</span>
+<span class="linenos">10</span>	<span class="kt">double</span> <span class="n">th</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">*</span> <span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">;</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">sn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span>	<span class="kt">double</span> <span class="n">sn</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">);</span>
+<span class="linenos">13</span>	<span class="kt">double</span> <span class="n">cs</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">);</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span><span class="w">	</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">sigx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="o">*</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">sigy</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">sn</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.</span><span class="o">*</span><span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">	</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">sigy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">sn</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">sigy</span><span class="o">*</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2.</span><span class="o">*</span><span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">	</span><span class="n">sp</span><span class="o">-&gt;</span><span class="n">tau</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">sigy</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="p">)</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="p">(</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sn</span><span class="o">*</span><span class="n">sn</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>	<span class="n">sp</span><span class="o">-&gt;</span><span class="n">sigx</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="o">*</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">sigy</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">sn</span> <span class="o">+</span> <span class="mf">2.</span><span class="o">*</span><span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span><span class="p">;</span>
+<span class="linenos">16</span>	<span class="n">sp</span><span class="o">-&gt;</span><span class="n">sigy</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">sn</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">sigy</span><span class="o">*</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span> <span class="o">-</span> <span class="mf">2.</span><span class="o">*</span><span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span><span class="p">;</span>
+<span class="linenos">17</span>	<span class="n">sp</span><span class="o">-&gt;</span><span class="n">tau</span>  <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">sigy</span> <span class="o">-</span> <span class="n">s</span><span class="p">.</span><span class="n">sigx</span><span class="p">)</span><span class="o">*</span><span class="n">sn</span><span class="o">*</span><span class="n">cs</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">tau</span><span class="o">*</span><span class="p">(</span><span class="n">cs</span><span class="o">*</span><span class="n">cs</span> <span class="o">-</span> <span class="n">sn</span><span class="o">*</span><span class="n">sn</span><span class="p">);</span>
+<span class="linenos">18</span><span class="p">}</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -222,13 +288,13 @@ entries in such a structure requires the syntax</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#ifndef STRESSTRANSFORM_H</span>
 <span class="linenos"> 2</span><span class="cp">#define STRESSTRANSFORM_H</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">sigx</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">sigy</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">tau</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="p">}</span><span class="w"> </span><span class="n">STRESS</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+<span class="linenos"> 5</span>	<span class="kt">double</span> <span class="n">sigx</span><span class="p">;</span>
+<span class="linenos"> 6</span>	<span class="kt">double</span> <span class="n">sigy</span><span class="p">;</span>
+<span class="linenos"> 7</span>	<span class="kt">double</span> <span class="n">tau</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="p">}</span> <span class="n">STRESS</span> <span class="p">;</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="kt">void</span><span class="w"> </span><span class="nf">StressTransform</span><span class="p">(</span><span class="n">STRESS</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">STRESS</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="kt">void</span> <span class="nf">StressTransform</span><span class="p">(</span><span class="n">STRESS</span> <span class="n">s</span><span class="p">,</span> <span class="n">STRESS</span> <span class="o">*</span><span class="n">sp</span><span class="p">,</span> <span class="kt">double</span> <span class="n">theta</span><span class="p">);</span>
 <span class="linenos">11</span>
 <span class="linenos">12</span><span class="cp">#endif</span>
 </pre></div>
@@ -236,30 +302,30 @@ entries in such a structure requires the syntax</p>
 <ul class="simple">
 <li><p>exercise2-2.c</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 4</span><span class="cp">#include</span> <span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">S0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">Sp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span>	<span class="n">STRESS</span> <span class="n">S0</span><span class="p">;</span>
+<span class="linenos"> 9</span>	<span class="n">STRESS</span> <span class="n">Sp</span><span class="p">;</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-5.5</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">tau</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">3.5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigx</span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">;</span>
+<span class="linenos">12</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigy</span> <span class="o">=</span> <span class="mf">-5.5</span><span class="p">;</span>
+<span class="linenos">13</span>	<span class="n">S0</span><span class="p">.</span><span class="n">tau</span>  <span class="o">=</span>  <span class="mf">3.5</span><span class="p">;</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span><span class="w">	</span><span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;sigx&#39; = %12.6f</span><span class="se">\n</span><span class="s">sigy&#39; = %12.6f</span><span class="se">\n</span><span class="s">tau&#39;  = %12.6f</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">15</span>	<span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+<span class="linenos">16</span>	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;sigx&#39; = %12.6f</span><span class="se">\n</span><span class="s">sigy&#39; = %12.6f</span><span class="se">\n</span><span class="s">tau&#39;  = %12.6f</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="w">	</span><span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span><span class="w"> </span><span class="mf">25.0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;sigx&#39; = %12.6f</span><span class="se">\n</span><span class="s">sigy&#39; = %12.6f</span><span class="se">\n</span><span class="s">tau&#39;  = %12.6f</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">20</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>	<span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">);</span>
+<span class="linenos">19</span>	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;sigx&#39; = %12.6f</span><span class="se">\n</span><span class="s">sigy&#39; = %12.6f</span><span class="se">\n</span><span class="s">tau&#39;  = %12.6f</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span>
+<span class="linenos">20</span><span class="p">}</span>
 </pre></div>
 </div>
-<section id="problem-3-writing-data-for-use-by-other-programs-csv">
-<h3>Problem 3: Writing data for use by other programs: CSV<a class="headerlink" href="#problem-3-writing-data-for-use-by-other-programs-csv" title="Permalink to this headline"></a></h3>
+<div class="section" id="problem-3-writing-data-for-use-by-other-programs-csv">
+<h3>Problem 3: Writing data for use by other programs: CSV<a class="headerlink" href="#problem-3-writing-data-for-use-by-other-programs-csv" title="Permalink to this headline">¶</a></h3>
 <p>While C is very powerful for numeric computations, it can be impractical to generate graphs or fancy
 images using the computed values.  A more efficient way is to use C to do the analysis, write results to
 an easily readable file, and use specialized tools for the post-processing.  One common and simple format
@@ -302,41 +368,41 @@ folder where you placed <strong>list.csv</strong> run</p>
 <li><p><em>stresstransform.c</em> and <em>stresstransform.h</em> are identical to the ones created for <strong>Problem 3</strong>.</p></li>
 <li><p>exercise2-3.c</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="c1">    // need this for the constant pi = M_PI</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 3</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="c1">    // need this for the constant pi = M_PI</span><span class="cp"></span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 5</span><span class="cp">#include</span> <span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="w">	</span><span class="c1">// get dth from the first argument.  This is given in degrees!</span>
+<span class="linenos"> 9</span>	<span class="c1">// get dth from the first argument.  This is given in degrees!</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">dth</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>	<span class="kt">double</span> <span class="n">dth</span><span class="p">;</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">22.5</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>	<span class="k">if</span> <span class="p">(</span><span class="n">argc</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="n">dth</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">;</span> <span class="p">}</span>
+<span class="linenos">14</span>	<span class="k">else</span> <span class="p">{</span> <span class="n">dth</span> <span class="o">=</span> <span class="mf">22.5</span><span class="p">;</span> <span class="p">}</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="w">	</span><span class="c1">// set the initial stress state</span>
+<span class="linenos">16</span>	<span class="c1">// set the initial stress state</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">S0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span>	<span class="n">STRESS</span> <span class="n">S0</span><span class="p">;</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-5.5</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">tau</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">3.5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">20</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigx</span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">;</span>
+<span class="linenos">21</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigy</span> <span class="o">=</span> <span class="mf">-5.5</span><span class="p">;</span>
+<span class="linenos">22</span>	<span class="n">S0</span><span class="p">.</span><span class="n">tau</span>  <span class="o">=</span>  <span class="mf">3.5</span><span class="p">;</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="w">	</span><span class="c1">// define  target container for transformed stress</span>
+<span class="linenos">24</span>	<span class="c1">// define  target container for transformed stress</span>
 <span class="linenos">25</span>
-<span class="linenos">26</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">Sp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">26</span>	<span class="n">STRESS</span> <span class="n">Sp</span><span class="p">;</span>
 <span class="linenos">27</span>
-<span class="linenos">28</span><span class="w">	</span><span class="c1">// loop to compute transformed states</span>
+<span class="linenos">28</span>	<span class="c1">// loop to compute transformed states</span>
 <span class="linenos">29</span>
-<span class="linenos">30</span><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">th</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">180.</span><span class="p">;</span><span class="w"> </span><span class="n">th</span><span class="o">+=</span><span class="n">dth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span>	<span class="k">for</span> <span class="p">(</span><span class="kt">double</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span> <span class="n">th</span> <span class="o">&lt;=</span> <span class="mf">180.</span><span class="p">;</span> <span class="n">th</span><span class="o">+=</span><span class="n">dth</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos">31</span>
-<span class="linenos">32</span><span class="w">	    </span><span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span><span class="w"> </span><span class="n">th</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">	    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%12.6f, %12.6f, %12.6f, %12.6f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">th</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span><span class="w"> </span><span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">35</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">32</span>	    <span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span> <span class="n">th</span><span class="p">);</span>
+<span class="linenos">33</span>	    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%12.6f, %12.6f, %12.6f, %12.6f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">th</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigx</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">sigy</span><span class="p">,</span> <span class="n">Sp</span><span class="p">.</span><span class="n">tau</span><span class="p">);</span>
+<span class="linenos">34</span>	<span class="p">}</span>
+<span class="linenos">35</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>which creates a result like this:</p>
@@ -400,15 +466,13 @@ generate nice plots <span class="red">automagically</span>.</p>
 <span class="linenos">17</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-center" id="id1">
+<div class="align-center figure" id="id1">
 <img alt="../_images/Figure_2-3.png" src="../_images/Figure_2-3.png" />
-<figcaption>
-<p><span class="caption-text">Mohr’s circle created from <em>list.csv</em> and <em>plotter.py</em></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="problem-4-writing-to-a-binary-file">
-<h3>Problem 4: Writing to a binary file<a class="headerlink" href="#problem-4-writing-to-a-binary-file" title="Permalink to this headline"></a></h3>
+<p class="caption"><span class="caption-text">Mohr’s circle created from <em>list.csv</em> and <em>plotter.py</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="problem-4-writing-to-a-binary-file">
+<h3>Problem 4: Writing to a binary file<a class="headerlink" href="#problem-4-writing-to-a-binary-file" title="Permalink to this headline">¶</a></h3>
 <p>Modify the code generated in the previous exercise to write a binary file names <em>mohrcircle.dta</em> instead
 of the formatted ASCII data.  The data shall be exported in clocks composed of <code class="code docutils literal notranslate"><span class="pre">double</span> <span class="pre">theta</span></code>
 followed by a block of <code class="code docutils literal notranslate"><span class="pre">STRESS</span></code> (or the three components of stress as <code class="code docutils literal notranslate"><span class="pre">double</span></code>).</p>
@@ -445,79 +509,79 @@ correct code.</p>
 <li><p><em>stresstransform.c</em> and <em>stresstransform.h</em> are identical to the ones created for <strong>Problem 3</strong>.</p></li>
 <li><p>exercise2-4.c</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="linenos"> 2</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="linenos"> 2</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
+<span class="linenos"> 4</span><span class="cp">#include</span> <span class="cpf">&quot;stresstransform.h&quot;</span><span class="cp"></span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="cm">/* ************************************************************************</span>
 <span class="linenos"> 7</span><span class="cm"> * </span>
 <span class="linenos"> 8</span><span class="cm"> *      writing to a binary file</span>
 <span class="linenos"> 9</span><span class="cm"> *</span>
-<span class="linenos">10</span><span class="cm"> * ************************************************************************/</span><span class="w"></span>
+<span class="linenos">10</span><span class="cm"> * ************************************************************************/</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">12</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="w">	</span><span class="c1">// get dth from the first argument.  This is given in degrees!</span>
+<span class="linenos">14</span>	<span class="c1">// get dth from the first argument.  This is given in degrees!</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="w">	</span><span class="kt">double</span><span class="w"> </span><span class="n">dth</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">16</span>	<span class="kt">double</span> <span class="n">dth</span><span class="p">;</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">		</span><span class="n">dth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">		</span><span class="n">dth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">22.5</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>	<span class="k">if</span> <span class="p">(</span><span class="n">argc</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos">19</span>		<span class="n">dth</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">;</span>
+<span class="linenos">20</span>	<span class="p">}</span>
+<span class="linenos">21</span>	<span class="k">else</span> <span class="p">{</span>
+<span class="linenos">22</span>		<span class="n">dth</span> <span class="o">=</span> <span class="mf">22.5</span><span class="p">;</span>
+<span class="linenos">23</span>	<span class="p">}</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span><span class="w">	</span><span class="c1">// open the file for writing </span>
+<span class="linenos">25</span>	<span class="c1">// open the file for writing </span>
 <span class="linenos">26</span>
-<span class="linenos">27</span><span class="w">	</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">f_ptr</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span>	<span class="kt">FILE</span> <span class="o">*</span><span class="n">f_ptr</span><span class="p">;</span>
 <span class="linenos">28</span>
-<span class="linenos">29</span><span class="w">	</span><span class="n">f_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">&quot;mohrcircle.dta&quot;</span><span class="p">,</span><span class="s">&quot;wb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">29</span>	<span class="n">f_ptr</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;mohrcircle.dta&quot;</span><span class="p">,</span><span class="s">&quot;wb&quot;</span><span class="p">);</span>
 <span class="linenos">30</span>
-<span class="linenos">31</span><span class="w">	</span><span class="c1">// define a data structure for a single entry in the file</span>
+<span class="linenos">31</span>	<span class="c1">// define a data structure for a single entry in the file</span>
 <span class="linenos">32</span>
-<span class="linenos">33</span><span class="w">	</span><span class="k">struct</span> <span class="nc">RESULT</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">		</span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">		</span><span class="n">STRESS</span><span class="w"> </span><span class="n">thestress</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">33</span>	<span class="k">struct</span> <span class="nc">RESULT</span> <span class="p">{</span>
+<span class="linenos">34</span>		<span class="kt">double</span> <span class="n">angle</span><span class="p">;</span>
+<span class="linenos">35</span>		<span class="n">STRESS</span> <span class="n">thestress</span><span class="p">;</span>
+<span class="linenos">36</span>	<span class="p">}</span> <span class="n">result</span><span class="p">;</span>
 <span class="linenos">37</span>
-<span class="linenos">38</span><span class="w">	</span><span class="c1">// set the initial stress state</span>
+<span class="linenos">38</span>	<span class="c1">// set the initial stress state</span>
 <span class="linenos">39</span>
-<span class="linenos">40</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">S0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">40</span>	<span class="n">STRESS</span> <span class="n">S0</span><span class="p">;</span>
 <span class="linenos">41</span>
-<span class="linenos">42</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">sigy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-5.5</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">	</span><span class="n">S0</span><span class="p">.</span><span class="n">tau</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">3.5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">42</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigx</span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">;</span>
+<span class="linenos">43</span>	<span class="n">S0</span><span class="p">.</span><span class="n">sigy</span> <span class="o">=</span> <span class="mf">-5.5</span><span class="p">;</span>
+<span class="linenos">44</span>	<span class="n">S0</span><span class="p">.</span><span class="n">tau</span>  <span class="o">=</span>  <span class="mf">3.5</span><span class="p">;</span>
 <span class="linenos">45</span>
-<span class="linenos">46</span><span class="w">	</span><span class="c1">// define  target container for transformed stress</span>
+<span class="linenos">46</span>	<span class="c1">// define  target container for transformed stress</span>
 <span class="linenos">47</span>
-<span class="linenos">48</span><span class="w">	</span><span class="n">STRESS</span><span class="w"> </span><span class="n">Sp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">48</span>	<span class="n">STRESS</span> <span class="n">Sp</span><span class="p">;</span>
 <span class="linenos">49</span>
-<span class="linenos">50</span><span class="w">	</span><span class="c1">// loop to compute transformed states</span>
+<span class="linenos">50</span>	<span class="c1">// loop to compute transformed states</span>
 <span class="linenos">51</span>
-<span class="linenos">52</span><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">th</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">180.</span><span class="p">;</span><span class="w"> </span><span class="n">th</span><span class="o">+=</span><span class="n">dth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">52</span>	<span class="k">for</span> <span class="p">(</span><span class="kt">double</span> <span class="n">th</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span> <span class="n">th</span> <span class="o">&lt;=</span> <span class="mf">180.</span><span class="p">;</span> <span class="n">th</span><span class="o">+=</span><span class="n">dth</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos">53</span>
-<span class="linenos">54</span><span class="w">	    </span><span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span><span class="w"> </span><span class="n">th</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">54</span>	    <span class="n">StressTransform</span><span class="p">(</span><span class="n">S0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Sp</span><span class="p">,</span> <span class="n">th</span><span class="p">);</span>
 <span class="linenos">55</span>
-<span class="linenos">56</span><span class="w">	    </span><span class="c1">//</span>
-<span class="linenos">57</span><span class="w">	    </span><span class="c1">// note:</span>
-<span class="linenos">58</span><span class="w">	    </span><span class="c1">//</span>
-<span class="linenos">59</span><span class="w">	    </span><span class="c1">// ... result is a structure. fwrite needs a reference to that structure</span>
-<span class="linenos">60</span><span class="w">	    </span><span class="c1">// ... sizeof(result) returns the number of bytes occupied by the ONE copy of result</span>
-<span class="linenos">61</span><span class="w">	    </span><span class="c1">// ... 1 is the number of blocks to write</span>
-<span class="linenos">62</span><span class="w">	    </span><span class="c1">// ... f_ptr is a pointer to the FILE handle</span>
+<span class="linenos">56</span>	    <span class="c1">//</span>
+<span class="linenos">57</span>	    <span class="c1">// note:</span>
+<span class="linenos">58</span>	    <span class="c1">//</span>
+<span class="linenos">59</span>	    <span class="c1">// ... result is a structure. fwrite needs a reference to that structure</span>
+<span class="linenos">60</span>	    <span class="c1">// ... sizeof(result) returns the number of bytes occupied by the ONE copy of result</span>
+<span class="linenos">61</span>	    <span class="c1">// ... 1 is the number of blocks to write</span>
+<span class="linenos">62</span>	    <span class="c1">// ... f_ptr is a pointer to the FILE handle</span>
 <span class="linenos">63</span>
-<span class="linenos">64</span><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">th</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">65</span><span class="w">	    </span><span class="n">result</span><span class="p">.</span><span class="n">thestress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">64</span>            <span class="n">result</span><span class="p">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">th</span><span class="p">;</span>
+<span class="linenos">65</span>	    <span class="n">result</span><span class="p">.</span><span class="n">thestress</span> <span class="o">=</span> <span class="n">Sp</span><span class="p">;</span>
 <span class="linenos">66</span>
-<span class="linenos">67</span><span class="w">	    </span><span class="n">fwrite</span><span class="p">(</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">result</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">f_ptr</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">67</span>	    <span class="n">fwrite</span><span class="p">(</span><span class="o">&amp;</span><span class="n">result</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">result</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f_ptr</span><span class="p">);</span>
 <span class="linenos">68</span>
-<span class="linenos">69</span><span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">69</span>	<span class="p">}</span>
 <span class="linenos">70</span>
-<span class="linenos">71</span><span class="w">	</span><span class="c1">// done writing data -- close the file</span>
-<span class="linenos">72</span><span class="w">	</span><span class="n">fclose</span><span class="p">(</span><span class="n">f_ptr</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">73</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">71</span>	<span class="c1">// done writing data -- close the file</span>
+<span class="linenos">72</span>	<span class="n">fclose</span><span class="p">(</span><span class="n">f_ptr</span><span class="p">);</span>
+<span class="linenos">73</span><span class="p">}</span>
 <span class="linenos">74</span>
 <span class="linenos">75</span>
 </pre></div>
@@ -634,9 +698,9 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 </pre></div>
 </div>
 </div>
-</section>
-<section id="problem-5-reading-from-a-binary-file">
-<h3>Problem 5: Reading From a binary file<a class="headerlink" href="#problem-5-reading-from-a-binary-file" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="problem-5-reading-from-a-binary-file">
+<h3>Problem 5: Reading From a binary file<a class="headerlink" href="#problem-5-reading-from-a-binary-file" title="Permalink to this headline">¶</a></h3>
 <p>Reading of data from files and placing them into containers such as Vectors is easy if you know the size of the data you are reading. If this is unknown the problem becomes more tricky. The solution presented on slide 22 worked for a small number of nputs, but failed with a segmentation fault for larger problems. You are to fix the problem. A copy of the offending files has been placed in the directory ex2-5 along with two files. The program can handle the first <strong>small.txt</strong>, it will fail with the second <strong>big.txt</strong>. Can you make the program work. The solution will test your understanding of file I/O,  memory management and pointers.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -647,39 +711,52 @@ jump pages forward and backward, or move to any specific line.  Press <code clas
 </pre></div>
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="assignment_C1.html" class="btn btn-neutral float-left" title="C Variables and Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="assignment_C3.html" class="btn btn-neutral float-right" title="C++ Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

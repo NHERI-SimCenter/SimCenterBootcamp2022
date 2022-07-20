@@ -1,36 +1,75 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Programming in C &mdash; Programming Bootcamp 2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/hacks.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assignments" href="assignments.html" />
     <link rel="prev" title="Python Quickstart Tutorial" href="lecture_videos_part1.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> Programming Bootcamp 2022
+          
+
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -38,7 +77,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
@@ -47,26 +97,41 @@
 <li class="toctree-l2"><a class="reference internal" href="lecture_videos_part0.html">General Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lecture_videos_part1.html">Python Quickstart Tutorial</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Programming in C</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#computers-programs-and-applications">Computers, Programs and Applications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#introduction-to-c-and-compilation">Introduction to C and Compilation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-variable-types-and-variable-names">C Variable Types and Variable Names</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-operations-conditionals-and-loops">C Operations, Conditionals and Loops</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-functions">C Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-pointers-revisited">C Pointers Revisited</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-arrays-and-memory-management">C Arrays and Memory Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-file-i-o">C File I/O</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-struts-data-structures-and-abstraction">C Struts, Data Structures and Abstraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-abstraction-and-oop">C++ Abstraction and OOP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-language">C++ Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c-class-example">C++ Class Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parallel-computers-and-parallel-programming">Parallel Computers and Parallel Programming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parallel-programming-with-mpi">Parallel Programming With MPI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parallel-programming-with-openmp">Parallel Programming With OpenMP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#intoduction-to-tapis">Intoduction to Tapis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tapis-systems">Tapis Systems</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tapis-files">Tapis Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tapis-apps">Tapis Apps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tapis-jobs">Tapis Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#day-1-introduction-to-c">Day 1: Introduction to C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#computers-programs-and-applications">1. Computers, Programs and Applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-c-and-compilation">Introduction to C and Compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-variable-types-and-variable-names">C Variable Types and Variable Names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-operations-conditionals-and-loops">C Operations, Conditionals and Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-functions">C Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#day-2-c-continued">Day 2: C Continued</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c-pointers">C Pointers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-arrays-and-memory-management">C Arrays and Memory Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-file-i-o">C File I/O</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-struts-data-structures-and-abstraction">C Struts, Data Structures and Abstraction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#day-3-intrpduction-to-c">Day 3: Intrpduction to C++</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c-abstraction-and-oop">C++ Abstraction and OOP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-language">C++ Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-class-example">C++ Class Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#day-4-parallel-programming">Day 4: Parallel Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parallel-computers-and-parallel-programming">Parallel Computers and Parallel Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parallel-programming-with-mpi">Parallel Programming With MPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parallel-programming-with-openmp">Parallel Programming With OpenMP</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#day-5-tapis">Day 5: Tapis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intoduction-to-tapis">Intoduction to Tapis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tapis-systems">Tapis Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tapis-files">Tapis Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tapis-apps">Tapis Apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tapis-jobs">Tapis Jobs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -81,124 +146,218 @@
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Additional Resources</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Programming Bootcamp 2022</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="lecture_videos.html">Self-Study Videos</a> &raquo;</li>
+        
       <li>Programming in C</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/source/lecture_videos_part2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="programming-in-c">
-<h1>Programming in C<a class="headerlink" href="#programming-in-c" title="Permalink to this headline"></a></h1>
-<section id="computers-programs-and-applications">
-<h2>Computers, Programs and Applications<a class="headerlink" href="#computers-programs-and-applications" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/rP1DSfU_JUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="introduction-to-c-and-compilation">
-<h2>Introduction to C and Compilation<a class="headerlink" href="#introduction-to-c-and-compilation" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/w2S75SKgGaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-variable-types-and-variable-names">
-<h2>C Variable Types and Variable Names<a class="headerlink" href="#c-variable-types-and-variable-names" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/kpjYp3Q5Cco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-operations-conditionals-and-loops">
-<h2>C Operations, Conditionals and Loops<a class="headerlink" href="#c-operations-conditionals-and-loops" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/gtBufZO5IGo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-functions">
-<h2>C Functions<a class="headerlink" href="#c-functions" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/ua2KOBhvxDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-pointers-revisited">
-<h2>C Pointers Revisited<a class="headerlink" href="#c-pointers-revisited" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Qplwm5K27UY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-arrays-and-memory-management">
-<h2>C Arrays and Memory Management<a class="headerlink" href="#c-arrays-and-memory-management" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/QESE-SwNx7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-file-i-o">
-<h2>C File I/O<a class="headerlink" href="#c-file-i-o" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/EWT3wU9yDCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-struts-data-structures-and-abstraction">
-<h2>C Struts, Data Structures and Abstraction<a class="headerlink" href="#c-struts-data-structures-and-abstraction" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/_ewhjB45tTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-abstraction-and-oop">
-<h2>C++ Abstraction and OOP<a class="headerlink" href="#c-abstraction-and-oop" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/9VYn7g96cxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-language">
-<h2>C++ Language<a class="headerlink" href="#c-language" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/0YJdjzSEN78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="c-class-example">
-<h2>C++ Class Example<a class="headerlink" href="#c-class-example" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/YzpMBOlhpq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="parallel-computers-and-parallel-programming">
-<h2>Parallel Computers and Parallel Programming<a class="headerlink" href="#parallel-computers-and-parallel-programming" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/WvfpAZMI01E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="parallel-programming-with-mpi">
-<h2>Parallel Programming With MPI<a class="headerlink" href="#parallel-programming-with-mpi" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/209rMQcKizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="parallel-programming-with-openmp">
-<h2>Parallel Programming With OpenMP<a class="headerlink" href="#parallel-programming-with-openmp" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/APzanKquS-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="intoduction-to-tapis">
-<h2>Intoduction to Tapis<a class="headerlink" href="#intoduction-to-tapis" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/vNFbzG4t1bI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="tapis-systems">
-<h2>Tapis Systems<a class="headerlink" href="#tapis-systems" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/TddwsA5MY_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="tapis-files">
-<h2>Tapis Files<a class="headerlink" href="#tapis-files" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/eh7Etvuvo7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="tapis-apps">
-<h2>Tapis Apps<a class="headerlink" href="#tapis-apps" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/f2-Qg6sMsQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-<section id="tapis-jobs">
-<h2>Tapis Jobs<a class="headerlink" href="#tapis-jobs" title="Permalink to this headline"></a></h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/HDo5QzwOjTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></section>
-</section>
+            
+  <div class="section" id="programming-in-c">
+<h1>Programming in C<a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="day-1-introduction-to-c">
+<h2>Day 1: Introduction to C<a class="headerlink" href="#day-1-introduction-to-c" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of short videos to be watched prior to attending Day 1. A pdf of the presentation used in these videos is <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day1.pdf">available here</a></p>
+<div class="section" id="computers-programs-and-applications">
+<h3>1. Computers, Programs and Applications<a class="headerlink" href="#computers-programs-and-applications" title="Permalink to this headline">¶</a></h3>
+<p>The first video provides information about just exactly what a computer is; basically some programmable device cabable of accepting inputs (keyboard, mouse, mic, etc.), storing data in form of files (which are just a sequence of bits, i.e. 0’s and 1’s), running applications (files with a special designation), and providing output (display, sound, etc.). Before you play this first video you might find the following helpful: <a class="reference external" href="https://www.youtube.com/watch?v=mCq8-xTH7jA">What makes a computer a computer?</a>, <a class="reference external" href="https://www.youtube.com/watch?v=xnyFYiK2rSY">Hardware &amp; Software:</a>, <a class="reference external" href="https://www.youtube.com/watch?v=USCBCmwMCDA">Data &amp; Binary Representation</a>, <a class="reference external" href="https://www.youtube.com/watch?v=ZoqMiFKspAA">Circuits and Logic</a></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/QJp_x0-UmTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="introduction-to-c-and-compilation">
+<h3>Introduction to C and Compilation<a class="headerlink" href="#introduction-to-c-and-compilation" title="Permalink to this headline">¶</a></h3>
+<p>To create binary executable files that the operating system will run on the <strong>CPU</strong> a programmer will use a <strong>compiler</strong>, which is an application that will take a human readable text file and convert it into a binary executable, the sequence of very simple set of instructions, e.g. fetch, add, multiply, compare, store, that the CPU will follow when the program runs. In this video we will be using Intel’s <strong>icc</strong> compiler on TACC Frontera system to convert our C Programs into such an executable using every languages basic <strong>hello world</strong> example.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/WhGShGIbeAA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-variable-types-and-variable-names">
+<h3>C Variable Types and Variable Names<a class="headerlink" href="#c-variable-types-and-variable-names" title="Permalink to this headline">¶</a></h3>
+<p>To make programming easier, programming languages provide programmers the ability to define and use <strong>variables</strong> in their programs. An example of a variable a programmer might create in a game application is foe example the users <strong>current score</strong>: this variable being set to 0 by the application when the user starts a game and is updated constantly as the user progresses through the game.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/8Bew-a3G7Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-operations-conditionals-and-loops">
+<h3>C Operations, Conditionals and Loops<a class="headerlink" href="#c-operations-conditionals-and-loops" title="Permalink to this headline">¶</a></h3>
+<p>The basic building blocks in any computational algortithm involve mathematical operations, conditional loops, e.g. do something if some condition is tru otherwise something else, and loops.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/I3FxSmnpl0M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-functions">
+<h3>C Functions<a class="headerlink" href="#c-functions" title="Permalink to this headline">¶</a></h3>
+<p>As you develop programs, there are basic algorithms that you will use over and over again, e.g. matrix-vector multiply or vector dot product. Programming languages provide constructions to define these commonly used routines that can be used repeatedly in one program or across many programs. As you develop large programs, from a development point of view, you will find it less error prone, if you break the program into manageable chunks.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/xN5Z-KvfM0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+</div>
+<div class="section" id="day-2-c-continued">
+<h2>Day 2: C Continued<a class="headerlink" href="#day-2-c-continued" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of short videos to be watched prior to attending Day 2. A pdf of the presentation used in these videos is <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day2.pdf">available here</a></p>
+<div class="section" id="c-pointers">
+<h3>C Pointers<a class="headerlink" href="#c-pointers" title="Permalink to this headline">¶</a></h3>
+<p>Pointers are the most difficult concept to understand in C programs. Pointers are simply variables that contain an address. The adress is some memory location that contains the data that the pointer is said to be pointing to. Operations on the pointer allow you to update that variable that the pointer is pointing to.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/lG645grczp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-arrays-and-memory-management">
+<h3>C Arrays and Memory Management<a class="headerlink" href="#c-arrays-and-memory-management" title="Permalink to this headline">¶</a></h3>
+<p>Pointers most typically are used to point to the start of an array or the current location in an array. Arrays in C can be either created at compile time if the array size is known, or more typically they are dynamically allocated when the program runs. When dynamically allocated, the programmer requests from a function named malloc() that the application obtain some memory from it’s available adress space.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/w28FemBmWfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-file-i-o">
+<h3>C File I/O<a class="headerlink" href="#c-file-i-o" title="Permalink to this headline">¶</a></h3>
+<p>To save the results of some computation or to read in values, the programmer must open and close files and read and write the data to these files.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/kwoCCeDpKkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-struts-data-structures-and-abstraction">
+<h3>C Struts, Data Structures and Abstraction<a class="headerlink" href="#c-struts-data-structures-and-abstraction" title="Permalink to this headline">¶</a></h3>
+<p>The C Language provides some built in data types, i.e. integer, float, double, and pointers. The power of C is that it allows users to create their own data types, e.g. node, vector, matrix, truss.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/_ewhjB45tTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+</div>
+<div class="section" id="day-3-intrpduction-to-c">
+<h2>Day 3: Intrpduction to C++<a class="headerlink" href="#day-3-intrpduction-to-c" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/C-Day3.pdf">available here</a></p>
+<div class="section" id="c-abstraction-and-oop">
+<h3>C++ Abstraction and OOP<a class="headerlink" href="#c-abstraction-and-oop" title="Permalink to this headline">¶</a></h3>
+<p>In previous video we saw programmer could create their own data types and pass these to functions. In OOP programmer the programmers associated both data and functions (methods), with the data types, e.g. a vector type can have a method that will provide it’s dot product and methods to set and obtain the entries of the vector. Concepts such as abstraction, polymorphism, … are common across all OOP programming languages.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Bdmg6rcaDdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-language">
+<h3>C++ Language<a class="headerlink" href="#c-language" title="Permalink to this headline">¶</a></h3>
+<p>In this video we look at an incremental improvement to C, C++ (if you remember what the ++ operand is). We quickly look at some of the language constructs added to C++ that overcome some of the perceived limitations in C.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/49A9nDQwASA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="c-class-example">
+<h3>C++ Class Example<a class="headerlink" href="#c-class-example" title="Permalink to this headline">¶</a></h3>
+<p>Now we look at the specific language features that enable OOP programming in C++.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/a7e3sa0K5T8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+</div>
+<div class="section" id="day-4-parallel-programming">
+<h2>Day 4: Parallel Programming<a class="headerlink" href="#day-4-parallel-programming" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parallel-computers-and-parallel-programming">
+<h3>Parallel Computers and Parallel Programming<a class="headerlink" href="#parallel-computers-and-parallel-programming" title="Permalink to this headline">¶</a></h3>
+<p>There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Parallel.pdf">available here</a></p>
+<p><strong>Frontera</strong> is one of the fastest High Performance Computers in the world. It’s high performance comes from the fact that it has many <strong>CPU**nodes, each with many **cores</strong>. To take advantage of such a powerful system, actually to take advantage of even your own local desktop system, you will need to create <strong>parallel</strong> programs.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/WvfpAZMI01E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="parallel-programming-with-mpi">
+<h3>Parallel Programming With MPI<a class="headerlink" href="#parallel-programming-with-mpi" title="Permalink to this headline">¶</a></h3>
+<p>This video is a very bried introduction to programming with the Message Passing INterface, <strong>MPI</strong>.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/209rMQcKizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="parallel-programming-with-openmp">
+<h3>Parallel Programming With OpenMP<a class="headerlink" href="#parallel-programming-with-openmp" title="Permalink to this headline">¶</a></h3>
+<p>This video is a very bried introduction to programming with the <strong>OpenMP</strong>, a library for creating shared-memory applications.</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/APzanKquS-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+</div>
+<div class="section" id="day-5-tapis">
+<h2>Day 5: Tapis<a class="headerlink" href="#day-5-tapis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intoduction-to-tapis">
+<h3>Intoduction to Tapis<a class="headerlink" href="#intoduction-to-tapis" title="Permalink to this headline">¶</a></h3>
+<p>There are a number of short videos to be watched prior to attending Day 3. A pdf of the presentation used in these videos is <a class="reference external" href="https://github.com/NHERI-SimCenter/SimCenterBootcamp2022/blob/master/presentations/Agave2.pdf">available here</a></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/vNFbzG4t1bI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="tapis-systems">
+<h3>Tapis Systems<a class="headerlink" href="#tapis-systems" title="Permalink to this headline">¶</a></h3>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/TddwsA5MY_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="tapis-files">
+<h3>Tapis Files<a class="headerlink" href="#tapis-files" title="Permalink to this headline">¶</a></h3>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/eh7Etvuvo7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="tapis-apps">
+<h3>Tapis Apps<a class="headerlink" href="#tapis-apps" title="Permalink to this headline">¶</a></h3>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/f2-Qg6sMsQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+<div class="section" id="tapis-jobs">
+<h3>Tapis Jobs<a class="headerlink" href="#tapis-jobs" title="Permalink to this headline">¶</a></h3>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/HDo5QzwOjTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="lecture_videos_part1.html" class="btn btn-neutral float-left" title="Python Quickstart Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="assignments.html" class="btn btn-neutral float-right" title="Assignments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lecture_videos_part1.html" class="btn btn-neutral float-left" title="Python Quickstart Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020-2022, Peter Mackenzie-Helnwein, Frank McKenna.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

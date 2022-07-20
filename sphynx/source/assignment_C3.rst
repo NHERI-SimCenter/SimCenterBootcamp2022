@@ -1,12 +1,41 @@
-C++ Exercises
-=============
+C: Assignments Day 3
+====================
 
-Today we have two problems for you to tackle.
 
-Problem 1: Adding a ColoredShape
+Today we have three problems for you to tackle.
+
+Problem 1: Lets switch to C++ syntax
+------------------------------------
+
+Navigate to **/code/c++/ExerciseDay3/ex1/** to find the code for this C++ exerise. This code is the solution to yesterdays last assignment. It compiles with both a **C** and a **C++** compiler. The task is to replace the standard C lib functions for memory and output, e.g functions like malloc(), with the standard C++ functions, e.g. new().
+
+.. literalinclude:: ./assignments/c3/file3.cpp
+  :language: c
+  :linenos:
+
+
+.. note::
+
+   There is no CmakeLists.txt file. To compile you must invoke the **C++** compiler directly, which is invoked from the terminal using the following to invoke the Intel C++ compiler:
+
+       .. code::
+
+	$ icpc file3.cpp
+
+
+   or the following to invoke the GNU C++ compiler
+   
+       .. code::
+
+	$ g++ file3.cpp	
+
+	
+   
+
+Problem 2: Adding a ColoredShape
 --------------------------------
 
-Navigate to **/code/c++/ExerciseDay3/ex1/** to find the code for the C++ example presented in todays video. You are asked to create another shape of your choosing and add to the code base. A similar example was perfomed during the video.
+Navigate to **/code/c++/ExerciseDay3/ex2/** to find the code for the C++ example presented in todays video. You are asked to create another shape of your choosing and add to the code base. A similar example was perfomed during the video.
 
 .. hint::
 
@@ -54,10 +83,10 @@ Navigate to **/code/c++/ExerciseDay3/ex1/** to find the code for the C++ example
 
     
    
-Problem 2: An engineering Vector Class requires you to finish off
+Problem 3: An engineering Vector Class requires you to finish off
 -----------------------------------------------------------------
 
-Navigate to **/code/c++/ExerciseDay3/ex2/** to find the partially completed code for a C++ Vector class. You are to finish it and test it. The directory contains a header file **Vector.h**,  an implementation file **Vector.cpp**, a **main.cpp** to test with and a **CMakeFilesList.txt** file for building and compiling.
+Navigate to **/code/c++/ExerciseDay3/ex3/** to find the partially completed code for a C++ Vector class. You are to finish it and test it. The directory contains a header file **Vector.h**,  an implementation file **Vector.cpp**, a **main.cpp** to test with and a **CMakeFilesList.txt** file for building and compiling.
 
 The header file Vector.h:
 
@@ -75,6 +104,6 @@ The implementation file Vector.cpp:
 
 .. hint::
 
-   Wherever you see a comment **//PROVDE CODE** is a place you need to edit, e.g. line 8 requires some assignment using a  **new double[some value]**.
+   Wherever you see a comment **//PROVIDE CODE** is a place you need to edit, e.g. line 8 requires some assignment using a  **new double[some value]**.
 
    

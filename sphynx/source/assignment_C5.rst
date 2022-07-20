@@ -1,6 +1,6 @@
 
-C-Tapis Assignment
-==================
+C: Assignments Day 5
+====================
 
 The purpose of these exercises is to set it up so that you are able to run a parallel application on Frontera or Stampede2 by issuing commands in the terminal of your desktop using your DesignSafe account and resources. Time permitting we will share the applications with fellow classmates. The advantage of being able to do this from a terminal is convenience and speed, e.g. you no longer will be required to login and find a token, cd to appropriate directories, edit submit scripts, and so on. Ultimately, as you progress in your careers you will begin to understand, the ability to share your work is one of the really great advantages provided.
 
