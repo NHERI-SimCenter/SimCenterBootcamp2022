@@ -56,6 +56,11 @@ The submit script is as shown below.
   :linenos:
 
 
+One possible solution, which includes multiple approaches, is as shown in the following:
+
+.. literalinclude:: ./solutions/c4/piMPI.c
+  :linenos:
+     
 Problem 2: Parallelize using OpenMP
 -----------------------------------
 
@@ -64,4 +69,7 @@ You are to modify the **pi.c** application and run it to use mpi. I have include
 .. literalinclude:: ./solutions/c4/submitPI.sh
   :linenos:
 
+One possible solution, which includes multiple approaches, is as shown in the following:
 
+.. literalinclude:: ./solutions/c4/piOpenMP.c
+  :linenos:
