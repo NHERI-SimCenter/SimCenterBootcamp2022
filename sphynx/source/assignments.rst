@@ -33,6 +33,7 @@ Each assignment typically includes one or more of the following.
     assignment_C2
     # assignment_C2_solution
     assignment_C3
-    assignment_C4
+    # assignment_C4
+    assignment_C4_solution
     assignment_C5    
 

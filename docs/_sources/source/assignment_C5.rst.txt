@@ -27,9 +27,13 @@ However, before you can begin, you need to make sure the **tapis** command is wo
 
 .. warning:: 
 
-   If you fail the last part of this first exercise it means that the **tapis-cli** is not going to work. From past experience we have found that the install works for some, but not all, and we are not sure why. You can still use the work you have done up until that point in the exercise, but you need to do something different different to complete it. We provide 3 solutions, in order of time to proceed:
+   If you fail in the first part there are a number of things that may be up.
 
-   1. Try to update to the latest version of **tapis-cli**:
+   1. **tapis** application not found. The **tapis** application, assuming pip install tapis-cli worked, is located in a folder not on the users **Path**. We have noticed this for some versions of **python** users have on their system. You need to manually update your enviromnet setting for **Path** to add the folder the **tapis** was placed in. Look at the install messages to see where tapis-cli was installed, and do a search for **tapis**. (You are looking for the application as opposed to some of the other things that will pop up).
+
+   2. **tapis** application hangs. We have users who have had this happen for versions **3.10.x** of **python**. The only fix is to download another version, in latest workshop version **3.9.13** worked from http://python.org.
+      
+   3. Try to update to the latest version of **tapis-cli**:
 
      .. code::
 
@@ -37,13 +41,13 @@ However, before you can begin, you need to make sure the **tapis** command is wo
         $ cd tapis-cli
         $ pip install --upgrade .
    
-   2. Run the exercise at TACC using either Frontera or Stampede2. To do this you need to login to your TACC machine and install **tapis-cli** as a local user.
+   4. Run the exercise at TACC using either Frontera or Stampede2. To do this you need to login to your TACC machine and install **tapis-cli** as a local user.
 
      .. code::
 
 	pip intall tapis-cli --user
       
-   3. Install and use the **Ubuntu subsystem on Windows 10**
+   5. Install and use the **Ubuntu subsystem on Windows 10**
 
    The Ubuntu subsystem is actually a full Ubuntu linux system running within a virtual machine while
    Windows is running as the primary OS. Microsoft provides step-by-step instructions on how to install
@@ -90,7 +94,7 @@ ${PASSWORD},
 ${SCRATCH_DIR} and
 ${ALLOCATION}.
 
-The **${ALLOCATION}** text is replaced with **-A FTA-DD-SimCenter** if using Frontera.
+The **${ALLOCATION}** text is replaced with **-A DesignSafe-SimCenter** if using Frontera.
 The scratch_dir can be found by logging into Frontera, issuing the commands cds (change dir to scratch) and then pwd (print working directory). The results of pwd is your scratch dir.
 
 Once the file has been completed, you can create the system by invoking one of the the following commands:
@@ -199,16 +203,16 @@ We are first going to search for an app to clone. Let us look at simcenter apps.
    
    tapis apps search --name like simcenter -f json
 
-You should see one with an id **simcenter-dakota-1.0.0u1**. Have a look at it's description.
+You should see one with an id **simcenter-dakota-1.0.0u6**. Have a look at it's description.
 
 .. code::
    
-   tapis apps show simcenter-dakota-1.0.0u1 -f json
+   tapis apps show simcenter-dakota-1.0.0u6 -f json
 
 
 Amidst the results returned, you will see it takes an input directory and some parameters to run:
 
-.. literalinclude:: ./assignments/c5/simcenter-dakota-1.0.0u1.json
+.. literalinclude:: ./assignments/c5/simcenter-dakota-1.0.0u6.json
   :linenos:
 
 

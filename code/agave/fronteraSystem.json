@@ -40,6 +40,19 @@
     "environment": "",
     "queues": [
         {
+            "name": "small",
+            "maxJobs": -1,
+            "maxMemoryPerNode": "192GB",
+            "default": true,
+            "maxRequestedTime": "48:00:00",
+            "description": null,
+            "maxNodes": 2,
+            "maxProcessorsPerNode": 56,
+            "mappedName": null,
+            "maxUserJobs": 2,
+            "customDirectives": "${ALLOCATION}"
+        },
+        {
             "name": "normal",
             "maxJobs": -1,
             "maxMemoryPerNode": "192GB",
